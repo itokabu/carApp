@@ -22,6 +22,8 @@ const MODES = {
 };
 
 const DATA_URL = document.querySelector('meta[name="arenante:data"]')?.content || 'data/cars.json';
+// 置き場所のデータが読めないとき（ローカルのサーバーを止めた、など）は、毎月自動更新している GitHub Pages から読む
+const FALLBACK_DATA_URL = 'https://itokabu.github.io/carApp/data/cars.json';
 
 const $app = document.getElementById('app');
 const $detail = document.getElementById('detail');
@@ -620,12 +622,16 @@ function renderFooter() {
 }
 
 async function init() {
-  try {
-    const res = await fetch(DATA_URL, { cache: 'no-cache' });
-    if (!res.ok) throw new Error(res.status);
-    data = await res.json();
-  } catch {
-    $app.innerHTML = '<p class="empty">データを読み込めませんでした。通信状況を確認して再読み込みしてください。</p>';
+  for (const url of [...new Set([DATA_URL, FALLBACK_DATA_URL])]) {
+    try {
+      const res = await fetch(url, { cache: 'no-cache' });
+      if (!res.ok) throw new Error(res.status);
+      data = await res.json();
+      break;
+    } catch { /* 次の置き場所を試す */ }
+  }
+  if (!data) {
+    $app.innerHTML = '<p class="empty">データを読み込めませんでした。インターネットにつながっているか確認して、再読み込みしてください。</p>';
     return;
   }
   renderFooter();
