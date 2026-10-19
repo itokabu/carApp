@@ -12,13 +12,12 @@ const LEVELS = [
   { star: 5, from: 71, to: 100, label: '鬼' },
 ];
 
-// arrow は方面案内標識の矢印の向き（度）
 const MODES = {
-  name: { title: '車名当て', desc: '前から見た写真で当てる', prompt: 'この車の名前はどれか。', arrow: 0 },
-  rear: { title: '後ろ姿当て', desc: '信号待ちの後ろ姿で当てる', prompt: 'この後ろ姿の車の名前はどれか。', arrow: 45 },
-  maker: { title: 'メーカー当て', desc: 'どこのメーカーか当てる', prompt: 'この車のメーカーはどれか。', arrow: 90 },
-  emblem: { title: 'エンブレム当て', desc: 'マークだけで当てる', prompt: 'このエンブレムのメーカーはどれか。', arrow: -45 },
-  newer: { title: '新型どっち？', desc: '新型と旧型を見分ける', prompt: '', arrow: -90 },
+  name: { title: '車名当て', desc: '前から見た写真で当てる', prompt: 'この車の名前はどれか。' },
+  rear: { title: '後ろ姿当て', desc: '信号待ちの後ろ姿で当てる', prompt: 'この後ろ姿の車の名前はどれか。' },
+  maker: { title: 'メーカー当て', desc: 'どこのメーカーか当てる', prompt: 'この車のメーカーはどれか。' },
+  emblem: { title: 'エンブレム当て', desc: 'マークだけで当てる', prompt: 'このエンブレムのメーカーはどれか。' },
+  newer: { title: '新型どっち？', desc: '新型と旧型を見分ける', prompt: '' },
 };
 
 const DATA_URL = document.querySelector('meta[name="arenante:data"]')?.content || 'data/cars.json';
@@ -31,6 +30,7 @@ const $lightbox = document.getElementById('lightbox');
 
 let data = null;
 let star = Number(load('star')) || 1;
+let mode = MODES[load('mode')] ? load('mode') : 'name';
 let quiz = null; // 出題中の状態（キーボード操作用）
 
 // ---------- utils ----------
@@ -85,24 +85,25 @@ const onigiri = (n) => `
     <text x="30" y="${String(n).length > 2 ? 37 : 39}" text-anchor="middle" style="font-size:${String(n).length > 2 ? 19 : 24}px">${n}</text>
   </svg>`;
 
-// 方面案内標識の矢印
-const arrow = (deg) => `
-  <svg class="sign-arrow" viewBox="0 0 40 40" style="transform:rotate(${deg}deg)" aria-hidden="true">
-    <path d="M20 3 33 18h-8.5v19h-9V18H7z"/>
-  </svg>`;
-
-// 走る車のシルエット（右向き）
+// 走る車のシルエット。すべて右向き（右がフロント）に走る。
+// flip: true の形は左向きに描いてあるので左右反転して使う
 const CAR_SHAPES = {
-  sedan: { w: 100, body: 'M3 31v-6c0-3 2-5 7-5.6L29 18l11-8.4c1.5-1.1 3.2-1.6 5-1.6h19c2.3 0 4.3.9 5.8 2.6L78 18l13.6 2.2c3.5.6 5.4 2.6 5.4 5.6V31z', wheels: [22, 79], r: 6.2 },
+  // セダン: 右に長いボンネットと寝たフロントガラス、左に短いトランク
+  sedan: { w: 100, body: 'M3 31v-6.5c0-2.3 1.5-3.8 4.5-4.3L18 18.8l9.8-8.6c1.3-1.1 2.9-1.7 4.6-1.7h12.8c2.2 0 4.2.9 5.7 2.5L67 18.5l23 2.7c4.3.5 7 2.5 7 5.8V31z', wheels: [21, 80], r: 6.2 },
+  // 軽トールワゴン: 右に短いボンネット
   kei: { w: 84, body: 'M4 31V9.5C4 6.5 6 5 9 5h47.5c2.6 0 4.6 1 6 3.1L71 19l7 1.6c2.4.6 3.5 2.2 3.5 4.6V31z', wheels: [19, 66], r: 5.8 },
-  truck: { w: 100, body: 'M4 31V10c0-3 1.8-4.6 4.6-4.6h17c2.3 0 3.9 1 4.8 3.2L34 18h62v13z', wheels: [17, 82], r: 5.8 },
-  suv: { w: 100, body: 'M3 31v-9c0-3 2-4.6 6-5.3l13-2L30 7c1.1-1 2.5-1.5 4-1.5h38c2.1 0 3.7.8 4.8 2.5L82 15l10 1.6c3.3.6 5 2.5 5 5.4V31z', wheels: [23, 78], r: 6.6 },
+  // 軽トラ: 運転席が前（左向きに描いてあるので反転）
+  truck: { w: 100, body: 'M4 31V10c0-3 1.8-4.6 4.6-4.6h17c2.3 0 3.9 1 4.8 3.2L34 18h62v13z', wheels: [17, 82], r: 5.8, flip: true },
+  // SUV: ボンネットが前（左向きに描いてあるので反転）
+  suv: { w: 100, body: 'M3 31v-9c0-3 2-4.6 6-5.3l13-2L30 7c1.1-1 2.5-1.5 4-1.5h38c2.1 0 3.7.8 4.8 2.5L82 15l10 1.6c3.3.6 5 2.5 5 5.4V31z', wheels: [23, 78], r: 6.6, flip: true },
 };
 const car = (type) => {
   const s = CAR_SHAPES[type];
   return `<svg class="car car-${type}" viewBox="0 0 ${s.w} 40" aria-hidden="true">
-    <path d="${s.body}"/>
-    ${s.wheels.map((x) => `<circle cx="${x}" cy="31" r="${s.r + 1.6}" class="car-gap"/><circle cx="${x}" cy="31" r="${s.r}"/>`).join('')}
+    <g${s.flip ? ` transform="translate(${s.w} 0) scale(-1 1)"` : ''}>
+      <path d="${s.body}"/>
+      ${s.wheels.map((x) => `<circle cx="${x}" cy="31" r="${s.r + 1.6}" class="car-gap"/><circle cx="${x}" cy="31" r="${s.r}"/>`).join('')}
+    </g>
   </svg>`;
 };
 
@@ -116,6 +117,43 @@ const roadDivider = () => `
       <span class="runner" style="--d:-14s;--t:24s">${car('suv')}</span>
     </div>
   </div>`;
+
+// モードごとの架空の標識（実在しない）。形と色は本物の標識の分類に合わせている
+//   車名当て・後ろ姿当て: 警戒標識（黄色のひし形）　メーカー当て: 指示標識（青い丸）
+//   エンブレム当て: 規制標識（赤い縁の丸）　新型どっち？: 案内標識（青い四角）
+const CAR_FRONT = 'M20 45v-8c0-1.3.5-2.4 1.4-3.2l2.4-6.2c.7-1.7 2.2-2.8 4-2.8h8.4c1.8 0 3.3 1.1 4 2.8l2.4 6.2c.9.8 1.4 1.9 1.4 3.2v8h-4v3h-4v-3H28v3h-4v-3z';
+const MODE_SIGNS = {
+  name: `
+    <path class="ms-plate" d="M32 2 62 32 32 62 2 32z"/>
+    <path class="ms-ring" d="M32 6.6 57.4 32 32 57.4 6.6 32z"/>
+    <path class="ms-icon" d="${CAR_FRONT}"/>
+    <path class="ms-cut" d="M25.6 31.6h12.8l-1.6-4.2c-.3-.7-.9-1.1-1.6-1.1h-6.4c-.7 0-1.3.4-1.6 1.1zM23 36.5h4.2v2.6H23zM36.8 36.5H41v2.6h-4.2z"/>
+    <text class="ms-icon" x="32" y="22" text-anchor="middle" font-size="12" font-weight="900">?</text>`,
+  rear: `
+    <path class="ms-plate" d="M32 2 62 32 32 62 2 32z"/>
+    <path class="ms-ring" d="M32 6.6 57.4 32 32 57.4 6.6 32z"/>
+    <path class="ms-icon" d="${CAR_FRONT}"/>
+    <path class="ms-cut" d="M26 31.8h12l-1.4-4.4c-.3-.7-.9-1.1-1.6-1.1h-6c-.7 0-1.3.4-1.6 1.1zM28.5 38.5h7v3.5h-7z"/>
+    <path class="ms-cut ms-tail" d="M22.6 35.6h3.4v4.4h-3.4zM38 35.6h3.4v4.4H38z"/>
+    <text class="ms-icon" x="32" y="22" text-anchor="middle" font-size="12" font-weight="900">?</text>`,
+  maker: `
+    <circle class="ms-plate" cx="32" cy="32" r="30"/>
+    <circle class="ms-ring" cx="32" cy="32" r="26"/>
+    <path class="ms-icon" d="M17 45V31l7 4.2V31l7 4.2V31l7 4.2V20h5.5l1.5 25zM19.5 40h3v2.5h-3zM26.5 40h3v2.5h-3zM33.5 40h3v2.5h-3z"/>`,
+  emblem: `
+    <circle class="ms-plate" cx="32" cy="32" r="30"/>
+    <circle class="ms-ring" cx="32" cy="32" r="25.5"/>
+    <path class="ms-icon" d="M32 17.5 44 22v9c0 8-5.4 12.6-12 15-6.6-2.4-12-7-12-15v-9z"/>
+    <text class="ms-cut" x="32" y="38" text-anchor="middle" font-size="16" font-weight="900">?</text>`,
+  newer: `
+    <rect class="ms-plate" x="3" y="3" width="58" height="58" rx="7"/>
+    <rect class="ms-ring" x="7.5" y="7.5" width="49" height="49" rx="4"/>
+    <path class="ms-icon" d="M14 44V31.5c0-1.4.9-2.4 2.4-2.6l5.6-.8 5-5.2c.7-.7 1.6-1.1 2.6-1.1h9.8c1.3 0 2.4.6 3.2 1.6l4.4 5.6 3.6.6c1.4.3 2.4 1.4 2.4 2.8V44z"/>
+    <circle class="ms-cut" cx="22" cy="44" r="4.6"/><circle class="ms-icon" cx="22" cy="44" r="3.2"/>
+    <circle class="ms-cut" cx="42" cy="44" r="4.6"/><circle class="ms-icon" cx="42" cy="44" r="3.2"/>
+    <path class="ms-icon" d="M47 11l1.4 3.8L52 16l-3.6 1.4L47 21l-1.4-3.6L42 16l3.6-1.2z"/>`,
+};
+const modeSign = (key) => `<svg class="msign msign-${key}" viewBox="0 0 64 64" aria-hidden="true">${MODE_SIGNS[key]}</svg>`;
 
 // 案内標識の見出し
 const signLabel = (text, tone = 'blue') => `<h2 class="sign-label ${tone}">${text}</h2>`;
@@ -251,23 +289,26 @@ function renderHome() {
     <p class="level-note">販売ランキング <b>${lv.from}〜${lv.to}位</b> の車が出ます。エンブレムは${star <= 2 ? '国産のみ' : star === 3 ? '国産と輸入車' : '輸入車のみ'}</p>
 
     ${signLabel('モード')}
-    <div class="modes">
+    <div class="modes" role="radiogroup" aria-label="モード">
       ${Object.entries(MODES).map(([key, m]) => {
         const count = questionCount(key);
         const best = load(`best:${key}:${star}`);
         const disabled = count < 4;
         return `
-          <button class="mode" data-mode="${key}" ${disabled ? 'disabled' : ''}>
-            <span class="mode-sign">
-              ${arrow(m.arrow)}
+          <button class="mode" role="radio" data-mode="${key}" aria-checked="${key === mode}" ${disabled ? 'disabled' : ''}>
+            ${modeSign(key)}
+            <span class="mode-text">
               <b>${m.title}</b>
-            </span>
-            <span class="mode-aux">
-              <span class="mode-desc">${disabled ? 'この難易度では出題できません' : m.desc}</span>
-              <span class="best">${disabled ? '' : `${count}問　ベスト <b>${best ?? '–'}</b>`}</span>
+              <small>${disabled ? 'この難易度では出題できません' : `${m.desc}`}</small>
+              ${disabled ? '' : `<small class="best">${count}問　ベスト ${best ? `<em>${best}</em>/${count}` : '–'}</small>`}
             </span>
           </button>`;
       }).join('')}
+    </div>
+
+    <div class="start">
+      <p class="start-summary"><b>${MODES[mode].title}</b>　難易度${lv.star}（${lv.from}〜${lv.to}位）・${questionCount(mode)}問</p>
+      <button class="start-btn" id="start" ${questionCount(mode) < 4 ? 'disabled' : ''}>スタート</button>
     </div>`;
 
   $app.querySelectorAll('[data-star]').forEach((b) => b.addEventListener('click', () => {
@@ -275,7 +316,12 @@ function renderHome() {
     save('star', star);
     renderHome();
   }));
-  $app.querySelectorAll('[data-mode]').forEach((b) => b.addEventListener('click', () => startQuiz(b.dataset.mode)));
+  $app.querySelectorAll('[data-mode]').forEach((b) => b.addEventListener('click', () => {
+    mode = b.dataset.mode;
+    save('mode', mode);
+    renderHome();
+  }));
+  document.getElementById('start').addEventListener('click', () => startQuiz(mode));
 }
 
 // ---------- 画面: クイズ（学科試験の問題用紙） ----------

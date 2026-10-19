@@ -112,7 +112,6 @@ ol { padding: 0; list-style: none; }
 }
 .sign-label.green { background: var(--sign-green); }
 
-.sign-arrow { width: 26px; height: 26px; flex: none; fill: var(--sign-white); }
 
 /* ヘキサ（都道府県道）とおにぎり（国道） */
 .hexa { width: 52px; height: 46px; display: block; }
@@ -238,51 +237,94 @@ main:has(.quiz) { max-width: 1120px; padding-top: 14px; }
 .level-note { font-size: 13px; color: var(--muted); margin: 10px 2px 0; }
 .level-note b { color: var(--ink); }
 
-/* モード: 方面案内標識＋補助標識。スマホ2列、PC3列 */
-.modes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 10px; }
+/* モード: 架空の標識＋モード名。難易度と同じく選択式で、選ばれていないものは白抜き */
+.modes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
 @media (min-width: 640px) { .modes { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .mode {
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 0;
-  border: 0;
-  background: none;
-  text-align: left;
-}
-.mode-sign {
-  display: flex;
   align-items: center;
   gap: 10px;
-  min-height: 64px;
-  padding: 10px 14px;
-  background: var(--sign-blue);
-  color: var(--sign-white);
-  border-radius: 8px;
-  outline: 2px solid var(--sign-white);
-  outline-offset: -6px;
-  transition: transform 0.12s ease;
+  width: 100%;
+  min-width: 0;
+  padding: 10px 10px;
+  border: 0;
+  background: transparent;
+  border-radius: 6px;
+  text-align: left;
 }
-.mode:nth-child(even) .mode-sign { background: var(--sign-green); }
-.mode-sign b { font-size: 17px; font-weight: 800; line-height: 1.25; }
-.mode-aux {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  margin: 3px 8px 0;
-  padding: 4px 8px;
-  background: var(--sign-white);
-  color: #111214;
-  border: 2px solid #111214;
-  border-radius: 4px;
-  font-size: 11.5px;
-  line-height: 1.45;
+.mode[aria-checked="true"] { background: var(--surface); box-shadow: inset 0 -3px 0 var(--sign-yellow); }
+.mode:disabled { opacity: 0.4; }
+.mode-text { display: flex; flex-direction: column; min-width: 0; line-height: 1.35; }
+.mode-text b { font-size: 15px; font-weight: 800; }
+.mode-text small { font-size: 11.5px; color: var(--muted); }
+.mode-text .best em { font-style: normal; font-family: var(--num); font-weight: 800; color: var(--ink); }
+
+.msign { flex: none; width: 48px; height: 48px; transition: transform 0.15s ease; }
+.mode[aria-checked="true"] .msign { transform: scale(1.1); }
+.msign text { font-family: var(--jp); }
+/* 選ばれていない標識は白抜き */
+.ms-plate { fill: var(--surface); stroke: var(--line); stroke-width: 2; }
+.ms-ring { fill: none; stroke: var(--line); stroke-width: 2.2; }
+.ms-icon { fill: var(--muted); }
+.ms-cut { fill: var(--surface); }
+/* 選ばれた標識は本来の色 */
+.mode[aria-checked="true"] .ms-plate { stroke: none; }
+.mode[aria-checked="true"] .msign-name .ms-plate,
+.mode[aria-checked="true"] .msign-rear .ms-plate { fill: var(--sign-yellow); }
+.mode[aria-checked="true"] .msign-name .ms-ring,
+.mode[aria-checked="true"] .msign-rear .ms-ring { stroke: #111214; }
+.mode[aria-checked="true"] .msign-name .ms-icon,
+.mode[aria-checked="true"] .msign-rear .ms-icon { fill: #111214; }
+.mode[aria-checked="true"] .msign-name .ms-cut,
+.mode[aria-checked="true"] .msign-rear .ms-cut { fill: var(--sign-yellow); }
+.mode[aria-checked="true"] .msign-rear .ms-tail { fill: var(--sign-red); }
+.mode[aria-checked="true"] .msign-maker .ms-plate,
+.mode[aria-checked="true"] .msign-newer .ms-plate { fill: var(--sign-blue); }
+.mode[aria-checked="true"] .msign-maker .ms-ring,
+.mode[aria-checked="true"] .msign-newer .ms-ring { stroke: #fff; }
+.mode[aria-checked="true"] .msign-maker .ms-icon,
+.mode[aria-checked="true"] .msign-newer .ms-icon { fill: #fff; }
+.mode[aria-checked="true"] .msign-maker .ms-cut,
+.mode[aria-checked="true"] .msign-newer .ms-cut { fill: var(--sign-blue); }
+.msign-emblem .ms-ring { stroke-width: 6; }
+.mode[aria-checked="true"] .msign-emblem .ms-plate { fill: #fff; }
+.mode[aria-checked="true"] .msign-emblem .ms-ring { stroke: var(--sign-red); }
+.mode[aria-checked="true"] .msign-emblem .ms-icon { fill: #111214; }
+.mode[aria-checked="true"] .msign-emblem .ms-cut { fill: #fff; }
+
+/* スタート */
+.start { margin-top: 26px; }
+.start-summary { font-size: 13px; color: var(--muted); text-align: center; margin-bottom: 8px; }
+.start-summary b { color: var(--ink); }
+.start-btn {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 16px 20px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--ink);
+  color: var(--bg);
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 0.3em;
+  overflow: hidden;
+  transition: transform 0.1s ease;
 }
-.mode-aux .best { font-weight: 700; color: #5d6066; }
-.mode-aux .best b { font-family: var(--num); font-size: 14px; color: #111214; }
-.mode:not(:disabled):active .mode-sign { transform: translateY(2px); }
-.mode:not(:disabled):hover .mode-sign { outline-width: 3px; }
-.mode:disabled { opacity: 0.45; }
+/* 両端にチェッカーフラッグ */
+.start-btn::before,
+.start-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 18px;
+  background: conic-gradient(#111 25%, #fff 0 50%, #111 0 75%, #fff 0) 0 0 / 9px 9px;
+}
+.start-btn::before { left: 0; }
+.start-btn::after { right: 0; }
+.start-btn:not(:disabled):active { transform: translateY(2px); }
+.start-btn:disabled { opacity: 0.4; }
 
 /* ---------- quiz（学科試験） ---------- */
 
@@ -732,8 +774,9 @@ kbd { font-family: var(--num); font-size: 11px; padding: 0 5px; border: 1px soli
   .tab { padding: 3px 9px; }
   .level .hexa { width: 42px; height: 37px; }
 }
-@media (max-width: 420px) {
-  .mode-sign { gap: 8px; padding: 10px 12px; }
-  .mode-sign b { font-size: 15px; white-space: nowrap; }
-  .mode-sign .sign-arrow { width: 22px; height: 22px; }
+@media (max-width: 480px) {
+  .mode { gap: 8px; padding: 10px 6px; }
+  .mode-text b { font-size: 14px; white-space: nowrap; }
+  .mode-text small:not(.best) { display: none; }
+  .msign { width: 42px; height: 42px; }
 }
