@@ -780,3 +780,31 @@ kbd { font-family: var(--num); font-size: 11px; padding: 0 5px; border: 1px soli
   .mode-text small:not(.best) { display: none; }
   .msign { width: 42px; height: 42px; }
 }
+
+/* 「新型」枠: 販売台数の難易度とは別物なので、点線で区切って高速道路の緑にする */
+.levels { grid-template-columns: repeat(5, 1fr) 1.1fr; }
+.level-new { position: relative; margin-left: 4px; }
+.level-new::before { content: ""; position: absolute; left: -4px; top: 8px; bottom: 8px; border-left: 2px dashed var(--line); }
+.level-new .hexa text, .mini-hexa.is-new .hexa text { font-family: var(--jp); font-size: 22px; font-weight: 900; }
+.level-new[aria-checked="true"] .hexa-plate, .mini-hexa.is-new .hexa-plate { fill: var(--sign-green); }
+
+.new-badge {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  padding: 0 6px;
+  font-size: 10.5px;
+  font-weight: 800;
+  line-height: 1.8;
+  color: #fff;
+  background: var(--sign-green);
+  border-radius: 3px;
+  outline: 1px solid #fff;
+  outline-offset: -3px;
+}
+@media (max-width: 400px) {
+  .levels { gap: 2px; }
+  .level .hexa { width: 40px; height: 35px; }
+  .level-name { font-size: 11px; }
+  .level-top { font-size: 9.5px; }
+}

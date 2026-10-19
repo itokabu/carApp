@@ -4333,5 +4333,27 @@
    }
   ],
   "fetchedAt": "2026-10-19T00:41:04.262Z"
+ },
+ "ホンダ|N-VAN|{\"since\":\"2018-07\"}": {
+  "wiki": "ホンダ・N-VAN",
+  "gens": [
+   {
+    "label": "N-VAN e :",
+    "period": "2024年10月10日 - (発表:2024年6月13日)",
+    "front": {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Honda_N-VAN_e%EF%BC%9AFUN_%28ZAB-JJ3%29_front.jpg/960px-Honda_N-VAN_e%EF%BC%9AFUN_%28ZAB-JJ3%29_front.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File:Honda_N-VAN_e%EF%BC%9AFUN_(ZAB-JJ3)_front.jpg",
+     "artist": "Tokumeigakarinoaoshima",
+     "license": "CC0"
+    },
+    "rear": {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Honda_N-VAN_e%EF%BC%9AFUN_%28ZAB-JJ3%29_rear.jpg/960px-Honda_N-VAN_e%EF%BC%9AFUN_%28ZAB-JJ3%29_rear.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File:Honda_N-VAN_e%EF%BC%9AFUN_(ZAB-JJ3)_rear.jpg",
+     "artist": "Tokumeigakarinoaoshima",
+     "license": "CC0"
+    }
+   }
+  ],
+  "fetchedAt": "2026-10-19T02:09:10.123Z"
  }
 }

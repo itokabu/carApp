@@ -402,6 +402,15 @@ async function fetchEmblems() {
   });
 }
 
+// 最新モデルの日本での発売年月（YYYY-MM）。販売期間に「日本:2026年1月」のような記載があればそちらを優先する
+function launchOf(gen) {
+  if (!gen) return null;
+  const jp = String(gen.period ?? '').match(/日本\s*[:：]?\s*(\d{4})年(?:\s*(\d{1,2})月)?/);
+  const any = [gen.period, gen.label].map((s) => String(s ?? '').match(/(\d{4})年(?:\s*(\d{1,2})月)?/)).find(Boolean);
+  const m = jp ?? any;
+  return m ? `${m[1]}-${String(m[2] ?? 1).padStart(2, '0')}` : null;
+}
+
 // ---------- main ----------
 
 function mergeBy(cars, keyFn, onMerge) {
@@ -439,8 +448,17 @@ async function main() {
     prev.name = overrides[prev.id]?.name ?? prev.wikiTitle.split('・').slice(1).join('・').replace(/\s*\(.*\)$/, '');
   })
     .sort((a, b) => b.units - a.units)
-    .slice(0, TOP_N)
-    .map(({ wikiTitle, ...c }, i) => ({ rank: i + 1, ...c, maker: wikiMaker(c.maker), name: overrides[c.id]?.name ?? c.name }));
+    .map(({ wikiTitle, ...c }, i) => ({
+      rank: i + 1, ...c, maker: wikiMaker(c.maker), name: overrides[c.id]?.name ?? c.name,
+      since: overrides[c.id]?.since ?? launchOf(c.gens?.[0]),
+    }));
+
+  // 「新型」枠: 最新モデルの発売が直近2年以内の車。ランキング100位より下でも新型なら残す
+  const latest = [jada.latest, kei.latest].sort().at(-1);
+  const [ly, lm] = latest.split('-').map(Number);
+  const from = new Date(Date.UTC(ly, lm - 1 - 23, 1)); // 最新月を含めて24か月前
+  const newSince = `${from.getUTCFullYear()}-${String(from.getUTCMonth() + 1).padStart(2, '0')}`;
+  cars = cars.filter((c) => c.rank <= TOP_N || (c.gens && c.since >= newSince));
 
   const withImage = cars.filter((c) => c.gens).length;
   if (withImage < 30) throw new Error(`写真のある車種が少なすぎます (${withImage})`);
@@ -448,6 +466,7 @@ async function main() {
   const out = {
     updatedAt: new Date().toISOString(),
     period: { registered: jada.latest, kei: kei.latest },
+    newSince,
     sources: [
       { name: '一般社団法人 日本自動車販売協会連合会（自販連）', url: JADA_PAGE },
       { name: '一般社団法人 全国軽自動車協会連合会（全軽自協）', url: KEI_PAGE },

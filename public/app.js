@@ -11,6 +11,9 @@ const LEVELS = [
   { star: 4, from: 46, to: 70, label: 'マニア' },
   { star: 5, from: 71, to: 100, label: '鬼' },
 ];
+// 「新型」枠は販売台数ではなく新しさで選ぶ: 最新モデルの発売が直近2年以内の車（データの newSince 以降）
+const NEW_LEVEL = { star: 'new', label: '新型' };
+const ALL_LEVELS = [...LEVELS, NEW_LEVEL];
 
 const MODES = {
   name: { title: '車名当て', desc: '前から見た写真で当てる', prompt: 'この車の名前はどれか。' },
@@ -29,7 +32,7 @@ const $detail = document.getElementById('detail');
 const $lightbox = document.getElementById('lightbox');
 
 let data = null;
-let star = Number(load('star')) || 1;
+let star = load('star') === 'new' ? 'new' : Number(load('star')) || 1;
 let mode = MODES[load('mode')] ? load('mode') : 'name';
 let quiz = null; // 出題中の状態（キーボード操作用）
 
@@ -54,10 +57,16 @@ function shuffle(arr) {
 }
 
 const sample = (arr, n) => shuffle(arr).slice(0, n);
-const level = () => LEVELS.find((l) => l.star === star) ?? LEVELS[0];
+const level = () => ALL_LEVELS.find((l) => l.star === star) ?? LEVELS[0];
+const isNewLevel = () => star === 'new';
+const isNewCar = (c) => !!c.since && c.since >= data.newSince;
+// 「難易度3（26〜45位）」「新型（2024年10月以降に発売）」
+const levelName = (lv = level()) => (lv.star === 'new' ? '新型' : `難易度${lv.star}`);
+const levelRange = (lv = level()) => (lv.star === 'new' ? `${ym(data.newSince)}以降に発売` : `${lv.from}〜${lv.to}位`);
 const group = (car) => (car.kind === '登録車' ? '登録車' : '軽');
 const fmt = (n) => Number(n).toLocaleString('ja-JP');
 const ym = (s) => s?.replace(/^(\d{4})-0?(\d+)$/, '$1年$2月') ?? '';
+const ymShort = (s) => s?.replace(/^(\d{4})-0?(\d+)$/, '$1.$2') ?? '';
 const MARKS = ['①', '②', '③', '④'];
 
 function preload(url) {
@@ -193,11 +202,12 @@ const kindPlate = (c) => `<span class="kind kind-${group(c) === '軽' ? 'kei' : 
 
 // ---------- 出題 ----------
 
-const inLevel = (c, lv = level()) => c.rank >= lv.from && c.rank <= lv.to;
+const inLevel = (c, lv = level()) => (lv.star === 'new' ? isNewCar(c) : c.rank >= lv.from && c.rank <= lv.to);
 
 function poolFor(mode) {
   if (mode === 'emblem') {
     const all = data.emblems ?? [];
+    if (isNewLevel()) return all;
     if (star <= 2) return all.filter((e) => e.domestic);
     if (star === 3) return all;
     return all.filter((e) => !e.domestic);
@@ -214,7 +224,9 @@ const questionCount = (mode) => Math.min(QUESTIONS, poolFor(mode).length);
 // 同じ区分（軽／登録車）を優先して、見た目で区別させる
 function distractors(answer, n, keyFn) {
   const all = data.cars.filter((c) => c.gens?.length);
-  const byDistance = (c) => Math.abs(c.rank - answer.rank) + Math.random() * 12;
+  const byDistance = isNewLevel()
+    ? (c) => (isNewCar(c) ? 0 : 50 + Math.abs(c.rank - answer.rank)) + Math.random() * 12
+    : (c) => Math.abs(c.rank - answer.rank) + Math.random() * 12;
   const ordered = [...all].sort((a, b) => byDistance(a) - byDistance(b));
   const pick = (list) => {
     const seen = new Set([keyFn(answer)]);
@@ -285,8 +297,15 @@ function renderHome() {
           <span class="level-name">${l.label}</span>
           <span class="level-top">${l.from}〜${l.to}位</span>
         </button>`).join('')}
+      <button class="level level-new" role="radio" data-star="new" aria-checked="${isNewLevel()}" aria-label="新型 ${ym(data.newSince)}以降に発売された車">
+        ${hexa('新')}
+        <span class="level-name">新型</span>
+        <span class="level-top">${esc(ymShort(data.newSince))}〜</span>
+      </button>
     </div>
-    <p class="level-note">販売ランキング <b>${lv.from}〜${lv.to}位</b> の車が出ます。エンブレムは${star <= 2 ? '国産のみ' : star === 3 ? '国産と輸入車' : '輸入車のみ'}</p>
+    <p class="level-note">${isNewLevel()
+      ? `販売台数ではなく新しさで選びます。最新モデルが <b>${ym(data.newSince)}以降</b> に発売された車が出ます`
+      : `販売ランキング <b>${lv.from}〜${lv.to}位</b> の車が出ます。エンブレムは${star <= 2 ? '国産のみ' : star === 3 ? '国産と輸入車' : '輸入車のみ'}`}</p>
 
     ${signLabel('モード')}
     <div class="modes" role="radiogroup" aria-label="モード">
@@ -307,12 +326,12 @@ function renderHome() {
     </div>
 
     <div class="start">
-      <p class="start-summary"><b>${MODES[mode].title}</b>　難易度${lv.star}（${lv.from}〜${lv.to}位）・${questionCount(mode)}問</p>
+      <p class="start-summary"><b>${MODES[mode].title}</b>　${levelName(lv)}（${levelRange(lv)}）・${questionCount(mode)}問</p>
       <button class="start-btn" id="start" ${questionCount(mode) < 4 ? 'disabled' : ''}>スタート</button>
     </div>`;
 
   $app.querySelectorAll('[data-star]').forEach((b) => b.addEventListener('click', () => {
-    star = Number(b.dataset.star);
+    star = b.dataset.star === 'new' ? 'new' : Number(b.dataset.star);
     save('star', star);
     renderHome();
   }));
@@ -382,7 +401,7 @@ function renderQuestion() {
     <div class="quiz">
       <div class="quiz-head">
         <button class="quit" data-go="home">やめる</button>
-        <span class="quiz-meta">${m.title}<span class="mini-hexa">${hexa(star)}</span></span>
+        <span class="quiz-meta">${m.title}<span class="mini-hexa${isNewLevel() ? ' is-new' : ''}">${hexa(isNewLevel() ? '新' : star)}</span></span>
         <span class="counter"><b>${quiz.index + 1}</b> / ${total}</span>
       </div>
       ${progressRoad()}
@@ -493,7 +512,7 @@ function renderResult() {
   if (isBest) save(bestKey, score);
   const rate = score / total;
   const msg = rate === 1 ? '満点です。次の難易度へどうぞ' : rate >= 0.7 ? '合格。かなり詳しい' : rate >= 0.4 ? 'あと少し。図鑑で復習しよう' : 'まずは図鑑で覚えよう';
-  const canLevelUp = rate === 1 && star < 5;
+  const canLevelUp = rate === 1 && !isNewLevel() && star < 5;
 
   const wrong = questions.filter((_, i) => results[i] === false);
   const wrongCars = wrong.filter((q) => q.car).map((q) => q.car);
@@ -503,7 +522,7 @@ function renderResult() {
 
   $app.innerHTML = `
     <section class="score-sheet">
-      <p class="sheet-no">採点結果　${MODES[mode].title}・難易度${lv.star}（${lv.from}〜${lv.to}位）</p>
+      <p class="sheet-no">採点結果　${MODES[mode].title}・${levelName(lv)}（${levelRange(lv)}）</p>
       <div class="score"><b>${score}</b><small>点 / ${total}点</small>${rate >= 0.7 ? RED_CIRCLE : ''}</div>
       <ol class="tally">${results.map((r, i) => `<li class="${r ? 'ok' : 'ng'}"><span>${i + 1}</span>${r ? '○' : '×'}</li>`).join('')}</ol>
       <p class="msg">${isBest ? '<span class="best-stamp">自己ベスト</span>' : ''}${msg}</p>
@@ -539,6 +558,7 @@ function cardHtml(c) {
       <span class="thumb">
         ${img ? `<img src="${esc(img.url)}" crossorigin="anonymous" alt="" loading="lazy" decoding="async">` : '<span class="noimg">写真なし</span>'}
         <span class="rank" aria-label="${c.rank}位">${onigiri(c.rank)}</span>
+        ${isNewCar(c) ? `<span class="new-badge">新型 ${esc(ymShort(c.since))}〜</span>` : ''}
       </span>
       <span class="meta">
         <b>${esc(c.name)}</b>
@@ -680,12 +700,25 @@ async function init() {
     $app.innerHTML = '<p class="empty">データを読み込めませんでした。インターネットにつながっているか確認して、再読み込みしてください。</p>';
     return;
   }
+  // 古いデータで newSince がないときは、最新月から24か月前を新型の境目にする
+  if (!data.newSince) {
+    const [y, m] = [data.period.registered, data.period.kei].sort().at(-1).split('-').map(Number);
+    const d = new Date(Date.UTC(y, m - 1 - 23, 1));
+    data.newSince = `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, '0')}`;
+  }
   renderFooter();
   go(location.hash === '#zukan' ? 'zukan' : 'home');
 }
 
+// オフライン用のキャッシュ。手元のサーバー（localhost）では使わない
+// （サーバーを止めたあとも古い画面がキャッシュから出続けてしまうため）
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('sw.js').catch(() => {});
+  if (/^(localhost|127.0.0.1|[::1])$/.test(location.hostname)) {
+    navigator.serviceWorker.getRegistrations().then((rs) => rs.forEach((r) => r.unregister())).catch(() => {});
+    caches?.keys().then((ks) => ks.forEach((k) => caches.delete(k))).catch(() => {});
+  } else {
+    navigator.serviceWorker.register('sw.js').catch(() => {});
+  }
 }
 
 init();
