@@ -3,28 +3,37 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>街クルマクイズ</title>
-  <meta name="description" content="日本の道でよく見る車を、最新の販売ランキングから出題するクイズと図鑑">
-  <meta name="theme-color" content="#0f172a">
+  <title>クルミル｜街でよく見る車クイズ</title>
+  <meta name="description" content="いま日本の道を走っている車を、最新の新車販売ランキングから出題。車名・後ろ姿・メーカー・エンブレム・新型旧型の5モードと図鑑で、街の車に詳しくなれるクイズです。">
+  <meta name="theme-color" content="#f4f1ea" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)">
+  <!-- 車のデータ（毎月自動更新）の置き場所。annotations-lab.com などに置くときは GitHub Pages の URL を指す -->
+  <meta name="kurumiru:data" content="data/cars.json">
+  <meta property="og:title" content="クルミル｜街でよく見る車クイズ">
+  <meta property="og:description" content="最新の販売ランキングから出題。街でよく見る車、いくつわかる？">
+  <meta property="og:type" content="website">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="topbar">
-    <button class="brand" data-go="home" aria-label="ホームへ">
-      <img src="icon.svg" alt="" width="28" height="28">
-      <span>街クルマクイズ</span>
+    <button class="brand" data-go="home" aria-label="クルミル ホームへ">
+      <img src="icon.svg" alt="" width="30" height="30">
+      <span>クルミル</span>
     </button>
     <nav class="tabs" aria-label="メニュー">
-      <button data-go="home" class="tab is-active">クイズ</button>
+      <button data-go="home" class="tab" aria-current="page">クイズ</button>
       <button data-go="zukan" class="tab">図鑑</button>
     </nav>
   </header>
 
   <main id="app" aria-live="polite">
-    <p class="loading">データを読み込み中…</p>
+    <p class="empty">データを読み込み中…</p>
   </main>
 
   <footer class="footer" id="footer"></footer>

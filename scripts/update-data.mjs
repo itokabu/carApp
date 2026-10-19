@@ -351,6 +351,57 @@ async function attachImages(cars, overrides) {
   fs.writeFileSync(CACHE_FILE, JSON.stringify(cache, null, 1) + '\n');
 }
 
+// ---------- エンブレム ----------
+// Wikimedia Commons のロゴ（パブリックドメイン）。社名の文字が入っている画像は crop（左上 x,y と幅 w,高さ h の割合）で
+// マーク部分だけを表示する。domestic=国産
+const EMBLEMS = [
+  { maker: 'トヨタ', file: 'Toyota EU.svg', domestic: true },
+  { maker: 'ホンダ', file: 'Honda.svg', domestic: true, crop: [0.08, 0, 0.84, 0.8] },
+  { maker: '日産', file: 'Nissan 2020 logo.svg', domestic: true },
+  { maker: 'スズキ', file: 'Suzuki logo 2.svg', domestic: true, crop: [0.2, 0, 0.6, 0.6] },
+  { maker: 'ダイハツ', file: 'Daihatsu logo 1998.svg', domestic: true, crop: [0, 0, 0.3, 1] },
+  { maker: 'マツダ', file: 'Mazda logo with emblem, new.svg', domestic: true, crop: [0.1, 0, 0.8, 0.74] },
+  { maker: 'スバル', file: 'Subaru logo (transparent).svg', domestic: true, crop: [0.1, 0, 0.8, 0.6] },
+  { maker: '三菱', file: 'Mitsubishi logo.svg', domestic: true },
+  { maker: 'レクサス', file: 'Lexus Logo.svg', domestic: true },
+  { maker: 'メルセデス・ベンツ', file: 'Mercedes-Benz Star 2022.svg' },
+  { maker: 'BMW', file: 'BMW logo (gray).svg' },
+  { maker: 'フォルクスワーゲン', file: 'Volkswagen logo 2019.svg' },
+  { maker: 'アウディ', file: 'Audi-Logo 2016.svg' },
+  { maker: 'ボルボ', file: 'Volvo-Iron-Mark-Black.svg' },
+  { maker: 'ヒョンデ', file: 'Hyundai Motor Company logo.svg', crop: [0, 0, 0.205, 1] },
+  { maker: 'テスラ', file: 'Tesla T symbol.svg' },
+  { maker: 'ルノー', file: 'Renault 2021 Text.svg', crop: [0.2, 0, 0.6, 0.72] },
+  { maker: 'シトロエン', file: 'Citroen 2022.svg', crop: [0.15, 0, 0.7, 0.74] },
+  { maker: 'MINI', file: 'MINI logo.svg' },
+];
+
+async function fetchEmblems() {
+  const j = await wikiApi({
+    titles: EMBLEMS.map((e) => `File:${e.file}`).join('|'), prop: 'imageinfo', iiprop: 'url|size|extmetadata',
+  });
+  const byTitle = new Map((j.query?.pages ?? []).map((p) => [p.title, p.imageinfo?.[0]]));
+  const norm2 = new Map((j.query?.normalized ?? []).map((n) => [n.from, n.to]));
+  return EMBLEMS.flatMap((e) => {
+    const t = `File:${e.file}`;
+    const ii = byTitle.get(norm2.get(t) ?? t);
+    if (!ii) { console.warn(`エンブレムが見つかりません: ${e.file}`); return []; }
+    return [{
+      maker: e.maker,
+      domestic: !!e.domestic,
+      crop: e.crop ?? [0, 0, 1, 1],
+      image: {
+        url: ii.url, // SVG のまま使う（切り抜いて拡大しても粗くならない）
+        width: ii.width,
+        height: ii.height,
+        page: ii.descriptionurl,
+        artist: cleanText(ii.extmetadata?.Artist?.value ?? '不明').slice(0, 80),
+        license: cleanText(ii.extmetadata?.LicenseShortName?.value ?? ''),
+      },
+    }];
+  });
+}
+
 // ---------- main ----------
 
 function mergeBy(cars, keyFn, onMerge) {
@@ -403,6 +454,7 @@ async function main() {
       { name: 'Wikipedia / Wikimedia Commons（写真）', url: 'https://ja.wikipedia.org/' },
     ],
     cars,
+    emblems: await fetchEmblems(),
   };
   fs.mkdirSync(path.dirname(OUT_FILE), { recursive: true });
   fs.writeFileSync(OUT_FILE, JSON.stringify(out, null, 1) + '\n');

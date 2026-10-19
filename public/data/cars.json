@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-19T00:59:59.026Z",
+ "updatedAt": "2026-10-19T01:12:35.939Z",
  "period": {
   "registered": "2026-09",
   "kei": "2026-09"
@@ -4740,6 +4740,350 @@
      "rear": null
     }
    ]
+  }
+ ],
+ "emblems": [
+  {
+   "maker": "トヨタ",
+   "domestic": true,
+   "crop": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Toyota_EU.svg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 512,
+    "height": 333,
+    "page": "https://commons.wikimedia.org/wiki/File:Toyota_EU.svg",
+    "artist": "Toyota Europe",
+    "license": "Public domain"
+   }
+  },
+  {
+   "maker": "ホンダ",
+   "domestic": true,
+   "crop": [
+    0.08,
+    0,
+    0.84,
+    0.8
+   ],
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Honda.svg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 2049,
+    "height": 1984,
+    "page": "https://commons.wikimedia.org/wiki/File:Honda.svg",
+    "artist": "不明 Unknown author",
+    "license": "Public domain"
+   }
+  },
+  {
+   "maker": "日産",
+   "domestic": true,
+   "crop": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Nissan_2020_logo.svg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 1000,
+    "height": 837,
+    "page": "https://commons.wikimedia.org/wiki/File:Nissan_2020_logo.svg",
+    "artist": "Nissan Motor Corporation",
+    "license": "Public domain"
+   }
+  },
+  {
+   "maker": "スズキ",
+   "domestic": true,
+   "crop": [
+    0.2,
+    0,
+    0.6,
+    0.6
+   ],
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Suzuki_logo_2025_%28vertical%29.svg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 496,
+    "height": 332,
+    "page": "https://commons.wikimedia.org/wiki/File:Suzuki_logo_2025_(vertical).svg",
+    "artist": "Suzuki Motor Corporation",
+    "license": "Public domain"
+   }
+  },
+  {
+   "maker": "ダイハツ",
+   "domestic": true,
+   "crop": [
+    0,
+    0,
+    0.3,
+    1
+   ],
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Daihatsu_logo_1998.svg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 512,
+    "height": 93,
+    "page": "https://commons.wikimedia.org/wiki/File:Daihatsu_logo_1998.svg",
+    "artist": "Daihatsu",
+    "license": "Public domain"
+   }
+  },
+  {
+   "maker": "マツダ",
+   "domestic": true,
+   "crop": [
+    0.1,
+    0,
+    0.8,
+    0.74
+   ],
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Mazda_logo_with_emblem%2C_new.svg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 79,
+    "height": 73,
+    "page": "https://commons.wikimedia.org/wiki/File:Mazda_logo_with_emblem,_new.svg",
+    "artist": "الشيخ ماهر بن حمد المعيقلي",
+    "license": "CC0"
+   }
+  },
+  {
+   "maker": "スバル",
+   "domestic": true,
+   "crop": [
+    0.1,
+    0,
+    0.8,
+    0.6
+   ],
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Subaru_logo_%28transparent%29.svg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 1021,
+    "height": 617,
+    "page": "https://commons.wikimedia.org/wiki/File:Subaru_logo_(transparent).svg",
+    "artist": "Subaru Corporation",
+    "license": "Public domain"
+   }
+  },
+  {
+   "maker": "三菱",
+   "domestic": true,
+   "crop": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Mitsubishi_logo.svg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 850,
+    "height": 733,
+    "page": "https://commons.wikimedia.org/wiki/File:Mitsubishi_logo.svg",
+    "artist": "Mitsubishi",
+    "license": "Public domain"
+   }
+  },
+  {
+   "maker": "レクサス",
+   "domestic": true,
+   "crop": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Lexus_Logo.svg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 131,
+    "height": 96,
+    "page": "https://commons.wikimedia.org/wiki/File:Lexus_Logo.svg",
+    "artist": "Glebushko0703",
+    "license": "CC0"
+   }
+  },
+  {
+   "maker": "メルセデス・ベンツ",
+   "domestic": false,
+   "crop": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/32/Mercedes-Benz_Star_2022.svg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 512,
+    "height": 512,
+    "page": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_Star_2022.svg",
+    "artist": "Mercedes-Benz Group",
+    "license": "Public domain"
+   }
+  },
+  {
+   "maker": "BMW",
+   "domestic": false,
+   "crop": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f4/BMW_logo_%28gray%29.svg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 600,
+    "height": 600,
+    "page": "https://commons.wikimedia.org/wiki/File:BMW_logo_(gray).svg",
+    "artist": "BMW",
+    "license": "Public domain"
+   }
+  },
+  {
+   "maker": "フォルクスワーゲン",
+   "domestic": false,
+   "crop": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Volkswagen_logo_2019.svg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 512,
+    "height": 512,
+    "page": "https://commons.wikimedia.org/wiki/File:Volkswagen_logo_2019.svg",
+    "artist": "Volkswagen",
+    "license": "Public domain"
+   }
+  },
+  {
+   "maker": "アウディ",
+   "domestic": false,
+   "crop": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/92/Audi-Logo_2016.svg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 1000,
+    "height": 353,
+    "page": "https://commons.wikimedia.org/wiki/File:Audi-Logo_2016.svg",
+    "artist": "Strichpunkt / KMS Team",
+    "license": "Public domain"
+   }
+  },
+  {
+   "maker": "ボルボ",
+   "domestic": false,
+   "crop": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Volvo-Iron-Mark-Black.svg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 512,
+    "height": 512,
+    "page": "https://commons.wikimedia.org/wiki/File:Volvo-Iron-Mark-Black.svg",
+    "artist": "Volvo Group",
+    "license": "Public domain"
+   }
+  },
+  {
+   "maker": "ヒョンデ",
+   "domestic": false,
+   "crop": [
+    0,
+    0,
+    0.205,
+    1
+   ],
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Hyundai_Motor_Company_logo.svg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 1000,
+    "height": 129,
+    "page": "https://commons.wikimedia.org/wiki/File:Hyundai_Motor_Company_logo.svg",
+    "artist": "Hyundai Motor Company",
+    "license": "Public domain"
+   }
+  },
+  {
+   "maker": "テスラ",
+   "domestic": false,
+   "crop": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Tesla_T_symbol.svg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 255,
+    "height": 254,
+    "page": "https://commons.wikimedia.org/wiki/File:Tesla_T_symbol.svg",
+    "artist": "Tesla (logo), Fry1989 eh? (vectorization)",
+    "license": "Public domain"
+   }
+  },
+  {
+   "maker": "ルノー",
+   "domestic": false,
+   "crop": [
+    0.2,
+    0,
+    0.6,
+    0.72
+   ],
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Renault_2021_Text.svg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 500,
+    "height": 438,
+    "page": "https://commons.wikimedia.org/wiki/File:Renault_2021_Text.svg",
+    "artist": "Renault / Reproduction : Kilyann Le Hen",
+    "license": "Public domain"
+   }
+  },
+  {
+   "maker": "シトロエン",
+   "domestic": false,
+   "crop": [
+    0.15,
+    0,
+    0.7,
+    0.74
+   ],
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Citroen_2022.svg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 850,
+    "height": 829,
+    "page": "https://commons.wikimedia.org/wiki/File:Citroen_2022.svg",
+    "artist": "Citroën",
+    "license": "Public domain"
+   }
+  },
+  {
+   "maker": "MINI",
+   "domestic": false,
+   "crop": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/MINI_logo.svg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 500,
+    "height": 219,
+    "page": "https://commons.wikimedia.org/wiki/File:MINI_logo.svg",
+    "artist": "BMW SVG by CMetalCore この W3C- unspecified ベクター画像 は Inkscape で作成されました .",
+    "license": "Public domain"
+   }
   }
  ]
 }
