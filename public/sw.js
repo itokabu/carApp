@@ -1,11 +1,11 @@
 // 画面のファイルとデータはネット優先（最新を取りに行き、オフライン時はキャッシュ）、
 // 写真はキャッシュ優先で表示を速くする
-const SHELL = 'shell-v2';
+const SHELL = 'shell-v3';
 const PHOTOS = 'photos-v1';
 const MAX_PHOTOS = 400;
 
 self.addEventListener('install', (e) => {
-  e.waitUntil(caches.open(SHELL).then((c) => c.addAll(['./', 'index.html', 'style.css', 'app.js', 'icon.svg', 'data/cars.json'])));
+  e.waitUntil(caches.open(SHELL).then((c) => c.addAll(['./', 'index.html', 'style.css', 'app.js', 'icon.svg'])));
   self.skipWaiting();
 });
 

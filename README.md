@@ -38,3 +38,16 @@ npm start        # http://localhost:3000
 - `exclude`: 出題しない
 
 更新時に `写真なし: …` と出た車種は、ここで記事名を指定すると写真が付きます。
+
+## annotations-lab.com に載せる
+
+画面のファイルは annotation プロジェクトの `public/games/kurumiru/` に置いて公開する（URL: https://annotations-lab.com/games/kurumiru/ ）。
+車のデータはそこに置かず、GitHub Pages（`https://itokabu.github.io/carApp/data/cars.json`、毎月自動更新）から読むので、**データ更新のたびにアップロードし直す必要はない**。
+
+画面を変えたときだけ:
+
+```sh
+npm run export   # ../※＠/annotation/public/games/kurumiru/ にコピー（データURLも書き換える）
+```
+
+そのあと annotation で `npm run build` して、`dist/` をサーバーにアップロードする。
