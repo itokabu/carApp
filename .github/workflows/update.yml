@@ -1,0 +1,61 @@
+name: データ更新と公開
+
+on:
+  schedule:
+    # 自販連は毎月5日前後、全軽自協は月初に前月分を公開するので、毎月8日と20日（日本時間 12:00）に更新
+    - cron: '0 3 8,20 * *'
+  workflow_dispatch: # Actions 画面から手動でも実行できる
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: ランキングと写真を取得
+        if: github.event_name != 'push'
+        env:
+          CONTACT: ${{ github.server_url }}/${{ github.repository }}
+        run: npm run update
+
+      - name: 変更があればコミット
+        if: github.event_name != 'push'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data/cars.json data/image-cache.json
+          git diff --cached --quiet || git commit -m "データ更新 $(date +%Y-%m-%d)"
+          git push
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+  deploy:
+    needs: update
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
