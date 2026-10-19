@@ -387,8 +387,8 @@ function renderHome() {
       </div>
       <!-- 高速道路の道路情報板（黒地にオレンジの電光文字）風に、最新データであることを知らせる -->
       <div class="info-board" role="status">
-        <span class="info-new">NEW</span>
-        <span class="info-text">最新データ　<b>${esc(updatedLabel())}</b>更新！</span>
+        <span class="info-new">最新</span>
+        <span class="info-text">${esc(updatedLabel())}更新</span>
       </div>
       <p class="hero-copy">車内で何度も聞いた「あれなんて車？」<br>今日でわからないを卒業しよう！</p>
       <p class="hero-text">いま日本の道でよく見かける車を、最新の販売ランキングから出題します。</p>
