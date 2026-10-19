@@ -5,47 +5,80 @@ const QUESTIONS = 10;
 
 // 難易度＝販売ランキングの何位から何位までを出題するか（上の難易度ほど街で見かけにくい車）
 const LEVELS = [
-  { star: 1, from: 1, to: 10, label: 'はじめて' },
-  { star: 2, from: 11, to: 25, label: 'ふつう' },
-  { star: 3, from: 26, to: 45, label: 'くわしい' },
-  { star: 4, from: 46, to: 70, label: 'マニア' },
-  { star: 5, from: 71, to: 100, label: '鬼' },
+  { star: 1, from: 1, to: 10, label: "はじめて" },
+  { star: 2, from: 11, to: 25, label: "ふつう" },
+  { star: 3, from: 26, to: 45, label: "くわしい" },
+  { star: 4, from: 46, to: 70, label: "マニア" },
+  { star: 5, from: 71, to: 100, label: "鬼" },
 ];
 // 「新型」枠は販売台数ではなく新しさで選ぶ: 最新モデルの発売が直近2年以内の車（データの newSince 以降）
-const NEW_LEVEL = { star: 'new', label: '新型' };
+const NEW_LEVEL = { star: "new", label: "新型" };
 const ALL_LEVELS = [...LEVELS, NEW_LEVEL];
 
 const MODES = {
-  name: { title: '車名当て', desc: '前から見た写真で当てる', prompt: 'この車の名前はどれか。' },
-  rear: { title: '後ろ姿当て', desc: '信号待ちの後ろ姿で当てる', prompt: 'この後ろ姿の車の名前はどれか。' },
-  maker: { title: 'メーカー当て', desc: 'どこのメーカーか当てる', prompt: 'この車のメーカーはどれか。' },
-  emblem: { title: 'エンブレム当て', desc: 'マークだけで当てる', prompt: 'このエンブレムのメーカーはどれか。' },
-  newer: { title: '新型どっち？', desc: '新型と旧型を見分ける', prompt: '' },
+  name: {
+    title: "車名当て",
+    desc: "前から見た写真で当てる",
+    prompt: "この車の名前はどれか。",
+  },
+  rear: {
+    title: "後ろ姿当て",
+    desc: "信号待ちの後ろ姿で当てる",
+    prompt: "この後ろ姿の車の名前はどれか。",
+  },
+  maker: {
+    title: "メーカー当て",
+    desc: "どこのメーカーか当てる",
+    prompt: "この車のメーカーはどれか。",
+  },
+  emblem: {
+    title: "エンブレム当て",
+    desc: "マークだけで当てる",
+    prompt: "このエンブレムのメーカーはどれか。",
+  },
+  newer: { title: "新型どっち？", desc: "新型と旧型を見分ける", prompt: "" },
 };
 
-const DATA_URL = document.querySelector('meta[name="arenante:data"]')?.content || 'data/cars.json';
+const DATA_URL =
+  document.querySelector('meta[name="arenante:data"]')?.content ||
+  "data/cars.json";
 // 置き場所のデータが読めないとき（ローカルのサーバーを止めた、など）は、毎月自動更新している GitHub Pages から読む
-const FALLBACK_DATA_URL = 'https://itokabu.github.io/carApp/data/cars.json';
+const FALLBACK_DATA_URL = "https://itokabu.github.io/carApp/data/cars.json";
 
-const $app = document.getElementById('app');
-const $detail = document.getElementById('detail');
-const $lightbox = document.getElementById('lightbox');
+const $app = document.getElementById("app");
+const $detail = document.getElementById("detail");
+const $lightbox = document.getElementById("lightbox");
 
 let data = null;
-let star = load('star') === 'new' ? 'new' : Number(load('star')) || 1;
-let mode = MODES[load('mode')] ? load('mode') : 'name';
+let star = load("star") === "new" ? "new" : Number(load("star")) || 1;
+let mode = MODES[load("mode")] ? load("mode") : "name";
 let quiz = null; // 出題中の状態（キーボード操作用）
 
 // ---------- utils ----------
 
 function load(key) {
-  try { return localStorage.getItem(`arenante:${key}`); } catch { return null; }
+  try {
+    return localStorage.getItem(`arenante:${key}`);
+  } catch {
+    return null;
+  }
 }
 function save(key, value) {
-  try { localStorage.setItem(`arenante:${key}`, value); } catch { /* 保存できない環境でも動かす */ }
+  try {
+    localStorage.setItem(`arenante:${key}`, value);
+  } catch {
+    /* 保存できない環境でも動かす */
+  }
 }
 
-const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+const esc = (s) =>
+  String(s ?? "").replace(
+    /[&<>"']/g,
+    (c) =>
+      ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[
+        c
+      ],
+  );
 
 function shuffle(arr) {
   const a = [...arr];
@@ -58,23 +91,32 @@ function shuffle(arr) {
 
 const sample = (arr, n) => shuffle(arr).slice(0, n);
 const level = () => ALL_LEVELS.find((l) => l.star === star) ?? LEVELS[0];
-const isNewLevel = () => star === 'new';
+const isNewLevel = () => star === "new";
 const isNewCar = (c) => !!c.since && c.since >= data.newSince;
 // 「難易度3（26〜45位）」「新型（2024年10月以降に発売）」
-const levelName = (lv = level()) => (lv.star === 'new' ? '新型' : `難易度${lv.star}`);
-const levelRange = (lv = level()) => (lv.star === 'new' ? `${ym(data.newSince)}以降に発売` : `${lv.from}〜${lv.to}位`);
-const group = (car) => (car.kind === '登録車' ? '登録車' : '軽');
-const fmt = (n) => Number(n).toLocaleString('ja-JP');
-const ym = (s) => s?.replace(/^(\d{4})-0?(\d+)$/, '$1年$2月') ?? '';
+const levelName = (lv = level()) =>
+  lv.star === "new" ? "新型" : `難易度${lv.star}`;
+const levelRange = (lv = level()) =>
+  lv.star === "new"
+    ? `${ym(data.newSince)}以降に発売`
+    : `${lv.from}〜${lv.to}位`;
+const group = (car) => (car.kind === "登録車" ? "登録車" : "軽");
+const fmt = (n) => Number(n).toLocaleString("ja-JP");
+const ym = (s) => s?.replace(/^(\d{4})-0?(\d+)$/, "$1年$2月") ?? "";
 // データを最後に更新した日（例: 10月19日）。日本時間で表示する
-const updatedLabel = () => new Date(data.updatedAt).toLocaleDateString('ja-JP', { month: 'long', day: 'numeric', timeZone: 'Asia/Tokyo' });
-const ymShort = (s) => s?.replace(/^(\d{4})-0?(\d+)$/, '$1.$2') ?? '';
-const MARKS = ['①', '②', '③', '④'];
+const updatedLabel = () =>
+  new Date(data.updatedAt).toLocaleDateString("ja-JP", {
+    month: "long",
+    day: "numeric",
+    timeZone: "Asia/Tokyo",
+  });
+const ymShort = (s) => s?.replace(/^(\d{4})-0?(\d+)$/, "$1.$2") ?? "";
+const MARKS = ["①", "②", "③", "④"];
 
 function preload(url) {
   if (!url) return;
   const img = new Image();
-  img.crossOrigin = 'anonymous';
+  img.crossOrigin = "anonymous";
   img.src = url;
 }
 
@@ -100,39 +142,62 @@ const onigiri = (n) => `
 // flip: true の形は左向きに描いてあるので左右反転して使う
 const CAR_SHAPES = {
   // セダン: 右に長いボンネットと寝たフロントガラス、左に短いトランク
-  sedan: { w: 100, body: 'M3 31v-6.5c0-2.3 1.5-3.8 4.5-4.3L18 18.8l9.8-8.6c1.3-1.1 2.9-1.7 4.6-1.7h12.8c2.2 0 4.2.9 5.7 2.5L67 18.5l23 2.7c4.3.5 7 2.5 7 5.8V31z', wheels: [21, 80], r: 6.2 },
+  sedan: {
+    w: 100,
+    body: "M3 31v-6.5c0-2.3 1.5-3.8 4.5-4.3L18 18.8l9.8-8.6c1.3-1.1 2.9-1.7 4.6-1.7h12.8c2.2 0 4.2.9 5.7 2.5L67 18.5l23 2.7c4.3.5 7 2.5 7 5.8V31z",
+    wheels: [21, 80],
+    r: 6.2,
+  },
   // 軽トールワゴン: 右に短いボンネット
-  kei: { w: 84, body: 'M4 31V9.5C4 6.5 6 5 9 5h47.5c2.6 0 4.6 1 6 3.1L71 19l7 1.6c2.4.6 3.5 2.2 3.5 4.6V31z', wheels: [19, 66], r: 5.8 },
+  kei: {
+    w: 84,
+    body: "M4 31V9.5C4 6.5 6 5 9 5h47.5c2.6 0 4.6 1 6 3.1L71 19l7 1.6c2.4.6 3.5 2.2 3.5 4.6V31z",
+    wheels: [19, 66],
+    r: 5.8,
+  },
   // 軽トラ: 運転席が前（左向きに描いてあるので反転）
-  truck: { w: 100, body: 'M4 31V10c0-3 1.8-4.6 4.6-4.6h17c2.3 0 3.9 1 4.8 3.2L34 18h62v13z', wheels: [17, 82], r: 5.8, flip: true },
+  truck: {
+    w: 100,
+    body: "M4 31V10c0-3 1.8-4.6 4.6-4.6h17c2.3 0 3.9 1 4.8 3.2L34 18h62v13z",
+    wheels: [17, 82],
+    r: 5.8,
+    flip: true,
+  },
   // SUV: ボンネットが前（左向きに描いてあるので反転）
-  suv: { w: 100, body: 'M3 31v-9c0-3 2-4.6 6-5.3l13-2L30 7c1.1-1 2.5-1.5 4-1.5h38c2.1 0 3.7.8 4.8 2.5L82 15l10 1.6c3.3.6 5 2.5 5 5.4V31z', wheels: [23, 78], r: 6.6, flip: true },
+  suv: {
+    w: 100,
+    body: "M3 31v-9c0-3 2-4.6 6-5.3l13-2L30 7c1.1-1 2.5-1.5 4-1.5h38c2.1 0 3.7.8 4.8 2.5L82 15l10 1.6c3.3.6 5 2.5 5 5.4V31z",
+    wheels: [23, 78],
+    r: 6.6,
+    flip: true,
+  },
 };
 const car = (type) => {
   const s = CAR_SHAPES[type];
   return `<svg class="car car-${type}" viewBox="0 0 ${s.w} 40" aria-hidden="true">
-    <g${s.flip ? ` transform="translate(${s.w} 0) scale(-1 1)"` : ''}>
+    <g${s.flip ? ` transform="translate(${s.w} 0) scale(-1 1)"` : ""}>
       <path d="${s.body}"/>
-      ${s.wheels.map((x) => `<circle cx="${x}" cy="31" r="${s.r + 1.6}" class="car-gap"/><circle cx="${x}" cy="31" r="${s.r}"/>`).join('')}
+      ${s.wheels.map((x) => `<circle cx="${x}" cy="31" r="${s.r + 1.6}" class="car-gap"/><circle cx="${x}" cy="31" r="${s.r}"/>`).join("")}
     </g>
   </svg>`;
 };
 
-// センターラインの上を車が走る区切り線
+// センターラインの上を車が走る区切り線（同じ速さ・等間隔で、追い越したり重なったりしない）
 const roadDivider = () => `
   <div class="road-divider" aria-hidden="true">
     <div class="lane">
-      <span class="runner" style="--d:0s;--t:17s">${car('kei')}</span>
-      <span class="runner" style="--d:-6s;--t:21s">${car('sedan')}</span>
-      <span class="runner" style="--d:-11s;--t:15s">${car('truck')}</span>
-      <span class="runner" style="--d:-14s;--t:24s">${car('suv')}</span>
+      <span class="runner" style="--d:0s;--t:36s">${car("kei")}</span>
+      <span class="runner" style="--d:-9s;--t:36s">${car("sedan")}</span>
+      <span class="runner" style="--d:-18s;--t:36s">${car("truck")}</span>
+      <span class="runner" style="--d:-27s;--t:36s">${car("suv")}</span>
     </div>
   </div>`;
 
 // モードごとの架空の標識（実在しない）。形と色は本物の標識の分類に合わせている
 //   車名当て・後ろ姿当て: 警戒標識（黄色のひし形）　メーカー当て: 指示標識（青い丸）
 //   エンブレム当て: 規制標識（赤い縁の丸）　新型どっち？: 案内標識（青い四角）
-const CAR_FRONT = 'M20 45v-8c0-1.3.5-2.4 1.4-3.2l2.4-6.2c.7-1.7 2.2-2.8 4-2.8h8.4c1.8 0 3.3 1.1 4 2.8l2.4 6.2c.9.8 1.4 1.9 1.4 3.2v8h-4v3h-4v-3H28v3h-4v-3z';
+const CAR_FRONT =
+  "M20 45v-8c0-1.3.5-2.4 1.4-3.2l2.4-6.2c.7-1.7 2.2-2.8 4-2.8h8.4c1.8 0 3.3 1.1 4 2.8l2.4 6.2c.9.8 1.4 1.9 1.4 3.2v8h-4v3h-4v-3H28v3h-4v-3z";
 const MODE_SIGNS = {
   name: `
     <path class="ms-plate" d="M32 2 62 32 32 62 2 32z"/>
@@ -164,25 +229,33 @@ const MODE_SIGNS = {
     <circle class="ms-cut" cx="42" cy="44" r="4.6"/><circle class="ms-icon" cx="42" cy="44" r="3.2"/>
     <path class="ms-icon" d="M47 11l1.4 3.8L52 16l-3.6 1.4L47 21l-1.4-3.6L42 16l3.6-1.2z"/>`,
 };
-const modeSign = (key) => `<svg class="msign msign-${key}" viewBox="0 0 64 64" aria-hidden="true">${MODE_SIGNS[key]}</svg>`;
+const modeSign = (key) =>
+  `<svg class="msign msign-${key}" viewBox="0 0 64 64" aria-hidden="true">${MODE_SIGNS[key]}</svg>`;
 
 // 案内標識の見出し
-const signLabel = (text, tone = 'blue') => `<h2 class="sign-label ${tone}">${text}</h2>`;
+const signLabel = (text, tone = "blue") =>
+  `<h2 class="sign-label ${tone}">${text}</h2>`;
 
 // 赤ペンの採点（丸・バツ）
-const RED_CIRCLE = '<svg class="redpen" viewBox="0 0 100 100" aria-hidden="true"><path d="M52 8C26 6 9 25 10 50c1 24 20 41 43 40 23-1 38-19 37-41C89 26 72 9 47 12"/></svg>';
-const RED_CROSS = '<svg class="redpen" viewBox="0 0 100 100" aria-hidden="true"><path d="M18 16 84 86M82 14 20 84"/></svg>';
+const RED_CIRCLE =
+  '<svg class="redpen" viewBox="0 0 100 100" aria-hidden="true"><path d="M52 8C26 6 9 25 10 50c1 24 20 41 43 40 23-1 38-19 37-41C89 26 72 9 47 12"/></svg>';
+const RED_CROSS =
+  '<svg class="redpen" viewBox="0 0 100 100" aria-hidden="true"><path d="M18 16 84 86M82 14 20 84"/></svg>';
 
-const ZOOM = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21M10.5 7.5v6M7.5 10.5h6"/></svg>';
+const ZOOM =
+  '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21M10.5 7.5v6M7.5 10.5h6"/></svg>';
 
 // 写真。タップで全体を拡大表示できる（クイズ中は答えが分からないよう、拡大画面にも車名は出さない）
-function photoHtml(img, { tag = '', revealCredit = false, alt = 'クイズの写真', caption = '' } = {}) {
+function photoHtml(
+  img,
+  { tag = "", revealCredit = false, alt = "クイズの写真", caption = "" } = {},
+) {
   if (!img) return `<div class="photo"><div class="noimg">写真なし</div></div>`;
-  const credit = `写真: ${esc(img.artist)}${img.license ? ` / ${esc(img.license)}` : ''}`;
+  const credit = `写真: ${esc(img.artist)}${img.license ? ` / ${esc(img.license)}` : ""}`;
   return `
     <div class="photo">
       <img src="${esc(img.url)}" crossorigin="anonymous" alt="${esc(alt)}" decoding="async">
-      ${tag ? `<span class="tag">${esc(tag)}</span>` : ''}
+      ${tag ? `<span class="tag">${esc(tag)}</span>` : ""}
       <button class="zoom" data-zoom="${esc(img.url)}" data-page="${esc(img.page)}" data-credit="${credit}" data-caption="${esc(caption)}" aria-label="写真を拡大">${ZOOM}</button>
       <span class="credit" data-page="${esc(img.page)}">${revealCredit ? `<a href="${esc(img.page)}" target="_blank" rel="noopener">${credit}</a>` : credit}</span>
     </div>`;
@@ -192,7 +265,7 @@ function photoHtml(img, { tag = '', revealCredit = false, alt = 'クイズの写
 function emblemHtml(e) {
   const [x, y, w, h] = e.crop;
   const aspect = (w * e.image.width) / (h * e.image.height);
-  const size = aspect >= 1 ? 'width:58%' : `width:${58 * aspect}%`;
+  const size = aspect >= 1 ? "width:58%" : `width:${58 * aspect}%`;
   const pos = (start, len) => (len >= 1 ? 0 : (start / (1 - len)) * 100);
   return `
     <div class="emblem-stage">
@@ -200,14 +273,16 @@ function emblemHtml(e) {
     </div>`;
 }
 
-const kindPlate = (c) => `<span class="kind kind-${group(c) === '軽' ? 'kei' : 'reg'}">${esc(c.kind)}</span>`;
+const kindPlate = (c) =>
+  `<span class="kind kind-${group(c) === "軽" ? "kei" : "reg"}">${esc(c.kind)}</span>`;
 
 // ---------- 出題 ----------
 
-const inLevel = (c, lv = level()) => (lv.star === 'new' ? isNewCar(c) : c.rank >= lv.from && c.rank <= lv.to);
+const inLevel = (c, lv = level()) =>
+  lv.star === "new" ? isNewCar(c) : c.rank >= lv.from && c.rank <= lv.to;
 
 function poolFor(mode) {
-  if (mode === 'emblem') {
+  if (mode === "emblem") {
     const all = data.emblems ?? [];
     if (isNewLevel()) return all;
     if (star <= 2) return all.filter((e) => e.domestic);
@@ -215,8 +290,11 @@ function poolFor(mode) {
     return all.filter((e) => !e.domestic);
   }
   const cars = data.cars.filter((c) => c.gens?.length && inLevel(c));
-  if (mode === 'rear') return cars.filter((c) => c.gens[0].rear);
-  if (mode === 'newer') return cars.filter((c) => c.gens.length >= 2 && c.gens[1].front?.url !== c.gens[0].front.url);
+  if (mode === "rear") return cars.filter((c) => c.gens[0].rear);
+  if (mode === "newer")
+    return cars.filter(
+      (c) => c.gens.length >= 2 && c.gens[1].front?.url !== c.gens[0].front.url,
+    );
   return cars;
 }
 
@@ -227,7 +305,9 @@ const questionCount = (mode) => Math.min(QUESTIONS, poolFor(mode).length);
 function distractors(answer, n, keyFn) {
   const all = data.cars.filter((c) => c.gens?.length);
   const byDistance = isNewLevel()
-    ? (c) => (isNewCar(c) ? 0 : 50 + Math.abs(c.rank - answer.rank)) + Math.random() * 12
+    ? (c) =>
+        (isNewCar(c) ? 0 : 50 + Math.abs(c.rank - answer.rank)) +
+        Math.random() * 12
     : (c) => Math.abs(c.rank - answer.rank) + Math.random() * 12;
   const ordered = [...all].sort((a, b) => byDistance(a) - byDistance(b));
   const pick = (list) => {
@@ -242,41 +322,61 @@ function distractors(answer, n, keyFn) {
     return out;
   };
   const same = pick(ordered.filter((c) => group(c) === group(answer)));
-  return same.length === n ? same : [...same, ...pick(ordered.filter((c) => !same.includes(c)))].slice(0, n);
+  return same.length === n
+    ? same
+    : [...same, ...pick(ordered.filter((c) => !same.includes(c)))].slice(0, n);
 }
 
 function buildQuestions(mode) {
   const pool = poolFor(mode);
   const n = questionCount(mode);
 
-  if (mode === 'emblem') {
+  if (mode === "emblem") {
     const makers = pool.map((e) => e.maker);
     return sample(pool, n).map((e) => ({
       mode,
       emblem: e,
-      choices: shuffle([e.maker, ...sample(makers.filter((m) => m !== e.maker), 3)]).map((m) => ({ label: m, correct: m === e.maker })),
+      choices: shuffle([
+        e.maker,
+        ...sample(
+          makers.filter((m) => m !== e.maker),
+          3,
+        ),
+      ]).map((m) => ({ label: m, correct: m === e.maker })),
     }));
   }
 
   return sample(pool, n).map((c) => {
-    if (mode === 'newer') {
+    if (mode === "newer") {
       const [newer, older] = c.gens;
-      return { mode, car: c, sides: shuffle([{ gen: newer, isNew: true }, { gen: older, isNew: false }]) };
+      return {
+        mode,
+        car: c,
+        sides: shuffle([
+          { gen: newer, isNew: true },
+          { gen: older, isNew: false },
+        ]),
+      };
     }
-    const keyFn = mode === 'maker' ? (x) => x.maker : (x) => x.name;
+    const keyFn = mode === "maker" ? (x) => x.maker : (x) => x.name;
     const choices = shuffle([c, ...distractors(c, 3, keyFn)]).map((x) => ({
       label: keyFn(x),
-      sub: mode === 'maker' ? '' : x.maker,
+      sub: mode === "maker" ? "" : x.maker,
       correct: keyFn(x) === keyFn(c),
     }));
-    return { mode, car: c, choices, img: mode === 'rear' ? c.gens[0].rear : c.gens[0].front };
+    return {
+      mode,
+      car: c,
+      choices,
+      img: mode === "rear" ? c.gens[0].rear : c.gens[0].front,
+    };
   });
 }
 
 // ---------- 画面: ホーム ----------
 
 function renderHome() {
-  setTab('home');
+  setTab("home");
   quiz = null;
   const lv = level();
   $app.innerHTML = `
@@ -285,71 +385,94 @@ function renderHome() {
         <p class="guide-kicker">街でよく見る車クイズ</p>
         <h1>あれなんて車？</h1>
       </div>
-      <div class="aux-plate">${esc(updatedLabel())}更新！</div>
-      <p class="hero-copy">助手席で何度も聞いた「あれなんて車？」。<br>今日でそれ、卒業しよう。</p>
+      <!-- 高速道路の道路情報板（黒地にオレンジの電光文字）風に、最新データであることを知らせる -->
+      <div class="info-board" role="status">
+        <span class="info-new">NEW</span>
+        <span class="info-text">最新データ　<b>${esc(updatedLabel())}</b>更新！</span>
+      </div>
+      <p class="hero-copy">車内で何度も聞いた「あれなんて車？」<br>今日でわからないを卒業しよう！</p>
       <p class="hero-text">いま日本の道でよく見かける車を、最新の販売ランキングから出題します。</p>
     </section>
 
     ${roadDivider()}
 
-    ${signLabel('難易度')}
+    ${signLabel("難易度")}
     <div class="levels" role="radiogroup" aria-label="難易度">
-      ${LEVELS.map((l) => `
+      ${LEVELS.map(
+        (l) => `
         <button class="level" role="radio" data-star="${l.star}" aria-checked="${l.star === star}" aria-label="難易度${l.star} ${l.label} ランキング${l.from}位から${l.to}位">
           ${hexa(l.star)}
           <span class="level-name">${l.label}</span>
           <span class="level-top">${l.from}〜${l.to}位</span>
-        </button>`).join('')}
+        </button>`,
+      ).join("")}
       <button class="level level-new" role="radio" data-star="new" aria-checked="${isNewLevel()}" aria-label="新型 ${ym(data.newSince)}以降に発売された車">
-        ${hexa('新')}
+        ${hexa("新")}
         <span class="level-name">新型</span>
         <span class="level-top">${esc(ymShort(data.newSince))}〜</span>
       </button>
     </div>
-    <p class="level-note">${isNewLevel()
-      ? `販売台数ではなく新しさで選びます。最新モデルが <b>${ym(data.newSince)}以降</b> に発売された車が出ます`
-      : `販売ランキング <b>${lv.from}〜${lv.to}位</b> の車が出ます。エンブレムは${star <= 2 ? '国産のみ' : star === 3 ? '国産と輸入車' : '輸入車のみ'}`}</p>
+    <p class="level-note">${
+      isNewLevel()
+        ? `販売台数ではなく新しさで選びます。最新モデルが <b>${ym(data.newSince)}以降</b> に発売された車が出ます`
+        : `販売ランキング <b>${lv.from}〜${lv.to}位</b> の車が出ます。エンブレムは${star <= 2 ? "国産のみ" : star === 3 ? "国産と輸入車" : "輸入車のみ"}`
+    }</p>
 
-    ${signLabel('モード')}
+    ${signLabel("モード")}
     <div class="modes" role="radiogroup" aria-label="モード">
-      ${Object.entries(MODES).map(([key, m]) => {
-        const count = questionCount(key);
-        const best = load(`best:${key}:${star}`);
-        const disabled = count < 4;
-        return `
-          <button class="mode" role="radio" data-mode="${key}" aria-checked="${key === mode}" ${disabled ? 'disabled' : ''}>
+      ${Object.entries(MODES)
+        .map(([key, m]) => {
+          const count = questionCount(key);
+          const best = load(`best:${key}:${star}`);
+          const disabled = count < 4;
+          return `
+          <button class="mode" role="radio" data-mode="${key}" aria-checked="${key === mode}" ${disabled ? "disabled" : ""}>
             ${modeSign(key)}
             <span class="mode-text">
               <b>${m.title}</b>
-              <small>${disabled ? 'この難易度では出題できません' : `${m.desc}`}</small>
-              ${disabled ? '' : `<small class="best">${count}問　ベスト ${best ? `<em>${best}</em>/${count}` : '–'}</small>`}
+              <small>${disabled ? "この難易度では出題できません" : `${m.desc}`}</small>
+              ${disabled ? "" : `<small class="best">${count}問　ベスト ${best ? `<em>${best}</em>/${count}` : "–"}</small>`}
             </span>
           </button>`;
-      }).join('')}
+        })
+        .join("")}
     </div>
 
     <div class="start">
       <p class="start-summary"><b>${MODES[mode].title}</b>　${levelName(lv)}（${levelRange(lv)}）・${questionCount(mode)}問</p>
-      <button class="start-btn" id="start" ${questionCount(mode) < 4 ? 'disabled' : ''}>スタート</button>
+      <button class="start-btn" id="start" ${questionCount(mode) < 4 ? "disabled" : ""}>スタート</button>
     </div>`;
 
-  $app.querySelectorAll('[data-star]').forEach((b) => b.addEventListener('click', () => {
-    star = b.dataset.star === 'new' ? 'new' : Number(b.dataset.star);
-    save('star', star);
-    renderHome();
-  }));
-  $app.querySelectorAll('[data-mode]').forEach((b) => b.addEventListener('click', () => {
-    mode = b.dataset.mode;
-    save('mode', mode);
-    renderHome();
-  }));
-  document.getElementById('start').addEventListener('click', () => startQuiz(mode));
+  $app.querySelectorAll("[data-star]").forEach((b) =>
+    b.addEventListener("click", () => {
+      star = b.dataset.star === "new" ? "new" : Number(b.dataset.star);
+      save("star", star);
+      renderHome();
+    }),
+  );
+  $app.querySelectorAll("[data-mode]").forEach((b) =>
+    b.addEventListener("click", () => {
+      mode = b.dataset.mode;
+      save("mode", mode);
+      renderHome();
+    }),
+  );
+  document
+    .getElementById("start")
+    .addEventListener("click", () => startQuiz(mode));
 }
 
 // ---------- 画面: クイズ（学科試験の問題用紙） ----------
 
 function startQuiz(mode) {
-  quiz = { mode, questions: buildQuestions(mode), index: 0, score: 0, results: [], answered: false };
+  quiz = {
+    mode,
+    questions: buildQuestions(mode),
+    index: 0,
+    score: 0,
+    results: [],
+    answered: false,
+  };
   renderQuestion();
 }
 
@@ -362,8 +485,8 @@ function progressRoad() {
   const total = quiz.questions.length;
   return `
     <div class="progress-road" role="progressbar" aria-valuemin="0" aria-valuemax="${total}" aria-valuenow="${quiz.index}" aria-label="${quiz.index + 1}問目 / 全${total}問">
-      <div class="progress-marks">${quiz.questions.map((_, i) => `<i class="${quiz.results[i] === true ? 'ok' : quiz.results[i] === false ? 'ng' : ''}"></i>`).join('')}</div>
-      <span class="progress-car" style="left:calc(${(quiz.index / total) * 100}% * 0.9)">${car('kei')}</span>
+      <div class="progress-marks">${quiz.questions.map((_, i) => `<i class="${quiz.results[i] === true ? "ok" : quiz.results[i] === false ? "ng" : ""}"></i>`).join("")}</div>
+      <span class="progress-car" style="left:calc(${(quiz.index / total) * 100}% * 0.9)">${car("kei")}</span>
       <span class="goal" aria-hidden="true"></span>
     </div>`;
 }
@@ -378,33 +501,43 @@ function renderQuestion() {
 
   let visual;
   let answers;
-  if (q.mode === 'newer') {
+  if (q.mode === "newer") {
     visual = `
       <div class="pair">
-        ${q.sides.map((s, i) => `
+        ${q.sides
+          .map(
+            (s, i) => `
           <div class="pick-wrap">
-            ${photoHtml(s.gen.front, { tag: i === 0 ? 'A' : 'B' })}
+            ${photoHtml(s.gen.front, { tag: i === 0 ? "A" : "B" })}
             <span class="pick-label" data-label="${i}"></span>
-          </div>`).join('')}
+          </div>`,
+          )
+          .join("")}
       </div>`;
     answers = `
       <ol class="sheet-choices two">
-        ${q.sides.map((_, i) => `<li><button class="choice" data-side="${i}"><span class="mark">${MARKS[i]}</span><span class="label">${i === 0 ? 'Aの写真' : 'Bの写真'}</span></button></li>`).join('')}
+        ${q.sides.map((_, i) => `<li><button class="choice" data-side="${i}"><span class="mark">${MARKS[i]}</span><span class="label">${i === 0 ? "Aの写真" : "Bの写真"}</span></button></li>`).join("")}
       </ol>`;
   } else {
-    visual = q.mode === 'emblem' ? emblemHtml(q.emblem) : photoHtml(q.img, { tag: q.mode === 'rear' ? '後ろ姿' : '' });
+    visual =
+      q.mode === "emblem"
+        ? emblemHtml(q.emblem)
+        : photoHtml(q.img, { tag: q.mode === "rear" ? "後ろ姿" : "" });
     answers = `
       <ol class="sheet-choices">
-        ${q.choices.map((c, i) => `<li><button class="choice" data-choice="${i}"><span class="mark">${MARKS[i]}</span><span class="label">${esc(c.label)}${c.sub ? `<small>${esc(c.sub)}</small>` : ''}</span></button></li>`).join('')}
+        ${q.choices.map((c, i) => `<li><button class="choice" data-choice="${i}"><span class="mark">${MARKS[i]}</span><span class="label">${esc(c.label)}${c.sub ? `<small>${esc(c.sub)}</small>` : ""}</span></button></li>`).join("")}
       </ol>`;
   }
-  const prompt = q.mode === 'newer' ? `${esc(q.car.maker)} ${esc(q.car.name)}の新しいモデルはどちらか。` : m.prompt;
+  const prompt =
+    q.mode === "newer"
+      ? `${esc(q.car.maker)} ${esc(q.car.name)}の新しいモデルはどちらか。`
+      : m.prompt;
 
   $app.innerHTML = `
     <div class="quiz">
       <div class="quiz-head">
         <button class="quit" data-go="home">やめる</button>
-        <span class="quiz-meta">${m.title}<span class="mini-hexa${isNewLevel() ? ' is-new' : ''}">${hexa(isNewLevel() ? '新' : star)}</span></span>
+        <span class="quiz-meta">${m.title}<span class="mini-hexa${isNewLevel() ? " is-new" : ""}">${hexa(isNewLevel() ? "新" : star)}</span></span>
         <span class="counter"><b>${quiz.index + 1}</b> / ${total}</span>
       </div>
       ${progressRoad()}
@@ -415,13 +548,21 @@ function renderQuestion() {
           <p class="sheet-q">${prompt}</p>
           ${answers}
           <div class="sheet-after" id="after"></div>
-          <p class="keys" aria-hidden="true">キー操作　<kbd>1</kbd>〜<kbd>${q.mode === 'newer' ? 2 : 4}</kbd> で回答　<kbd>Enter</kbd> で次へ</p>
+          <p class="keys" aria-hidden="true">キー操作　<kbd>1</kbd>〜<kbd>${q.mode === "newer" ? 2 : 4}</kbd> で回答　<kbd>Enter</kbd> で次へ</p>
         </div>
       </div>
     </div>`;
 
-  $app.querySelectorAll('[data-choice]').forEach((b) => b.addEventListener('click', () => choose(Number(b.dataset.choice))));
-  $app.querySelectorAll('[data-side]').forEach((b) => b.addEventListener('click', () => choose(Number(b.dataset.side))));
+  $app
+    .querySelectorAll("[data-choice]")
+    .forEach((b) =>
+      b.addEventListener("click", () => choose(Number(b.dataset.choice))),
+    );
+  $app
+    .querySelectorAll("[data-side]")
+    .forEach((b) =>
+      b.addEventListener("click", () => choose(Number(b.dataset.side))),
+    );
   window.scrollTo({ top: 0 });
 }
 
@@ -429,18 +570,19 @@ function choose(i) {
   if (!quiz || quiz.answered) return;
   const q = quiz.questions[quiz.index];
   let ok;
-  if (q.mode === 'newer') {
+  if (q.mode === "newer") {
     if (!q.sides[i]) return;
     ok = q.sides[i].isNew;
-    $app.querySelectorAll('[data-side]').forEach((el, j) => {
+    $app.querySelectorAll("[data-side]").forEach((el, j) => {
       el.disabled = true;
       markChoice(el, q.sides[j].isNew, j === i);
-      $app.querySelector(`[data-label="${j}"]`).textContent = `${q.sides[j].isNew ? '新型' : '旧型'}　${q.sides[j].gen.label}`;
+      $app.querySelector(`[data-label="${j}"]`).textContent =
+        `${q.sides[j].isNew ? "新型" : "旧型"}　${q.sides[j].gen.label}`;
     });
   } else {
     if (!q.choices[i]) return;
     ok = q.choices[i].correct;
-    $app.querySelectorAll('[data-choice]').forEach((el, j) => {
+    $app.querySelectorAll("[data-choice]").forEach((el, j) => {
       el.disabled = true;
       markChoice(el, q.choices[j].correct, j === i);
     });
@@ -450,9 +592,14 @@ function choose(i) {
 
 // 選んだマークを塗りつぶし、正解には赤丸、選んだ不正解には赤いバツ
 function markChoice(el, correct, picked) {
-  if (picked) el.classList.add('is-picked');
-  if (correct) { el.classList.add('is-correct'); el.insertAdjacentHTML('beforeend', RED_CIRCLE); }
-  else if (picked) { el.classList.add('is-wrong'); el.insertAdjacentHTML('beforeend', RED_CROSS); }
+  if (picked) el.classList.add("is-picked");
+  if (correct) {
+    el.classList.add("is-correct");
+    el.insertAdjacentHTML("beforeend", RED_CIRCLE);
+  } else if (picked) {
+    el.classList.add("is-wrong");
+    el.insertAdjacentHTML("beforeend", RED_CROSS);
+  }
 }
 
 function answer(ok) {
@@ -460,47 +607,67 @@ function answer(ok) {
   quiz.answered = true;
   if (ok) quiz.score++;
   quiz.results[quiz.index] = ok;
-  $app.querySelector(`.progress-marks i:nth-child(${quiz.index + 1})`)?.classList.add(ok ? 'ok' : 'ng');
+  $app
+    .querySelector(`.progress-marks i:nth-child(${quiz.index + 1})`)
+    ?.classList.add(ok ? "ok" : "ng");
 
   // 回答後は写真のクレジットをリンクにする（回答前は答えが分かってしまうので文字だけ）
-  $app.querySelectorAll('.photo .credit').forEach((el) => {
+  $app.querySelectorAll(".photo .credit").forEach((el) => {
     el.innerHTML = `<a href="${esc(el.dataset.page)}" target="_blank" rel="noopener">${el.innerHTML}</a>`;
   });
 
   const isLast = quiz.index === quiz.questions.length - 1;
   let info;
-  if (q.mode === 'emblem') {
+  if (q.mode === "emblem") {
     const e = q.emblem;
-    info = `<b>${esc(e.maker)}</b>（${e.domestic ? '国産' : '輸入車'}）`;
+    info = `<b>${esc(e.maker)}</b>（${e.domestic ? "国産" : "輸入車"}）`;
   } else {
     const c = q.car;
-    info = `<b>${esc(c.maker)} ${esc(c.name)}</b>${kindPlate(c)}<span class="fine">ランキング${c.rank}位${q.mode !== 'newer' ? `・${esc(c.gens[0].label)}` : ''}</span>
+    info = `<b>${esc(c.maker)} ${esc(c.name)}</b>${kindPlate(c)}<span class="fine">ランキング${c.rank}位${q.mode !== "newer" ? `・${esc(c.gens[0].label)}` : ""}</span>
       <button class="link-btn" data-detail="${esc(c.id)}">くわしく</button>`;
   }
 
-  document.getElementById('after').innerHTML = `
-    <div class="result-line ${ok ? 'ok' : 'ng'}">
-      <span class="stamp">${ok ? '正解' : '不正解'}</span>
+  document.getElementById("after").innerHTML = `
+    <div class="result-line ${ok ? "ok" : "ng"}">
+      <span class="stamp">${ok ? "正解" : "不正解"}</span>
       <span class="answer-info">${info}</span>
     </div>
-    <button class="next-btn" id="next">${isLast ? '採点結果を見る' : '次の問題へ'}<span aria-hidden="true">→</span></button>`;
-  const $next = document.getElementById('next');
-  $next.addEventListener('click', goNext);
+    <button class="next-btn" id="next">${isLast ? "採点結果を見る" : "次の問題へ"}<span aria-hidden="true">→</span></button>`;
+  const $next = document.getElementById("next");
+  $next.addEventListener("click", goNext);
   $next.focus({ preventScroll: true });
 }
 
 function goNext() {
   if (!quiz?.answered) return;
   if (quiz.index === quiz.questions.length - 1) renderResult();
-  else { quiz.index++; renderQuestion(); }
+  else {
+    quiz.index++;
+    renderQuestion();
+  }
 }
 
 // PC ではキーボードでポンポン進める
-document.addEventListener('keydown', (e) => {
-  if (!quiz || $detail.open || $lightbox.open || e.ctrlKey || e.metaKey || e.altKey) return;
-  if (/^[1-4]$/.test(e.key) && !quiz.answered) { e.preventDefault(); choose(Number(e.key) - 1); return; }
-  if ((e.key === 'Enter' || e.key === ' ' || e.key === 'ArrowRight') && quiz.answered) {
-    if (document.activeElement?.closest?.('.link-btn')) return;
+document.addEventListener("keydown", (e) => {
+  if (
+    !quiz ||
+    $detail.open ||
+    $lightbox.open ||
+    e.ctrlKey ||
+    e.metaKey ||
+    e.altKey
+  )
+    return;
+  if (/^[1-4]$/.test(e.key) && !quiz.answered) {
+    e.preventDefault();
+    choose(Number(e.key) - 1);
+    return;
+  }
+  if (
+    (e.key === "Enter" || e.key === " " || e.key === "ArrowRight") &&
+    quiz.answered
+  ) {
+    if (document.activeElement?.closest?.(".link-btn")) return;
     e.preventDefault();
     goNext();
   }
@@ -514,7 +681,14 @@ function renderResult() {
   const isBest = score > prevBest;
   if (isBest) save(bestKey, score);
   const rate = score / total;
-  const msg = rate === 1 ? '満点です。次の難易度へどうぞ' : rate >= 0.7 ? '合格。かなり詳しい' : rate >= 0.4 ? 'あと少し。図鑑で復習しよう' : 'まずは図鑑で覚えよう';
+  const msg =
+    rate === 1
+      ? "満点です。次の難易度へどうぞ"
+      : rate >= 0.7
+        ? "合格。かなり詳しい"
+        : rate >= 0.4
+          ? "あと少し。図鑑で復習しよう"
+          : "まずは図鑑で覚えよう";
   const canLevelUp = rate === 1 && !isNewLevel() && star < 5;
 
   const wrong = questions.filter((_, i) => results[i] === false);
@@ -526,29 +700,41 @@ function renderResult() {
   $app.innerHTML = `
     <section class="score-sheet">
       <p class="sheet-no">採点結果　${MODES[mode].title}・${levelName(lv)}（${levelRange(lv)}）</p>
-      <div class="score"><b>${score}</b><small>点 / ${total}点</small>${rate >= 0.7 ? RED_CIRCLE : ''}</div>
-      <ol class="tally">${results.map((r, i) => `<li class="${r ? 'ok' : 'ng'}"><span>${i + 1}</span>${r ? '○' : '×'}</li>`).join('')}</ol>
-      <p class="msg">${isBest ? '<span class="best-stamp">自己ベスト</span>' : ''}${msg}</p>
+      <div class="score"><b>${score}</b><small>点 / ${total}点</small>${rate >= 0.7 ? RED_CIRCLE : ""}</div>
+      <ol class="tally">${results.map((r, i) => `<li class="${r ? "ok" : "ng"}"><span>${i + 1}</span>${r ? "○" : "×"}</li>`).join("")}</ol>
+      <p class="msg">${isBest ? '<span class="best-stamp">自己ベスト</span>' : ""}${msg}</p>
       <div class="actions">
-        ${canLevelUp
-          ? `<button class="next-btn" id="levelup">難易度${star + 1}に挑戦<span aria-hidden="true">→</span></button>`
-          : `<button class="next-btn" id="retry">もう一回<span aria-hidden="true">→</span></button>`}
+        ${
+          canLevelUp
+            ? `<button class="next-btn" id="levelup">難易度${star + 1}に挑戦<span aria-hidden="true">→</span></button>`
+            : `<button class="next-btn" id="retry">もう一回<span aria-hidden="true">→</span></button>`
+        }
         <button class="board-btn" data-go="home">モードを選ぶ</button>
       </div>
     </section>
-    ${wrongCars.length ? `
-      ${signLabel('まちがえた車')}
-      <div class="grid">${wrongCars.map(cardHtml).join('')}</div>` : ''}
-    ${wrongEmblems.length ? `
-      ${signLabel('まちがえたエンブレム')}
-      <div class="emblem-grid">${wrongEmblems.map((e) => `<div class="emblem-card">${emblemHtml(e)}<b>${esc(e.maker)}</b></div>`).join('')}</div>` : ''}`;
-  document.getElementById('retry')?.addEventListener('click', () => startQuiz(mode));
-  document.getElementById('levelup')?.addEventListener('click', () => {
+    ${
+      wrongCars.length
+        ? `
+      ${signLabel("まちがえた車")}
+      <div class="grid">${wrongCars.map(cardHtml).join("")}</div>`
+        : ""
+    }
+    ${
+      wrongEmblems.length
+        ? `
+      ${signLabel("まちがえたエンブレム")}
+      <div class="emblem-grid">${wrongEmblems.map((e) => `<div class="emblem-card">${emblemHtml(e)}<b>${esc(e.maker)}</b></div>`).join("")}</div>`
+        : ""
+    }`;
+  document
+    .getElementById("retry")
+    ?.addEventListener("click", () => startQuiz(mode));
+  document.getElementById("levelup")?.addEventListener("click", () => {
     star++;
-    save('star', star);
+    save("star", star);
     startQuiz(mode);
   });
-  document.querySelector('#retry, #levelup')?.focus({ preventScroll: true });
+  document.querySelector("#retry, #levelup")?.focus({ preventScroll: true });
   window.scrollTo({ top: 0 });
 }
 
@@ -561,7 +747,7 @@ function cardHtml(c) {
       <span class="thumb">
         ${img ? `<img src="${esc(img.url)}" crossorigin="anonymous" alt="" loading="lazy" decoding="async">` : '<span class="noimg">写真なし</span>'}
         <span class="rank" aria-label="${c.rank}位">${onigiri(c.rank)}</span>
-        ${isNewCar(c) ? `<span class="new-badge">新型 ${esc(ymShort(c.since))}〜</span>` : ''}
+        ${isNewCar(c) ? `<span class="new-badge">新型 ${esc(ymShort(c.since))}〜</span>` : ""}
       </span>
       <span class="meta">
         <b>${esc(c.name)}</b>
@@ -570,12 +756,17 @@ function cardHtml(c) {
     </button>`;
 }
 
-const zukanFilter = { q: '', kind: 'all' };
+const zukanFilter = { q: "", kind: "all" };
 
 function renderZukan() {
-  setTab('zukan');
+  setTab("zukan");
   quiz = null;
-  const kinds = [['all', 'すべて'], ['登録車', '登録車'], ['軽自動車', '軽'], ['軽貨物', '軽貨物']];
+  const kinds = [
+    ["all", "すべて"],
+    ["登録車", "登録車"],
+    ["軽自動車", "軽"],
+    ["軽貨物", "軽貨物"],
+  ];
   $app.innerHTML = `
     <div class="guide blue zukan-sign">
       <h1>図鑑</h1>
@@ -584,23 +775,37 @@ function renderZukan() {
     <p class="hero-text">タップすると世代ごとの写真が見られます。</p>
     <input class="search" type="search" placeholder="車名・メーカーで探す" value="${esc(zukanFilter.q)}" aria-label="検索">
     <div class="chips" role="group" aria-label="区分">
-      ${kinds.map(([k, label]) => `<button class="chip" data-kind="${k}" aria-pressed="${zukanFilter.kind === k}">${label}</button>`).join('')}
+      ${kinds.map(([k, label]) => `<button class="chip" data-kind="${k}" aria-pressed="${zukanFilter.kind === k}">${label}</button>`).join("")}
     </div>
     <div class="grid" id="grid"></div>`;
 
   const draw = () => {
     const q = zukanFilter.q.trim().toLowerCase();
-    const list = data.cars.filter((c) =>
-      (zukanFilter.kind === 'all' || c.kind === zukanFilter.kind) &&
-      (!q || `${c.name} ${c.maker} ${(c.aliases ?? []).join(' ')}`.toLowerCase().includes(q)));
-    document.getElementById('grid').innerHTML = list.length ? list.map(cardHtml).join('') : '<p class="empty">見つかりませんでした</p>';
+    const list = data.cars.filter(
+      (c) =>
+        (zukanFilter.kind === "all" || c.kind === zukanFilter.kind) &&
+        (!q ||
+          `${c.name} ${c.maker} ${(c.aliases ?? []).join(" ")}`
+            .toLowerCase()
+            .includes(q)),
+    );
+    document.getElementById("grid").innerHTML = list.length
+      ? list.map(cardHtml).join("")
+      : '<p class="empty">見つかりませんでした</p>';
   };
-  $app.querySelector('.search').addEventListener('input', (e) => { zukanFilter.q = e.target.value; draw(); });
-  $app.querySelectorAll('[data-kind]').forEach((b) => b.addEventListener('click', () => {
-    zukanFilter.kind = b.dataset.kind;
-    $app.querySelectorAll('[data-kind]').forEach((el) => el.setAttribute('aria-pressed', el === b));
+  $app.querySelector(".search").addEventListener("input", (e) => {
+    zukanFilter.q = e.target.value;
     draw();
-  }));
+  });
+  $app.querySelectorAll("[data-kind]").forEach((b) =>
+    b.addEventListener("click", () => {
+      zukanFilter.kind = b.dataset.kind;
+      $app
+        .querySelectorAll("[data-kind]")
+        .forEach((el) => el.setAttribute("aria-pressed", el === b));
+      draw();
+    }),
+  );
   draw();
 }
 
@@ -608,7 +813,9 @@ function openDetail(id) {
   const c = data.cars.find((x) => x.id === id);
   if (!c) return;
   const aliases = (c.aliases ?? []).filter((a) => a !== c.name);
-  const month = ym(c.kind === '登録車' ? data.period.registered : data.period.kei);
+  const month = ym(
+    c.kind === "登録車" ? data.period.registered : data.period.kei,
+  );
   $detail.innerHTML = `
     <div class="detail-head">
       <span class="rank">${onigiri(c.rank)}</span>
@@ -619,23 +826,29 @@ function openDetail(id) {
       <button class="close" aria-label="閉じる"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
     </div>
     <div class="detail-body">
-      ${aliases.length ? `<p class="fine">販売名: ${aliases.map(esc).join('、')}</p>` : ''}
+      ${aliases.length ? `<p class="fine">販売名: ${aliases.map(esc).join("、")}</p>` : ""}
       <dl class="stats">
         <div><dt>販売ランキング</dt><dd>${c.rank}<small>位</small></dd></div>
         <div><dt>直近2年の台数</dt><dd>${fmt(c.units)}</dd></div>
         <div><dt>${esc(month)}</dt><dd>${fmt(c.latestMonth)}</dd></div>
       </dl>
-      ${(c.gens ?? []).map((g, i) => `
+      ${(c.gens ?? [])
+        .map(
+          (g, i) => `
         <section class="gen">
-          <h3><span>${['最新モデル', 'ひとつ前', 'ふたつ前'][i]}</span>${esc(g.label)}</h3>
+          <h3><span>${["最新モデル", "ひとつ前", "ふたつ前"][i]}</span>${esc(g.label)}</h3>
           <div class="pair">
-            ${photoHtml(g.front, { tag: '前', revealCredit: true, alt: `${c.name} ${g.label} 前から`, caption: `${c.name}　${g.label}　前` })}
-            ${g.rear ? photoHtml(g.rear, { tag: '後ろ', revealCredit: true, alt: `${c.name} ${g.label} 後ろから`, caption: `${c.name}　${g.label}　後ろ` }) : ''}
+            ${photoHtml(g.front, { tag: "前", revealCredit: true, alt: `${c.name} ${g.label} 前から`, caption: `${c.name}　${g.label}　前` })}
+            ${g.rear ? photoHtml(g.rear, { tag: "後ろ", revealCredit: true, alt: `${c.name} ${g.label} 後ろから`, caption: `${c.name}　${g.label}　後ろ` }) : ""}
           </div>
-        </section>`).join('')}
-      ${c.wiki ? `<a class="board-btn block" href="${esc(c.wiki)}" target="_blank" rel="noopener">Wikipediaで読む</a>` : ''}
+        </section>`,
+        )
+        .join("")}
+      ${c.wiki ? `<a class="board-btn block" href="${esc(c.wiki)}" target="_blank" rel="noopener">Wikipediaで読む</a>` : ""}
     </div>`;
-  $detail.querySelector('.close').addEventListener('click', () => $detail.close());
+  $detail
+    .querySelector(".close")
+    .addEventListener("click", () => $detail.close());
   $detail.showModal();
   $detail.scrollTop = 0;
 }
@@ -644,83 +857,114 @@ function openDetail(id) {
 function openLightbox(btn) {
   $lightbox.innerHTML = `
     <figure>
-      <img src="${esc(btn.dataset.zoom)}" crossorigin="anonymous" alt="${esc(btn.dataset.caption || '拡大した写真')}">
+      <img src="${esc(btn.dataset.zoom)}" crossorigin="anonymous" alt="${esc(btn.dataset.caption || "拡大した写真")}">
       <figcaption>
-        ${btn.dataset.caption ? `<b>${esc(btn.dataset.caption)}</b>` : ''}
+        ${btn.dataset.caption ? `<b>${esc(btn.dataset.caption)}</b>` : ""}
         <a href="${esc(btn.dataset.page)}" target="_blank" rel="noopener">${btn.dataset.credit}</a>
       </figcaption>
     </figure>
     <button class="close" aria-label="閉じる" autofocus><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>`;
-  $lightbox.querySelector('.close').addEventListener('click', () => $lightbox.close());
+  $lightbox
+    .querySelector(".close")
+    .addEventListener("click", () => $lightbox.close());
   $lightbox.showModal();
 }
 
 // ---------- 共通 ----------
 
 function setTab(name) {
-  document.querySelectorAll('.tab').forEach((t) => t.setAttribute('aria-current', t.dataset.go === name ? 'page' : 'false'));
+  document
+    .querySelectorAll(".tab")
+    .forEach((t) =>
+      t.setAttribute("aria-current", t.dataset.go === name ? "page" : "false"),
+    );
 }
 
 function go(name) {
-  if (name === 'zukan') renderZukan();
+  if (name === "zukan") renderZukan();
   else renderHome();
   window.scrollTo({ top: 0 });
 }
 
-document.addEventListener('click', (e) => {
+document.addEventListener("click", (e) => {
   // 写真のどこを押しても拡大（クレジットのリンクは除く）
-  const zoomEl = e.target.closest('[data-zoom]') ?? (!e.target.closest('a') && e.target.closest('.photo')?.querySelector('[data-zoom]'));
-  if (zoomEl && !$lightbox.open) { openLightbox(zoomEl); return; }
-  const goEl = e.target.closest('[data-go]');
-  if (goEl) { go(goEl.dataset.go); return; }
-  const detailEl = e.target.closest('[data-detail]');
-  if (detailEl) { openDetail(detailEl.dataset.detail); return; }
+  const zoomEl =
+    e.target.closest("[data-zoom]") ??
+    (!e.target.closest("a") &&
+      e.target.closest(".photo")?.querySelector("[data-zoom]"));
+  if (zoomEl && !$lightbox.open) {
+    openLightbox(zoomEl);
+    return;
+  }
+  const goEl = e.target.closest("[data-go]");
+  if (goEl) {
+    go(goEl.dataset.go);
+    return;
+  }
+  const detailEl = e.target.closest("[data-detail]");
+  if (detailEl) {
+    openDetail(detailEl.dataset.detail);
+    return;
+  }
   // 背景や拡大写真のタップで閉じる
   if (e.target === $detail) $detail.close();
-  if ($lightbox.open && !e.target.closest('a, figcaption')) $lightbox.close();
+  if ($lightbox.open && !e.target.closest("a, figcaption")) $lightbox.close();
 });
 
 function renderFooter() {
-  const updated = new Date(data.updatedAt).toLocaleDateString('ja-JP');
-  document.getElementById('footer').innerHTML = `
+  const updated = new Date(data.updatedAt).toLocaleDateString("ja-JP");
+  document.getElementById("footer").innerHTML = `
     ${roadDivider()}
     <p>データ更新 ${esc(updated)}｜登録車 ${esc(ym(data.period.registered))}・軽自動車 ${esc(ym(data.period.kei))}までの販売台数</p>
     <p>ランキングは直近2年の同じ期間（1月〜最新月）の新車販売台数の合計です。毎月自動で更新されます。</p>
-    <p>出典: ${data.sources.map((s) => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>`).join('、')}</p>
+    <p>出典: ${data.sources.map((s) => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>`).join("、")}</p>
     <p>写真・ロゴは Wikimedia Commons のもので、各作者のライセンス（CC BY-SA など）に従って掲載しています。ロゴは各社の商標です。</p>`;
 }
 
 async function init() {
   for (const url of [...new Set([DATA_URL, FALLBACK_DATA_URL])]) {
     try {
-      const res = await fetch(url, { cache: 'no-cache' });
+      const res = await fetch(url, { cache: "no-cache" });
       if (!res.ok) throw new Error(res.status);
       data = await res.json();
       break;
-    } catch { /* 次の置き場所を試す */ }
+    } catch {
+      /* 次の置き場所を試す */
+    }
   }
   if (!data) {
-    $app.innerHTML = '<p class="empty">データを読み込めませんでした。インターネットにつながっているか確認して、再読み込みしてください。</p>';
+    $app.innerHTML =
+      '<p class="empty">データを読み込めませんでした。インターネットにつながっているか確認して、再読み込みしてください。</p>';
     return;
   }
   // 古いデータで newSince がないときは、最新月から24か月前を新型の境目にする
   if (!data.newSince) {
-    const [y, m] = [data.period.registered, data.period.kei].sort().at(-1).split('-').map(Number);
+    const [y, m] = [data.period.registered, data.period.kei]
+      .sort()
+      .at(-1)
+      .split("-")
+      .map(Number);
     const d = new Date(Date.UTC(y, m - 1 - 23, 1));
-    data.newSince = `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, '0')}`;
+    data.newSince = `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, "0")}`;
   }
   renderFooter();
-  go(location.hash === '#zukan' ? 'zukan' : 'home');
+  go(location.hash === "#zukan" ? "zukan" : "home");
 }
 
 // オフライン用のキャッシュ。手元のサーバー（localhost）では使わない
 // （サーバーを止めたあとも古い画面がキャッシュから出続けてしまうため）
-if ('serviceWorker' in navigator) {
+if ("serviceWorker" in navigator) {
   if (/^(localhost|127.0.0.1|[::1])$/.test(location.hostname)) {
-    navigator.serviceWorker.getRegistrations().then((rs) => rs.forEach((r) => r.unregister())).catch(() => {});
-    caches?.keys().then((ks) => ks.forEach((k) => caches.delete(k))).catch(() => {});
+    navigator.serviceWorker
+      .getRegistrations()
+      .then((rs) => rs.forEach((r) => r.unregister()))
+      .catch(() => {});
+    caches
+      ?.keys()
+      .then((ks) => ks.forEach((k) => caches.delete(k)))
+      .catch(() => {});
   } else {
-    navigator.serviceWorker.register('sw.js').catch(() => {});
+    navigator.serviceWorker.register("sw.js").catch(() => {});
   }
 }
 
