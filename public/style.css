@@ -1,4 +1,4 @@
-/* クルミル — ナンバープレートの緑（登録車）と黄（軽自動車）を差し色に、アスファルトと白線のトーン */
+/* あれなんて車？ — ナンバープレートの緑（登録車）と黄（軽自動車）を差し色に、アスファルトと白線のトーン */
 :root {
   --bg: #f4f1ea;
   --surface: #ffffff;
@@ -512,4 +512,10 @@ h1, h2 { margin: 0; }
 @media (min-width: 640px) {
   .modes { grid-template-columns: 1fr 1fr; }
   .mode:last-child:nth-child(odd) { grid-column: 1 / -1; }
+}
+
+@media (max-width: 360px) {
+  .brand { font-size: 16px; gap: 6px; }
+  .brand img { width: 26px; height: 26px; }
+  .tab { padding: 6px 12px; }
 }

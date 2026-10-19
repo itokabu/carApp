@@ -25,7 +25,7 @@ const MODES = {
   newer: { title: '新型どっち？', desc: '同じ車の新型と旧型を見分ける', prompt: '' },
 };
 
-const DATA_URL = document.querySelector('meta[name="kurumiru:data"]')?.content || 'data/cars.json';
+const DATA_URL = document.querySelector('meta[name="arenante:data"]')?.content || 'data/cars.json';
 
 const $app = document.getElementById('app');
 const $detail = document.getElementById('detail');
@@ -36,10 +36,10 @@ let star = Number(load('star')) || 2;
 // ---------- utils ----------
 
 function load(key) {
-  try { return localStorage.getItem(`kurumiru:${key}`); } catch { return null; }
+  try { return localStorage.getItem(`arenante:${key}`); } catch { return null; }
 }
 function save(key, value) {
-  try { localStorage.setItem(`kurumiru:${key}`, value); } catch { /* 保存できない環境でも動かす */ }
+  try { localStorage.setItem(`arenante:${key}`, value); } catch { /* 保存できない環境でも動かす */ }
 }
 
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
