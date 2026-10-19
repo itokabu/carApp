@@ -1,6 +1,6 @@
 // 画面のファイルとデータはネット優先（最新を取りに行き、オフライン時はキャッシュ）、
 // 写真はキャッシュ優先で表示を速くする
-const SHELL = 'shell-v3';
+const SHELL = 'shell-v4';
 const PHOTOS = 'photos-v1';
 const MAX_PHOTOS = 400;
 
