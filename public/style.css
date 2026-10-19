@@ -808,3 +808,6 @@ kbd { font-family: var(--num); font-size: 11px; padding: 0 5px; border: 1px soli
   .level-name { font-size: 11px; }
   .level-top { font-size: 9.5px; }
 }
+
+.hero-copy { margin: 18px 2px 0; font-size: clamp(17px, 4.6vw, 21px); font-weight: 800; line-height: 1.55; }
+.hero-copy + .hero-text { margin-top: 6px; }

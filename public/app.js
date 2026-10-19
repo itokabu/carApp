@@ -66,6 +66,8 @@ const levelRange = (lv = level()) => (lv.star === 'new' ? `${ym(data.newSince)}�
 const group = (car) => (car.kind === '登録車' ? '登録車' : '軽');
 const fmt = (n) => Number(n).toLocaleString('ja-JP');
 const ym = (s) => s?.replace(/^(\d{4})-0?(\d+)$/, '$1年$2月') ?? '';
+// データを最後に更新した日（例: 10月19日）。日本時間で表示する
+const updatedLabel = () => new Date(data.updatedAt).toLocaleDateString('ja-JP', { month: 'long', day: 'numeric', timeZone: 'Asia/Tokyo' });
 const ymShort = (s) => s?.replace(/^(\d{4})-0?(\d+)$/, '$1.$2') ?? '';
 const MARKS = ['①', '②', '③', '④'];
 
@@ -283,8 +285,9 @@ function renderHome() {
         <p class="guide-kicker">街でよく見る車クイズ</p>
         <h1>あれなんて車？</h1>
       </div>
-      <div class="aux-plate">${esc(ym(data.period.registered))}の販売ランキングで出題</div>
-      <p class="hero-text">新車の販売台数が多い車ほど、街でよく見かける車。いま日本の道を走っている車を、ランキングをもとに出題します。データは毎月自動で更新。</p>
+      <div class="aux-plate">${esc(updatedLabel())}更新！</div>
+      <p class="hero-copy">助手席で何度も聞いた「あれなんて車？」。<br>今日でそれ、卒業しよう。</p>
+      <p class="hero-text">いま日本の道でよく見かける車を、最新の販売ランキングから出題します。</p>
     </section>
 
     ${roadDivider()}
