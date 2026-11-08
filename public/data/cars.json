@@ -1,10 +1,10 @@
 {
- "updatedAt": "2026-10-20T08:22:41.339Z",
+ "updatedAt": "2026-11-08T10:04:38.676Z",
  "period": {
-  "registered": "2026-09",
-  "kei": "2026-09"
+  "registered": "2026-10",
+  "kei": "2026-10"
  },
- "newSince": "2024-10",
+ "newSince": "2024-11",
  "sources": [
   {
    "name": "一般社団法人 日本自動車販売協会連合会（自販連）",
@@ -24,8 +24,8 @@
    "rank": 1,
    "name": "N-BOX",
    "maker": "ホンダ",
-   "units": 314749,
-   "latestMonth": 19105,
+   "units": 342365,
+   "latestMonth": 14832,
    "kind": "軽自動車",
    "id": "ホンダ|N-BOX",
    "aliases": [
@@ -78,8 +78,8 @@
    "rank": 2,
    "name": "スペーシア",
    "maker": "スズキ",
-   "units": 259228,
-   "latestMonth": 16891,
+   "units": 287947,
+   "latestMonth": 13933,
    "kind": "軽自動車",
    "id": "スズキ|スペーシア",
    "aliases": [
@@ -128,8 +128,8 @@
    "rank": 3,
    "name": "ヤリス",
    "maker": "トヨタ",
-   "units": 233556,
-   "latestMonth": 14230,
+   "units": 265754,
+   "latestMonth": 15157,
    "kind": "登録車",
    "id": "トヨタ|ヤリス",
    "aliases": [
@@ -187,8 +187,8 @@
    "rank": 4,
    "name": "カローラ",
    "maker": "トヨタ",
-   "units": 201093,
-   "latestMonth": 11321,
+   "units": 223597,
+   "latestMonth": 10551,
    "kind": "登録車",
    "id": "トヨタ|カローラ",
    "aliases": [
@@ -246,8 +246,8 @@
    "rank": 5,
    "name": "タント",
    "maker": "ダイハツ",
-   "units": 183042,
-   "latestMonth": 12158,
+   "units": 209647,
+   "latestMonth": 12361,
    "kind": "軽自動車",
    "id": "ダイハツ|タント",
    "aliases": [
@@ -295,8 +295,8 @@
    "rank": 6,
    "name": "ムーヴ",
    "maker": "ダイハツ",
-   "units": 176281,
-   "latestMonth": 12119,
+   "units": 204009,
+   "latestMonth": 11713,
    "kind": "軽自動車",
    "id": "ダイハツ|ムーヴ",
    "aliases": [
@@ -349,8 +349,8 @@
    "rank": 7,
    "name": "シエンタ",
    "maker": "トヨタ",
-   "units": 172659,
-   "latestMonth": 10468,
+   "units": 191406,
+   "latestMonth": 10730,
    "kind": "登録車",
    "id": "トヨタ|シエンタ",
    "aliases": [
@@ -392,8 +392,8 @@
    "rank": 8,
    "name": "ライズ",
    "maker": "トヨタ",
-   "units": 160202,
-   "latestMonth": 4066,
+   "units": 171176,
+   "latestMonth": 1090,
    "kind": "登録車",
    "id": "トヨタ|ライズ",
    "aliases": [
@@ -424,8 +424,8 @@
    "rank": 9,
    "name": "ルーミー",
    "maker": "トヨタ",
-   "units": 146771,
-   "latestMonth": 7202,
+   "units": 163078,
+   "latestMonth": 7755,
    "kind": "登録車",
    "id": "トヨタ|ルーミー",
    "aliases": [
@@ -456,8 +456,8 @@
    "rank": 10,
    "name": "ジムニー",
    "maker": "スズキ",
-   "units": 138122,
-   "latestMonth": 9384,
+   "units": 156595,
+   "latestMonth": 10055,
    "kind": "登録車",
    "id": "スズキ|ジムニー",
    "aliases": [
@@ -505,8 +505,8 @@
    "rank": 11,
    "name": "フリード",
    "maker": "ホンダ",
-   "units": 136748,
-   "latestMonth": 7566,
+   "units": 152854,
+   "latestMonth": 8634,
    "kind": "登録車",
    "id": "ホンダ|フリード",
    "aliases": [
@@ -548,8 +548,8 @@
    "rank": 12,
    "name": "ハスラー",
    "maker": "スズキ",
-   "units": 136541,
-   "latestMonth": 8158,
+   "units": 150845,
+   "latestMonth": 7201,
    "kind": "軽自動車",
    "id": "スズキ|ハスラー",
    "aliases": [
@@ -596,8 +596,8 @@
    "rank": 13,
    "name": "アルファード",
    "maker": "トヨタ",
-   "units": 130919,
-   "latestMonth": 6879,
+   "units": 146229,
+   "latestMonth": 7224,
    "kind": "登録車",
    "id": "トヨタ|アルファード",
    "aliases": [
@@ -653,10 +653,59 @@
   },
   {
    "rank": 14,
+   "name": "アトレー/ハイゼットカーゴ",
+   "maker": "ダイハツ",
+   "units": 141138,
+   "latestMonth": 7548,
+   "kind": "軽自動車",
+   "id": "ダイハツ|アトレー/ハイゼットカーゴ",
+   "aliases": [
+    "アトレー/ハイゼットカーゴ"
+   ],
+   "wiki": "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%8F%E3%83%84%E3%83%BB%E3%82%A2%E3%83%88%E3%83%AC%E3%83%BC",
+   "gens": [
+    {
+     "label": "6代目(2021年 - )",
+     "period": "2021年12月20日 -",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Daihatsu_ATRAI_RS_2WD_%283BA-S700V-ZBXZ%29_front.jpg/960px-Daihatsu_ATRAI_RS_2WD_%283BA-S700V-ZBXZ%29_front.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Daihatsu_ATRAI_RS_2WD_(3BA-S700V-ZBXZ)_front.jpg",
+      "artist": "Tokumeigakarinoaoshima",
+      "license": "CC BY-SA 4.0"
+     },
+     "rear": null
+    },
+    {
+     "label": "5代目(2005年-2021年)",
+     "period": "2005年5月 – 2021年12月",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Daihatsu_ATRAI_WAGON_CUSTOM_TURBO_RS%22Limited_SA_III%22_%28ABA-S321G-ZQXZ%29_front.jpg/960px-Daihatsu_ATRAI_WAGON_CUSTOM_TURBO_RS%22Limited_SA_III%22_%28ABA-S321G-ZQXZ%29_front.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Daihatsu_ATRAI_WAGON_CUSTOM_TURBO_RS%22Limited_SA_III%22_(ABA-S321G-ZQXZ)_front.jpg",
+      "artist": "Tokumeigakarinoaoshima",
+      "license": "CC BY-SA 4.0"
+     },
+     "rear": null
+    },
+    {
+     "label": "4代目(1999年-2005年)",
+     "period": "1999年1月–2005年5月",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Daihatsu_Atrai_003.JPG/960px-Daihatsu_Atrai_003.JPG?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Daihatsu_Atrai_003.JPG",
+      "artist": "Tennen-Gas",
+      "license": "CC BY-SA 3.0"
+     },
+     "rear": null
+    }
+   ],
+   "since": "2021-12"
+  },
+  {
+   "rank": 15,
    "name": "ルークス",
    "maker": "日産",
-   "units": 128129,
-   "latestMonth": 10332,
+   "units": 139205,
+   "latestMonth": 5663,
    "kind": "軽自動車",
    "id": "日産|ルークス",
    "aliases": [
@@ -716,60 +765,11 @@
    "since": "2025-10"
   },
   {
-   "rank": 15,
-   "name": "アトレー/ハイゼットカーゴ",
-   "maker": "ダイハツ",
-   "units": 125229,
-   "latestMonth": 7738,
-   "kind": "軽自動車",
-   "id": "ダイハツ|アトレー/ハイゼットカーゴ",
-   "aliases": [
-    "アトレー/ハイゼットカーゴ"
-   ],
-   "wiki": "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%8F%E3%83%84%E3%83%BB%E3%82%A2%E3%83%88%E3%83%AC%E3%83%BC",
-   "gens": [
-    {
-     "label": "6代目(2021年 - )",
-     "period": "2021年12月20日 -",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Daihatsu_ATRAI_RS_2WD_%283BA-S700V-ZBXZ%29_front.jpg/960px-Daihatsu_ATRAI_RS_2WD_%283BA-S700V-ZBXZ%29_front.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Daihatsu_ATRAI_RS_2WD_(3BA-S700V-ZBXZ)_front.jpg",
-      "artist": "Tokumeigakarinoaoshima",
-      "license": "CC BY-SA 4.0"
-     },
-     "rear": null
-    },
-    {
-     "label": "5代目(2005年-2021年)",
-     "period": "2005年5月 – 2021年12月",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Daihatsu_ATRAI_WAGON_CUSTOM_TURBO_RS%22Limited_SA_III%22_%28ABA-S321G-ZQXZ%29_front.jpg/960px-Daihatsu_ATRAI_WAGON_CUSTOM_TURBO_RS%22Limited_SA_III%22_%28ABA-S321G-ZQXZ%29_front.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Daihatsu_ATRAI_WAGON_CUSTOM_TURBO_RS%22Limited_SA_III%22_(ABA-S321G-ZQXZ)_front.jpg",
-      "artist": "Tokumeigakarinoaoshima",
-      "license": "CC BY-SA 4.0"
-     },
-     "rear": null
-    },
-    {
-     "label": "4代目(1999年-2005年)",
-     "period": "1999年1月–2005年5月",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Daihatsu_Atrai_003.JPG/960px-Daihatsu_Atrai_003.JPG?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Daihatsu_Atrai_003.JPG",
-      "artist": "Tennen-Gas",
-      "license": "CC BY-SA 3.0"
-     },
-     "rear": null
-    }
-   ],
-   "since": "2021-12"
-  },
-  {
    "rank": 16,
    "name": "ヴォクシー",
    "maker": "トヨタ",
-   "units": 123691,
-   "latestMonth": 6939,
+   "units": 139070,
+   "latestMonth": 7914,
    "kind": "登録車",
    "id": "トヨタ|ヴォクシー",
    "aliases": [
@@ -827,8 +827,8 @@
    "rank": 17,
    "name": "エブリイ",
    "maker": "スズキ",
-   "units": 123608,
-   "latestMonth": 7952,
+   "units": 137163,
+   "latestMonth": 6706,
    "kind": "軽自動車",
    "id": "スズキ|エブリイ",
    "aliases": [
@@ -882,8 +882,8 @@
    "rank": 18,
    "name": "ノア",
    "maker": "トヨタ",
-   "units": 119449,
-   "latestMonth": 6293,
+   "units": 133435,
+   "latestMonth": 6304,
    "kind": "登録車",
    "id": "トヨタ|ノア",
    "aliases": [
@@ -941,8 +941,8 @@
    "rank": 19,
    "name": "ノート",
    "maker": "日産",
-   "units": 114522,
-   "latestMonth": 6432,
+   "units": 124483,
+   "latestMonth": 4469,
    "kind": "登録車",
    "id": "日産|ノート",
    "aliases": [
@@ -998,10 +998,64 @@
   },
   {
    "rank": 20,
+   "name": "ハイゼットトラック",
+   "maker": "ダイハツ",
+   "units": 123366,
+   "latestMonth": 6365,
+   "kind": "軽自動車",
+   "id": "ダイハツ|ハイゼットトラック",
+   "aliases": [
+    "ハイゼットトラック"
+   ],
+   "wiki": "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%8F%E3%83%84%E3%83%BB%E3%83%8F%E3%82%A4%E3%82%BC%E3%83%83%E3%83%88",
+   "gens": [
+    {
+     "label": "10代目(S320V/S321V/S330V/S331V/S500P/S510P)",
+     "period": "2014年9月 – (S500/510P)",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Daihatsu_HIJET_TRUCK_Standard%22SA_IIIt%22_%28EBD-S500P%29.jpg/960px-Daihatsu_HIJET_TRUCK_Standard%22SA_IIIt%22_%28EBD-S500P%29.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Daihatsu_HIJET_TRUCK_Standard%22SA_IIIt%22_(EBD-S500P).jpg",
+      "artist": "Tokumeigakarinoaoshima",
+      "license": "CC BY-SA 4.0"
+     },
+     "rear": null
+    },
+    {
+     "label": "9代目(S200P/S210P/S200V/S210V/S201P/S211P)",
+     "period": "1999年 – 2007年(S200/210P系) 2007年 - 2014年(S201/211P系)",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/2007-2011_Daihatsu_Hijet_Truck_Extra_4WD.jpg/960px-2007-2011_Daihatsu_Hijet_Truck_Extra_4WD.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:2007-2011_Daihatsu_Hijet_Truck_Extra_4WD.jpg",
+      "artist": "TTTNIS",
+      "license": "CC0"
+     },
+     "rear": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/2007-2011_Daihatsu_Hijet_Truck_Extra_4WD_rear.jpg/960px-2007-2011_Daihatsu_Hijet_Truck_Extra_4WD_rear.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:2007-2011_Daihatsu_Hijet_Truck_Extra_4WD_rear.jpg",
+      "artist": "TTTNIS",
+      "license": "CC0"
+     }
+    },
+    {
+     "label": "8代目(S100C/S100P/S100V/S110C/S110P/S110V)",
+     "period": "1994年1月–1999年1月",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Daihatsu_Hijet_005.JPG/960px-Daihatsu_Hijet_005.JPG?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Daihatsu_Hijet_005.JPG",
+      "artist": "Tennen-Gas",
+      "license": "CC BY-SA 3.0"
+     },
+     "rear": null
+    }
+   ],
+   "since": "2014-09"
+  },
+  {
+   "rank": 21,
    "name": "アクア",
    "maker": "トヨタ",
-   "units": 109091,
-   "latestMonth": 5324,
+   "units": 117923,
+   "latestMonth": 5651,
    "kind": "登録車",
    "id": "トヨタ|アクア",
    "aliases": [
@@ -1045,11 +1099,59 @@
    "since": "2021-07"
   },
   {
-   "rank": 21,
+   "rank": 22,
+   "name": "ヴェゼル",
+   "maker": "ホンダ",
+   "units": 117837,
+   "latestMonth": 6530,
+   "kind": "登録車",
+   "id": "ホンダ|ヴェゼル",
+   "aliases": [
+    "ヴェゼル"
+   ],
+   "wiki": "https://ja.wikipedia.org/wiki/%E3%83%9B%E3%83%B3%E3%83%80%E3%83%BB%E3%83%B4%E3%82%A7%E3%82%BC%E3%83%AB",
+   "gens": [
+    {
+     "label": "2代目 RV3/4/5/6型(2021年 - )",
+     "period": "2021年4月 - (発表:2021年4月22日)",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/2021-2024_Honda_Vezel_e-HEV_X.jpg/960px-2021-2024_Honda_Vezel_e-HEV_X.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:2021-2024_Honda_Vezel_e-HEV_X.jpg",
+      "artist": "TTTNIS",
+      "license": "CC0"
+     },
+     "rear": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/2021-2024_Honda_Vezel_e-HEV_X_rear.jpg/960px-2021-2024_Honda_Vezel_e-HEV_X_rear.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:2021-2024_Honda_Vezel_e-HEV_X_rear.jpg",
+      "artist": "TTTNIS",
+      "license": "CC0"
+     }
+    },
+    {
+     "label": "初代 RU1/2/3/4型 (2013年 - 2021年)",
+     "period": "日本: 2013年12月 - 2021年3月 (発表: 2013年12月19日) 中国: 2014年4月18日 -",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Honda_VEZEL_TOURING%E3%83%BBHonda_SENSING_%28DBA-RU1%29_front.jpg/960px-Honda_VEZEL_TOURING%E3%83%BBHonda_SENSING_%28DBA-RU1%29_front.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Honda_VEZEL_TOURING%E3%83%BBHonda_SENSING_(DBA-RU1)_front.jpg",
+      "artist": "Tokumeigakarinoaoshima",
+      "license": "CC BY-SA 4.0"
+     },
+     "rear": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Honda_VEZEL_TOURING%E3%83%BBHonda_SENSING_%28DBA-RU1%29_rear.jpg/960px-Honda_VEZEL_TOURING%E3%83%BBHonda_SENSING_%28DBA-RU1%29_rear.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Honda_VEZEL_TOURING%E3%83%BBHonda_SENSING_(DBA-RU1)_rear.jpg",
+      "artist": "Tokumeigakarinoaoshima",
+      "license": "CC BY-SA 4.0"
+     }
+    }
+   ],
+   "since": "2021-04"
+  },
+  {
+   "rank": 23,
    "name": "セレナ",
    "maker": "日産",
-   "units": 108819,
-   "latestMonth": 6559,
+   "units": 117836,
+   "latestMonth": 4197,
    "kind": "登録車",
    "id": "日産|セレナ",
    "aliases": [
@@ -1104,113 +1206,11 @@
    "since": "2022-12"
   },
   {
-   "rank": 22,
-   "name": "ハイゼットトラック",
-   "maker": "ダイハツ",
-   "units": 108767,
-   "latestMonth": 6288,
-   "kind": "軽自動車",
-   "id": "ダイハツ|ハイゼットトラック",
-   "aliases": [
-    "ハイゼットトラック"
-   ],
-   "wiki": "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%8F%E3%83%84%E3%83%BB%E3%83%8F%E3%82%A4%E3%82%BC%E3%83%83%E3%83%88",
-   "gens": [
-    {
-     "label": "10代目(S320V/S321V/S330V/S331V/S500P/S510P)",
-     "period": "2014年9月 – (S500/510P)",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Daihatsu_HIJET_TRUCK_Standard%22SA_IIIt%22_%28EBD-S500P%29.jpg/960px-Daihatsu_HIJET_TRUCK_Standard%22SA_IIIt%22_%28EBD-S500P%29.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Daihatsu_HIJET_TRUCK_Standard%22SA_IIIt%22_(EBD-S500P).jpg",
-      "artist": "Tokumeigakarinoaoshima",
-      "license": "CC BY-SA 4.0"
-     },
-     "rear": null
-    },
-    {
-     "label": "9代目(S200P/S210P/S200V/S210V/S201P/S211P)",
-     "period": "1999年 – 2007年(S200/210P系) 2007年 - 2014年(S201/211P系)",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/2007-2011_Daihatsu_Hijet_Truck_Extra_4WD.jpg/960px-2007-2011_Daihatsu_Hijet_Truck_Extra_4WD.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:2007-2011_Daihatsu_Hijet_Truck_Extra_4WD.jpg",
-      "artist": "TTTNIS",
-      "license": "CC0"
-     },
-     "rear": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/2007-2011_Daihatsu_Hijet_Truck_Extra_4WD_rear.jpg/960px-2007-2011_Daihatsu_Hijet_Truck_Extra_4WD_rear.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:2007-2011_Daihatsu_Hijet_Truck_Extra_4WD_rear.jpg",
-      "artist": "TTTNIS",
-      "license": "CC0"
-     }
-    },
-    {
-     "label": "8代目(S100C/S100P/S100V/S110C/S110P/S110V)",
-     "period": "1994年1月–1999年1月",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Daihatsu_Hijet_005.JPG/960px-Daihatsu_Hijet_005.JPG?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Daihatsu_Hijet_005.JPG",
-      "artist": "Tennen-Gas",
-      "license": "CC BY-SA 3.0"
-     },
-     "rear": null
-    }
-   ],
-   "since": "2014-09"
-  },
-  {
-   "rank": 23,
-   "name": "ヴェゼル",
-   "maker": "ホンダ",
-   "units": 103878,
-   "latestMonth": 6918,
-   "kind": "登録車",
-   "id": "ホンダ|ヴェゼル",
-   "aliases": [
-    "ヴェゼル"
-   ],
-   "wiki": "https://ja.wikipedia.org/wiki/%E3%83%9B%E3%83%B3%E3%83%80%E3%83%BB%E3%83%B4%E3%82%A7%E3%82%BC%E3%83%AB",
-   "gens": [
-    {
-     "label": "2代目 RV3/4/5/6型(2021年 - )",
-     "period": "2021年4月 - (発表:2021年4月22日)",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/2021-2024_Honda_Vezel_e-HEV_X.jpg/960px-2021-2024_Honda_Vezel_e-HEV_X.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:2021-2024_Honda_Vezel_e-HEV_X.jpg",
-      "artist": "TTTNIS",
-      "license": "CC0"
-     },
-     "rear": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/2021-2024_Honda_Vezel_e-HEV_X_rear.jpg/960px-2021-2024_Honda_Vezel_e-HEV_X_rear.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:2021-2024_Honda_Vezel_e-HEV_X_rear.jpg",
-      "artist": "TTTNIS",
-      "license": "CC0"
-     }
-    },
-    {
-     "label": "初代 RU1/2/3/4型 (2013年 - 2021年)",
-     "period": "日本: 2013年12月 - 2021年3月 (発表: 2013年12月19日) 中国: 2014年4月18日 -",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Honda_VEZEL_TOURING%E3%83%BBHonda_SENSING_%28DBA-RU1%29_front.jpg/960px-Honda_VEZEL_TOURING%E3%83%BBHonda_SENSING_%28DBA-RU1%29_front.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Honda_VEZEL_TOURING%E3%83%BBHonda_SENSING_(DBA-RU1)_front.jpg",
-      "artist": "Tokumeigakarinoaoshima",
-      "license": "CC BY-SA 4.0"
-     },
-     "rear": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Honda_VEZEL_TOURING%E3%83%BBHonda_SENSING_%28DBA-RU1%29_rear.jpg/960px-Honda_VEZEL_TOURING%E3%83%BBHonda_SENSING_%28DBA-RU1%29_rear.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Honda_VEZEL_TOURING%E3%83%BBHonda_SENSING_(DBA-RU1)_rear.jpg",
-      "artist": "Tokumeigakarinoaoshima",
-      "license": "CC BY-SA 4.0"
-     }
-    }
-   ],
-   "since": "2021-04"
-  },
-  {
    "rank": 24,
    "name": "ワゴンR",
    "maker": "スズキ",
-   "units": 102428,
-   "latestMonth": 5308,
+   "units": 112794,
+   "latestMonth": 4227,
    "kind": "軽自動車",
    "id": "スズキ|ワゴンR",
    "aliases": [
@@ -1266,53 +1266,10 @@
   },
   {
    "rank": 25,
-   "name": "デリカミニ/eK",
-   "maker": "三菱",
-   "units": 92341,
-   "latestMonth": 7505,
-   "kind": "軽自動車",
-   "id": "三菱|デリカミニ/eK",
-   "aliases": [
-    "デリカミニ/eK"
-   ],
-   "wiki": "https://ja.wikipedia.org/wiki/%E4%B8%89%E8%8F%B1%E3%83%BB%E3%83%87%E3%83%AA%E3%82%AB%E3%83%9F%E3%83%8B",
-   "gens": [
-    {
-     "label": "2代目(BA1A/BA2A/BA5A/BA6A型・2025年 - )",
-     "period": "2025年10月29日 - (公式発表:2025年9月18日)",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Mitsubishi_Delica_mini_T_Premium_DELIMARU_Package_2025_JAPAN_Front.jpg/960px-Mitsubishi_Delica_mini_T_Premium_DELIMARU_Package_2025_JAPAN_Front.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Mitsubishi_Delica_mini_T_Premium_DELIMARU_Package_2025_JAPAN_Front.jpg",
-      "artist": "Suzuki-Ham",
-      "license": "CC BY-SA 4.0"
-     },
-     "rear": null
-    },
-    {
-     "label": "初代(B34A/B35A/B37A/B38A型・2023年 - 2025年)",
-     "period": "2023年5月25日 - 2025年9月17日 (公式発表:2023年4月6日)",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Mitsubishi_DELICA_MINI_G_Premium_4WD_Active_Tone_Style_%285AA-B37A-HXTSGZ%29_front.jpg/960px-Mitsubishi_DELICA_MINI_G_Premium_4WD_Active_Tone_Style_%285AA-B37A-HXTSGZ%29_front.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Mitsubishi_DELICA_MINI_G_Premium_4WD_Active_Tone_Style_(5AA-B37A-HXTSGZ)_front.jpg",
-      "artist": "Tokumeigakarinoaoshima",
-      "license": "CC0"
-     },
-     "rear": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Mitsubishi_DELICA_MINI_G_Premium_4WD_Active_Tone_Style_%285AA-B37A-HXTSGZ%29_rear.jpg/960px-Mitsubishi_DELICA_MINI_G_Premium_4WD_Active_Tone_Style_%285AA-B37A-HXTSGZ%29_rear.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Mitsubishi_DELICA_MINI_G_Premium_4WD_Active_Tone_Style_(5AA-B37A-HXTSGZ)_rear.jpg",
-      "artist": "Tokumeigakarinoaoshima",
-      "license": "CC0"
-     }
-    }
-   ],
-   "since": "2025-10"
-  },
-  {
-   "rank": 26,
    "name": "ステップワゴン",
    "maker": "ホンダ",
-   "units": 91439,
-   "latestMonth": 5287,
+   "units": 101703,
+   "latestMonth": 5708,
    "kind": "登録車",
    "id": "ホンダ|ステップワゴン",
    "aliases": [
@@ -1357,11 +1314,140 @@
    "since": "2022-05"
   },
   {
+   "rank": 26,
+   "name": "デリカミニ/eK",
+   "maker": "三菱",
+   "units": 99908,
+   "latestMonth": 3877,
+   "kind": "軽自動車",
+   "id": "三菱|デリカミニ/eK",
+   "aliases": [
+    "デリカミニ/eK"
+   ],
+   "wiki": "https://ja.wikipedia.org/wiki/%E4%B8%89%E8%8F%B1%E3%83%BB%E3%83%87%E3%83%AA%E3%82%AB%E3%83%9F%E3%83%8B",
+   "gens": [
+    {
+     "label": "2代目(BA1A/BA2A/BA5A/BA6A型・2025年 - )",
+     "period": "2025年10月29日 - (公式発表:2025年9月18日)",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Mitsubishi_Delica_mini_T_Premium_DELIMARU_Package_2025_JAPAN_Front.jpg/960px-Mitsubishi_Delica_mini_T_Premium_DELIMARU_Package_2025_JAPAN_Front.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Mitsubishi_Delica_mini_T_Premium_DELIMARU_Package_2025_JAPAN_Front.jpg",
+      "artist": "Suzuki-Ham",
+      "license": "CC BY-SA 4.0"
+     },
+     "rear": null
+    },
+    {
+     "label": "初代(B34A/B35A/B37A/B38A型・2023年 - 2025年)",
+     "period": "2023年5月25日 - 2025年9月17日 (公式発表:2023年4月6日)",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Mitsubishi_DELICA_MINI_G_Premium_4WD_Active_Tone_Style_%285AA-B37A-HXTSGZ%29_front.jpg/960px-Mitsubishi_DELICA_MINI_G_Premium_4WD_Active_Tone_Style_%285AA-B37A-HXTSGZ%29_front.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Mitsubishi_DELICA_MINI_G_Premium_4WD_Active_Tone_Style_(5AA-B37A-HXTSGZ)_front.jpg",
+      "artist": "Tokumeigakarinoaoshima",
+      "license": "CC0"
+     },
+     "rear": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Mitsubishi_DELICA_MINI_G_Premium_4WD_Active_Tone_Style_%285AA-B37A-HXTSGZ%29_rear.jpg/960px-Mitsubishi_DELICA_MINI_G_Premium_4WD_Active_Tone_Style_%285AA-B37A-HXTSGZ%29_rear.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Mitsubishi_DELICA_MINI_G_Premium_4WD_Active_Tone_Style_(5AA-B37A-HXTSGZ)_rear.jpg",
+      "artist": "Tokumeigakarinoaoshima",
+      "license": "CC0"
+     }
+    }
+   ],
+   "since": "2025-10"
+  },
+  {
    "rank": 27,
+   "name": "ランドクルーザー",
+   "maker": "トヨタ",
+   "units": 98223,
+   "latestMonth": 7154,
+   "kind": "登録車",
+   "id": "トヨタ|ランドクルーザー",
+   "aliases": [
+    "ランドクルーザー"
+   ],
+   "wiki": "https://ja.wikipedia.org/wiki/%E3%83%88%E3%83%A8%E3%82%BF%E3%83%BB%E3%83%A9%E3%83%B3%E3%83%89%E3%82%AF%E3%83%AB%E3%83%BC%E3%82%B6%E3%83%BC250",
+   "gens": [
+    {
+     "label": "GDJ250W/TRJ250W型",
+     "period": "2024年 -",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Toyota_Land_Cruiser_250_VX.jpg/960px-Toyota_Land_Cruiser_250_VX.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Toyota_Land_Cruiser_250_VX.jpg",
+      "artist": "TTTNIS",
+      "license": "CC0"
+     },
+     "rear": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Toyota_Land_Cruiser_250_ZX_First_Edition_rear.jpg/960px-Toyota_Land_Cruiser_250_ZX_First_Edition_rear.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Toyota_Land_Cruiser_250_ZX_First_Edition_rear.jpg",
+      "artist": "TTTNIS",
+      "license": "CC0"
+     }
+    }
+   ],
+   "since": "2024-01"
+  },
+  {
+   "rank": 28,
+   "name": "キャリイ",
+   "maker": "スズキ",
+   "units": 97754,
+   "latestMonth": 4907,
+   "kind": "軽自動車",
+   "id": "スズキ|キャリイ",
+   "aliases": [
+    "キャリイ"
+   ],
+   "wiki": "https://ja.wikipedia.org/wiki/%E3%82%B9%E3%82%BA%E3%82%AD%E3%83%BB%E3%82%AD%E3%83%A3%E3%83%AA%E3%82%A4",
+   "gens": [
+    {
+     "label": "11代目 DA16T型(2013年 - )",
+     "period": "2013年9月20日-",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Suzuki_Carry_Truck_KC_4WD_DA16T_260424.jpg/960px-Suzuki_Carry_Truck_KC_4WD_DA16T_260424.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Suzuki_Carry_Truck_KC_4WD_DA16T_260424.jpg",
+      "artist": "DR17 Sagittarius Runaway",
+      "license": "CC BY-SA 4.0"
+     },
+     "rear": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Suzuki_Carry_Truck_KC_4WD_DA16T_Rear.JPG/960px-Suzuki_Carry_Truck_KC_4WD_DA16T_Rear.JPG?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Suzuki_Carry_Truck_KC_4WD_DA16T_Rear.JPG",
+      "artist": "DY5W-sport",
+      "license": "CC BY-SA 3.0"
+     }
+    },
+    {
+     "label": "10代目 DA52T/DB52T/DA62T/DA63T/DA65T型(1999年- 2013年)",
+     "period": "1999年1月9日- 2013年9月19日",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Suzuki_Carry_005.JPG/960px-Suzuki_Carry_005.JPG?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Suzuki_Carry_005.JPG",
+      "artist": "Tennen-Gas",
+      "license": "CC BY-SA 3.0"
+     },
+     "rear": null
+    },
+    {
+     "label": "9代目 DC51T/DD51T型(1991-1999年)",
+     "period": "1991年9月-1999年1月",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Suzuki_Carry_1001.JPG/960px-Suzuki_Carry_1001.JPG?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Suzuki_Carry_1001.JPG",
+      "artist": "Tennen-Gas",
+      "license": "CC BY-SA 3.0"
+     },
+     "rear": null
+    }
+   ],
+   "since": "2013-09"
+  },
+  {
+   "rank": 29,
    "name": "プリウス",
    "maker": "トヨタ",
-   "units": 89853,
-   "latestMonth": 3931,
+   "units": 97720,
+   "latestMonth": 4119,
    "kind": "登録車",
    "id": "トヨタ|プリウス",
    "aliases": [
@@ -1416,97 +1502,11 @@
    "since": "2023-01"
   },
   {
-   "rank": 28,
-   "name": "キャリイ",
-   "maker": "スズキ",
-   "units": 89235,
-   "latestMonth": 6545,
-   "kind": "軽自動車",
-   "id": "スズキ|キャリイ",
-   "aliases": [
-    "キャリイ"
-   ],
-   "wiki": "https://ja.wikipedia.org/wiki/%E3%82%B9%E3%82%BA%E3%82%AD%E3%83%BB%E3%82%AD%E3%83%A3%E3%83%AA%E3%82%A4",
-   "gens": [
-    {
-     "label": "11代目 DA16T型(2013年 - )",
-     "period": "2013年9月20日-",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Suzuki_Carry_Truck_KC_4WD_DA16T_260424.jpg/960px-Suzuki_Carry_Truck_KC_4WD_DA16T_260424.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Suzuki_Carry_Truck_KC_4WD_DA16T_260424.jpg",
-      "artist": "DR17 Sagittarius Runaway",
-      "license": "CC BY-SA 4.0"
-     },
-     "rear": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Suzuki_Carry_Truck_KC_4WD_DA16T_Rear.JPG/960px-Suzuki_Carry_Truck_KC_4WD_DA16T_Rear.JPG?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Suzuki_Carry_Truck_KC_4WD_DA16T_Rear.JPG",
-      "artist": "DY5W-sport",
-      "license": "CC BY-SA 3.0"
-     }
-    },
-    {
-     "label": "10代目 DA52T/DB52T/DA62T/DA63T/DA65T型(1999年- 2013年)",
-     "period": "1999年1月9日- 2013年9月19日",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Suzuki_Carry_005.JPG/960px-Suzuki_Carry_005.JPG?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Suzuki_Carry_005.JPG",
-      "artist": "Tennen-Gas",
-      "license": "CC BY-SA 3.0"
-     },
-     "rear": null
-    },
-    {
-     "label": "9代目 DC51T/DD51T型(1991-1999年)",
-     "period": "1991年9月-1999年1月",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Suzuki_Carry_1001.JPG/960px-Suzuki_Carry_1001.JPG?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Suzuki_Carry_1001.JPG",
-      "artist": "Tennen-Gas",
-      "license": "CC BY-SA 3.0"
-     },
-     "rear": null
-    }
-   ],
-   "since": "2013-09"
-  },
-  {
-   "rank": 29,
-   "name": "ランドクルーザー",
-   "maker": "トヨタ",
-   "units": 86692,
-   "latestMonth": 7362,
-   "kind": "登録車",
-   "id": "トヨタ|ランドクルーザー",
-   "aliases": [
-    "ランドクルーザー"
-   ],
-   "wiki": "https://ja.wikipedia.org/wiki/%E3%83%88%E3%83%A8%E3%82%BF%E3%83%BB%E3%83%A9%E3%83%B3%E3%83%89%E3%82%AF%E3%83%AB%E3%83%BC%E3%82%B6%E3%83%BC250",
-   "gens": [
-    {
-     "label": "GDJ250W/TRJ250W型",
-     "period": "2024年 -",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Toyota_Land_Cruiser_250_VX.jpg/960px-Toyota_Land_Cruiser_250_VX.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Toyota_Land_Cruiser_250_VX.jpg",
-      "artist": "TTTNIS",
-      "license": "CC0"
-     },
-     "rear": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Toyota_Land_Cruiser_250_ZX_First_Edition_rear.jpg/960px-Toyota_Land_Cruiser_250_ZX_First_Edition_rear.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Toyota_Land_Cruiser_250_ZX_First_Edition_rear.jpg",
-      "artist": "TTTNIS",
-      "license": "CC0"
-     }
-    }
-   ],
-   "since": "2024-01"
-  },
-  {
    "rank": 30,
    "name": "ソリオ",
    "maker": "スズキ",
-   "units": 83592,
-   "latestMonth": 5066,
+   "units": 93525,
+   "latestMonth": 5123,
    "kind": "登録車",
    "id": "スズキ|ソリオ",
    "aliases": [
@@ -1552,14 +1552,58 @@
   },
   {
    "rank": 31,
+   "name": "ミライース",
+   "maker": "ダイハツ",
+   "units": 92725,
+   "latestMonth": 5160,
+   "kind": "軽自動車",
+   "id": "ダイハツ|ミラ",
+   "aliases": [
+    "ミラ"
+   ],
+   "wiki": "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%8F%E3%83%84%E3%83%BB%E3%83%9F%E3%83%A9%E3%82%A4%E3%83%BC%E3%82%B9",
+   "gens": [
+    {
+     "label": "2代目(通算9代目) LA350S/360S(2017年 - )",
+     "period": "2017年5月9日 -",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Daihatsu_Mira_e-S_G%22SA_III%22_%2717_%281%29.jpg/960px-Daihatsu_Mira_e-S_G%22SA_III%22_%2717_%281%29.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Daihatsu_Mira_e-S_G%22SA_III%22_%2717_(1).jpg",
+      "artist": "Oq10pass",
+      "license": "CC0"
+     },
+     "rear": null
+    },
+    {
+     "label": "初代(通算8代目)LA300S/310S(2011年 - 2017年)",
+     "period": "2011年9月20日 - 2017年5月9日",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Daihatsu_Mira_e-S_X_memorial_edition.jpg/960px-Daihatsu_Mira_e-S_X_memorial_edition.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Daihatsu_Mira_e-S_X_memorial_edition.jpg",
+      "artist": "DY5W-sport",
+      "license": "CC BY-SA 3.0"
+     },
+     "rear": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Daihatsu_Mira_e-S_X_memorial_edition_Rear.JPG/960px-Daihatsu_Mira_e-S_X_memorial_edition_Rear.JPG?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Daihatsu_Mira_e-S_X_memorial_edition_Rear.JPG",
+      "artist": "DY5W-sport",
+      "license": "CC BY-SA 3.0"
+     }
+    }
+   ],
+   "since": "2017-05"
+  },
+  {
+   "rank": 32,
    "name": "アルト",
    "maker": "スズキ",
-   "units": 83189,
-   "latestMonth": 4441,
+   "units": 91417,
+   "latestMonth": 3700,
    "kind": "軽自動車",
    "id": "スズキ|アルト",
    "aliases": [
-    "アルト"
+    "アルト",
+    "アルトバン"
    ],
    "wiki": "https://ja.wikipedia.org/wiki/%E3%82%B9%E3%82%BA%E3%82%AD%E3%83%BB%E3%82%A2%E3%83%AB%E3%83%88",
    "gens": [
@@ -1610,54 +1654,11 @@
    "since": "2021-12"
   },
   {
-   "rank": 32,
-   "name": "ミライース",
-   "maker": "ダイハツ",
-   "units": 82029,
-   "latestMonth": 4647,
-   "kind": "軽自動車",
-   "id": "ダイハツ|ミラ",
-   "aliases": [
-    "ミラ"
-   ],
-   "wiki": "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%8F%E3%83%84%E3%83%BB%E3%83%9F%E3%83%A9%E3%82%A4%E3%83%BC%E3%82%B9",
-   "gens": [
-    {
-     "label": "2代目(通算9代目) LA350S/360S(2017年 - )",
-     "period": "2017年5月9日 -",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Daihatsu_Mira_e-S_G%22SA_III%22_%2717_%281%29.jpg/960px-Daihatsu_Mira_e-S_G%22SA_III%22_%2717_%281%29.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Daihatsu_Mira_e-S_G%22SA_III%22_%2717_(1).jpg",
-      "artist": "Oq10pass",
-      "license": "CC0"
-     },
-     "rear": null
-    },
-    {
-     "label": "初代(通算8代目)LA300S/310S(2011年 - 2017年)",
-     "period": "2011年9月20日 - 2017年5月9日",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Daihatsu_Mira_e-S_X_memorial_edition.jpg/960px-Daihatsu_Mira_e-S_X_memorial_edition.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Daihatsu_Mira_e-S_X_memorial_edition.jpg",
-      "artist": "DY5W-sport",
-      "license": "CC BY-SA 3.0"
-     },
-     "rear": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Daihatsu_Mira_e-S_X_memorial_edition_Rear.JPG/960px-Daihatsu_Mira_e-S_X_memorial_edition_Rear.JPG?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Daihatsu_Mira_e-S_X_memorial_edition_Rear.JPG",
-      "artist": "DY5W-sport",
-      "license": "CC BY-SA 3.0"
-     }
-    }
-   ],
-   "since": "2017-05"
-  },
-  {
    "rank": 33,
    "name": "フィット",
    "maker": "ホンダ",
-   "units": 76707,
-   "latestMonth": 4723,
+   "units": 83696,
+   "latestMonth": 3736,
    "kind": "登録車",
    "id": "ホンダ|フィット",
    "aliases": [
@@ -1715,8 +1716,8 @@
    "rank": 34,
    "name": "ハリアー",
    "maker": "トヨタ",
-   "units": 76219,
-   "latestMonth": 2884,
+   "units": 81934,
+   "latestMonth": 2618,
    "kind": "登録車",
    "id": "トヨタ|ハリアー",
    "aliases": [
@@ -1779,8 +1780,8 @@
    "rank": 35,
    "name": "クラウン",
    "maker": "トヨタ",
-   "units": 74117,
-   "latestMonth": 2509,
+   "units": 81846,
+   "latestMonth": 2736,
    "kind": "登録車",
    "id": "トヨタ|クラウン",
    "aliases": [
@@ -1833,8 +1834,8 @@
    "rank": 36,
    "name": "タフト",
    "maker": "ダイハツ",
-   "units": 70105,
-   "latestMonth": 4491,
+   "units": 79341,
+   "latestMonth": 4322,
    "kind": "軽自動車",
    "id": "ダイハツ|タフト",
    "aliases": [
@@ -1871,8 +1872,8 @@
    "rank": 37,
    "name": "RAV4",
    "maker": "トヨタ",
-   "units": 66018,
-   "latestMonth": 5120,
+   "units": 76224,
+   "latestMonth": 5296,
    "kind": "登録車",
    "id": "トヨタ|RAV4",
    "aliases": [
@@ -1930,8 +1931,8 @@
    "rank": 38,
    "name": "デイズ",
    "maker": "日産",
-   "units": 65620,
-   "latestMonth": 4260,
+   "units": 70961,
+   "latestMonth": 2370,
    "kind": "軽自動車",
    "id": "日産|デイズ",
    "aliases": [
@@ -1978,8 +1979,8 @@
    "rank": 39,
    "name": "ヴェルファイア",
    "maker": "トヨタ",
-   "units": 49744,
-   "latestMonth": 3367,
+   "units": 56556,
+   "latestMonth": 3124,
    "kind": "登録車",
    "id": "トヨタ|ヴェルファイア",
    "aliases": [
@@ -2035,150 +2036,10 @@
   },
   {
    "rank": 40,
-   "name": "クリッパー",
-   "maker": "日産",
-   "units": 47594,
-   "latestMonth": 4310,
-   "kind": "軽自動車",
-   "id": "日産|クリッパー",
-   "aliases": [
-    "クリッパー"
-   ],
-   "wiki": "https://ja.wikipedia.org/wiki/%E6%97%A5%E7%94%A3%E3%83%BB%E3%82%AF%E3%83%AA%E3%83%83%E3%83%91%E3%83%BC%E3%83%90%E3%83%B3",
-   "gens": [
-    {
-     "label": "3代目 DR17V/DR18V型(2015年 - )",
-     "period": "{{ubl|NV100クリッパーバン:|2015年3月 - 2024年3月|クリッパーバン:|2024年3月",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Nissan_DW17V_Clipper_GX_Turbo_4WD.jpg/960px-Nissan_DW17V_Clipper_GX_Turbo_4WD.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Nissan_DW17V_Clipper_GX_Turbo_4WD.jpg",
-      "artist": "DR17 Sagittarius Runaway",
-      "license": "CC BY-SA 4.0"
-     },
-     "rear": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nissan_DW17V_Clipper_GX_Turbo_4WD_Rear.jpg/960px-Nissan_DW17V_Clipper_GX_Turbo_4WD_Rear.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Nissan_DW17V_Clipper_GX_Turbo_4WD_Rear.jpg",
-      "artist": "DR17 Sagittarius Runaway",
-      "license": "CC BY-SA 4.0"
-     }
-    },
-    {
-     "label": "2代目 DR64V型(2013年 - 2015年)",
-     "period": "2013年12月 - 2015年3月",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Nissan_NV100_Clipper_DX_GL_Package_4WD_DR64V_502.JPG/960px-Nissan_NV100_Clipper_DX_GL_Package_4WD_DR64V_502.JPG?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Nissan_NV100_Clipper_DX_GL_Package_4WD_DR64V_502.JPG",
-      "artist": "DY5W-sport",
-      "license": "CC BY-SA 4.0"
-     },
-     "rear": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/NV100_Clipper_DX_GL_Package_4WD_DR64V_Rear.JPG/960px-NV100_Clipper_DX_GL_Package_4WD_DR64V_Rear.JPG?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:NV100_Clipper_DX_GL_Package_4WD_DR64V_Rear.JPG",
-      "artist": "DY5W-sport",
-      "license": "CC BY-SA 4.0"
-     }
-    },
-    {
-     "label": "初代 U71V/U72V型(2003年 - 2013年)",
-     "period": "{{ubl|クリッパーバン:|2003年10月 - 2012年1月|NV100クリッパーバン:|2012年1月 - 2013年12月}}",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Nissan_NV100_Clipper_0015.JPG/960px-Nissan_NV100_Clipper_0015.JPG?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Nissan_NV100_Clipper_0015.JPG",
-      "artist": "DY5W-sport",
-      "license": "CC BY-SA 3.0"
-     },
-     "rear": null
-    }
-   ],
-   "since": "2015-03"
-  },
-  {
-   "rank": 41,
-   "name": "CX-5",
-   "maker": "マツダ",
-   "units": 47481,
-   "latestMonth": 4394,
-   "kind": "登録車",
-   "id": "マツダ|CX-5",
-   "aliases": [
-    "CX-5"
-   ],
-   "wiki": "https://ja.wikipedia.org/wiki/%E3%83%9E%E3%83%84%E3%83%80%E3%83%BBCX-5",
-   "gens": [
-    {
-     "label": "3代目 KM系(2025年 - )",
-     "period": "2026年5月21日 - (発表:2025年7月10日)",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Mazda_CX-5_%28KI%29_Auto_Zuerich_2025_DSC_3493.jpg/960px-Mazda_CX-5_%28KI%29_Auto_Zuerich_2025_DSC_3493.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Mazda_CX-5_(KI)_Auto_Zuerich_2025_DSC_3493.jpg",
-      "artist": "Alexander Migl",
-      "license": "CC BY-SA 4.0"
-     },
-     "rear": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Mazda_CX-5_%28KI%29_Auto_Zuerich_2025_DSC_3472.jpg/960px-Mazda_CX-5_%28KI%29_Auto_Zuerich_2025_DSC_3472.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Mazda_CX-5_(KI)_Auto_Zuerich_2025_DSC_3472.jpg",
-      "artist": "Alexander Migl",
-      "license": "CC BY-SA 4.0"
-     }
-    },
-    {
-     "label": "2代目 KF系(2017年 - 2026年)",
-     "period": "2017年2月2日 - 2026年(予定) (発表:2016年12月15日)",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/2017_Mazda_CX-5_%28KF%29_Maxx_2WD_wagon_%282018-11-02%29_01.jpg/960px-2017_Mazda_CX-5_%28KF%29_Maxx_2WD_wagon_%282018-11-02%29_01.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:2017_Mazda_CX-5_(KF)_Maxx_2WD_wagon_(2018-11-02)_01.jpg",
-      "artist": "EurovisionNim",
-      "license": "CC BY-SA 4.0"
-     },
-     "rear": null
-    },
-    {
-     "label": "初代 KE系(2012年 - 2017年)",
-     "period": "2012年2月16日 - 2017年2月",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/2015_Mazda_CX-5_%28KE_MY15%29_Maxx_wagon_%282018-10-01%29_01.jpg/960px-2015_Mazda_CX-5_%28KE_MY15%29_Maxx_wagon_%282018-10-01%29_01.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:2015_Mazda_CX-5_(KE_MY15)_Maxx_wagon_(2018-10-01)_01.jpg",
-      "artist": "EurovisionNim",
-      "license": "CC BY-SA 4.0"
-     },
-     "rear": null
-    }
-   ],
-   "since": "2026-05"
-  },
-  {
-   "rank": 42,
-   "name": "デリカD:5",
-   "maker": "三菱",
-   "units": 46642,
-   "latestMonth": 3105,
-   "kind": "登録車",
-   "id": "三菱|デリカD5",
-   "aliases": [
-    "デリカD5"
-   ],
-   "wiki": "https://ja.wikipedia.org/wiki/%E4%B8%89%E8%8F%B1%E3%83%BB%E3%83%87%E3%83%AA%E3%82%ABD%3A5",
-   "gens": [
-    {
-     "label": "CV1W/CV2W/CV4W/CV5W型",
-     "period": "2007年1月 -",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/MITSUBISHI_DELICA_D5_URBAN_GEAR_2019_01_%28cropped%29.jpg/960px-MITSUBISHI_DELICA_D5_URBAN_GEAR_2019_01_%28cropped%29.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:MITSUBISHI_DELICA_D5_URBAN_GEAR_2019_01_(cropped).jpg",
-      "artist": "CEFICEFI",
-      "license": "CC BY-SA 4.0"
-     },
-     "rear": null
-    }
-   ],
-   "since": "2007-01"
-  },
-  {
-   "rank": 43,
    "name": "フォレスター",
    "maker": "スバル",
-   "units": 46410,
-   "latestMonth": 4360,
+   "units": 53755,
+   "latestMonth": 5315,
    "kind": "登録車",
    "id": "SUBARU|フォレスター",
    "aliases": [
@@ -2238,11 +2099,151 @@
    "since": "2025-04"
   },
   {
+   "rank": 41,
+   "name": "CX-5",
+   "maker": "マツダ",
+   "units": 52258,
+   "latestMonth": 2959,
+   "kind": "登録車",
+   "id": "マツダ|CX-5",
+   "aliases": [
+    "CX-5"
+   ],
+   "wiki": "https://ja.wikipedia.org/wiki/%E3%83%9E%E3%83%84%E3%83%80%E3%83%BBCX-5",
+   "gens": [
+    {
+     "label": "3代目 KM系(2025年 - )",
+     "period": "2026年5月21日 - (発表:2025年7月10日)",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Mazda_CX-5_%28KI%29_Auto_Zuerich_2025_DSC_3493.jpg/960px-Mazda_CX-5_%28KI%29_Auto_Zuerich_2025_DSC_3493.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Mazda_CX-5_(KI)_Auto_Zuerich_2025_DSC_3493.jpg",
+      "artist": "Alexander Migl",
+      "license": "CC BY-SA 4.0"
+     },
+     "rear": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Mazda_CX-5_%28KI%29_Auto_Zuerich_2025_DSC_3472.jpg/960px-Mazda_CX-5_%28KI%29_Auto_Zuerich_2025_DSC_3472.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Mazda_CX-5_(KI)_Auto_Zuerich_2025_DSC_3472.jpg",
+      "artist": "Alexander Migl",
+      "license": "CC BY-SA 4.0"
+     }
+    },
+    {
+     "label": "2代目 KF系(2017年 - 2026年)",
+     "period": "2017年2月2日 - 2026年(予定) (発表:2016年12月15日)",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/2017_Mazda_CX-5_%28KF%29_Maxx_2WD_wagon_%282018-11-02%29_01.jpg/960px-2017_Mazda_CX-5_%28KF%29_Maxx_2WD_wagon_%282018-11-02%29_01.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:2017_Mazda_CX-5_(KF)_Maxx_2WD_wagon_(2018-11-02)_01.jpg",
+      "artist": "EurovisionNim",
+      "license": "CC BY-SA 4.0"
+     },
+     "rear": null
+    },
+    {
+     "label": "初代 KE系(2012年 - 2017年)",
+     "period": "2012年2月16日 - 2017年2月",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/2015_Mazda_CX-5_%28KE_MY15%29_Maxx_wagon_%282018-10-01%29_01.jpg/960px-2015_Mazda_CX-5_%28KE_MY15%29_Maxx_wagon_%282018-10-01%29_01.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:2015_Mazda_CX-5_(KE_MY15)_Maxx_wagon_(2018-10-01)_01.jpg",
+      "artist": "EurovisionNim",
+      "license": "CC BY-SA 4.0"
+     },
+     "rear": null
+    }
+   ],
+   "since": "2026-05"
+  },
+  {
+   "rank": 42,
+   "name": "クリッパー",
+   "maker": "日産",
+   "units": 51876,
+   "latestMonth": 1915,
+   "kind": "軽自動車",
+   "id": "日産|クリッパー",
+   "aliases": [
+    "クリッパー"
+   ],
+   "wiki": "https://ja.wikipedia.org/wiki/%E6%97%A5%E7%94%A3%E3%83%BB%E3%82%AF%E3%83%AA%E3%83%83%E3%83%91%E3%83%BC%E3%83%90%E3%83%B3",
+   "gens": [
+    {
+     "label": "3代目 DR17V/DR18V型(2015年 - )",
+     "period": "{{ubl|NV100クリッパーバン:|2015年3月 - 2024年3月|クリッパーバン:|2024年3月",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Nissan_DW17V_Clipper_GX_Turbo_4WD.jpg/960px-Nissan_DW17V_Clipper_GX_Turbo_4WD.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Nissan_DW17V_Clipper_GX_Turbo_4WD.jpg",
+      "artist": "DR17 Sagittarius Runaway",
+      "license": "CC BY-SA 4.0"
+     },
+     "rear": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nissan_DW17V_Clipper_GX_Turbo_4WD_Rear.jpg/960px-Nissan_DW17V_Clipper_GX_Turbo_4WD_Rear.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Nissan_DW17V_Clipper_GX_Turbo_4WD_Rear.jpg",
+      "artist": "DR17 Sagittarius Runaway",
+      "license": "CC BY-SA 4.0"
+     }
+    },
+    {
+     "label": "2代目 DR64V型(2013年 - 2015年)",
+     "period": "2013年12月 - 2015年3月",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Nissan_NV100_Clipper_DX_GL_Package_4WD_DR64V_502.JPG/960px-Nissan_NV100_Clipper_DX_GL_Package_4WD_DR64V_502.JPG?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Nissan_NV100_Clipper_DX_GL_Package_4WD_DR64V_502.JPG",
+      "artist": "DY5W-sport",
+      "license": "CC BY-SA 4.0"
+     },
+     "rear": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/NV100_Clipper_DX_GL_Package_4WD_DR64V_Rear.JPG/960px-NV100_Clipper_DX_GL_Package_4WD_DR64V_Rear.JPG?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:NV100_Clipper_DX_GL_Package_4WD_DR64V_Rear.JPG",
+      "artist": "DY5W-sport",
+      "license": "CC BY-SA 4.0"
+     }
+    },
+    {
+     "label": "初代 U71V/U72V型(2003年 - 2013年)",
+     "period": "{{ubl|クリッパーバン:|2003年10月 - 2012年1月|NV100クリッパーバン:|2012年1月 - 2013年12月}}",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Nissan_NV100_Clipper_0015.JPG/960px-Nissan_NV100_Clipper_0015.JPG?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Nissan_NV100_Clipper_0015.JPG",
+      "artist": "DY5W-sport",
+      "license": "CC BY-SA 3.0"
+     },
+     "rear": null
+    }
+   ],
+   "since": "2015-03"
+  },
+  {
+   "rank": 43,
+   "name": "デリカD:5",
+   "maker": "三菱",
+   "units": 50828,
+   "latestMonth": 2297,
+   "kind": "登録車",
+   "id": "三菱|デリカD5",
+   "aliases": [
+    "デリカD5"
+   ],
+   "wiki": "https://ja.wikipedia.org/wiki/%E4%B8%89%E8%8F%B1%E3%83%BB%E3%83%87%E3%83%AA%E3%82%ABD%3A5",
+   "gens": [
+    {
+     "label": "CV1W/CV2W/CV4W/CV5W型",
+     "period": "2007年1月 -",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/MITSUBISHI_DELICA_D5_URBAN_GEAR_2019_01_%28cropped%29.jpg/960px-MITSUBISHI_DELICA_D5_URBAN_GEAR_2019_01_%28cropped%29.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:MITSUBISHI_DELICA_D5_URBAN_GEAR_2019_01_(cropped).jpg",
+      "artist": "CEFICEFI",
+      "license": "CC BY-SA 4.0"
+     },
+     "rear": null
+    }
+   ],
+   "since": "2007-01"
+  },
+  {
    "rank": 44,
    "name": "インプレッサ",
    "maker": "スバル",
-   "units": 44664,
-   "latestMonth": 1954,
+   "units": 49660,
+   "latestMonth": 2223,
    "kind": "登録車",
    "id": "SUBARU|インプレッサ",
    "aliases": [
@@ -2300,8 +2301,8 @@
    "rank": 45,
    "name": "N-VAN",
    "maker": "ホンダ",
-   "units": 42374,
-   "latestMonth": 2236,
+   "units": 47126,
+   "latestMonth": 2085,
    "kind": "軽自動車",
    "id": "ホンダ|N-VAN",
    "aliases": [
@@ -2332,8 +2333,8 @@
    "rank": 46,
    "name": "N-WGN",
    "maker": "ホンダ",
-   "units": 38647,
-   "latestMonth": 2146,
+   "units": 42121,
+   "latestMonth": 1411,
    "kind": "軽自動車",
    "id": "ホンダ|N-WGN",
    "aliases": [
@@ -2375,8 +2376,8 @@
    "rank": 47,
    "name": "MAZDA2",
    "maker": "マツダ",
-   "units": 37703,
-   "latestMonth": 1764,
+   "units": 40875,
+   "latestMonth": 1304,
    "kind": "登録車",
    "id": "マツダ|MAZDA2",
    "aliases": [
@@ -2439,8 +2440,8 @@
    "rank": 48,
    "name": "スイフト",
    "maker": "スズキ",
-   "units": 34809,
-   "latestMonth": 1356,
+   "units": 38764,
+   "latestMonth": 1369,
    "kind": "登録車",
    "id": "スズキ|スイフト",
    "aliases": [
@@ -2503,8 +2504,8 @@
    "rank": 49,
    "name": "WR-V",
    "maker": "ホンダ",
-   "units": 32441,
-   "latestMonth": 1297,
+   "units": 35175,
+   "latestMonth": 1037,
    "kind": "登録車",
    "id": "ホンダ|WR-V",
    "aliases": [
@@ -2562,8 +2563,8 @@
    "rank": 50,
    "name": "ZR-V",
    "maker": "ホンダ",
-   "units": 32422,
-   "latestMonth": 901,
+   "units": 34888,
+   "latestMonth": 867,
    "kind": "登録車",
    "id": "ホンダ|ZR-V",
    "aliases": [
@@ -2594,8 +2595,8 @@
    "rank": 51,
    "name": "NX",
    "maker": "レクサス",
-   "units": 31152,
-   "latestMonth": 1582,
+   "units": 33939,
+   "latestMonth": 1353,
    "kind": "登録車",
    "id": "レクサス|NX350H",
    "aliases": [
@@ -2640,10 +2641,69 @@
   },
   {
    "rank": 52,
+   "name": "クロスビー",
+   "maker": "スズキ",
+   "units": 33581,
+   "latestMonth": 2649,
+   "kind": "登録車",
+   "id": "スズキ|クロスビー",
+   "aliases": [
+    "クロスビー"
+   ],
+   "wiki": "https://ja.wikipedia.org/wiki/%E3%82%B9%E3%82%BA%E3%82%AD%E3%83%BB%E3%82%AF%E3%83%AD%E3%82%B9%E3%83%93%E3%83%BC",
+   "gens": [
+    {
+     "label": "MN71S/MND1S型",
+     "period": "2017年12月25日 -",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/2017-2022_Suzuki_Xbee.jpg/960px-2017-2022_Suzuki_Xbee.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:2017-2022_Suzuki_Xbee.jpg",
+      "artist": "TTTNIS",
+      "license": "CC0"
+     },
+     "rear": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Suzuki_XBEE_HYBRID_MZ_%28DAA-MB71S-CBZK-JC%29_rear.jpg/960px-Suzuki_XBEE_HYBRID_MZ_%28DAA-MB71S-CBZK-JC%29_rear.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Suzuki_XBEE_HYBRID_MZ_(DAA-MB71S-CBZK-JC)_rear.jpg",
+      "artist": "Tokumeigakarinoaoshima",
+      "license": "CC BY-SA 4.0"
+     }
+    }
+   ],
+   "since": "2017-12"
+  },
+  {
+   "rank": 53,
+   "name": "LBX",
+   "maker": "レクサス",
+   "units": 32626,
+   "latestMonth": 1929,
+   "kind": "登録車",
+   "id": "レクサス|LBX",
+   "aliases": [
+    "LBX"
+   ],
+   "wiki": "https://ja.wikipedia.org/wiki/%E3%83%AC%E3%82%AF%E3%82%B5%E3%82%B9%E3%83%BBLBX",
+   "gens": [
+    {
+     "label": "MAYH1#/GAYA16型",
+     "period": "2023年12月 – (発表:2023年11月9日)",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Lexus_LBX_%22Cool%22_%2724_%281%29.jpg/960px-Lexus_LBX_%22Cool%22_%2724_%281%29.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Lexus_LBX_%22Cool%22_%2724_(1).jpg",
+      "artist": "Oq10pass",
+      "license": "CC0"
+     },
+     "rear": null
+    }
+   ],
+   "since": "2023-12"
+  },
+  {
+   "rank": 54,
    "name": "エクストレイル",
    "maker": "日産",
-   "units": 30398,
-   "latestMonth": 1108,
+   "units": 32369,
+   "latestMonth": 805,
    "kind": "登録車",
    "id": "日産|エクストレイル",
    "aliases": [
@@ -2698,11 +2758,54 @@
    "since": "2022-07"
   },
   {
-   "rank": 53,
+   "rank": 55,
+   "name": "N-ONE",
+   "maker": "ホンダ",
+   "units": 32203,
+   "latestMonth": 1435,
+   "kind": "軽自動車",
+   "id": "ホンダ|N-ONE",
+   "aliases": [
+    "N-ONE"
+   ],
+   "wiki": "https://ja.wikipedia.org/wiki/%E3%83%9B%E3%83%B3%E3%83%80%E3%83%BBN-ONE",
+   "gens": [
+    {
+     "label": "2代目 JG3/4型(2020年 - )",
+     "period": "2020年11月20日 - (発表:2020年11月19日)",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Honda_N-ONE_Original_2WD_%286BA-JG3%29_front.jpg/960px-Honda_N-ONE_Original_2WD_%286BA-JG3%29_front.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Honda_N-ONE_Original_2WD_(6BA-JG3)_front.jpg",
+      "artist": "Tokumeigakarinoaoshima",
+      "license": "CC BY-SA 4.0"
+     },
+     "rear": null
+    },
+    {
+     "label": "初代 JG1/2型(2012年 - 2020年)",
+     "period": "2012年11月2日 -2020年4月 (発表:2012年11月1日)",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Honda_N-One_G-L_Package%2C_front_left.jpg/960px-Honda_N-One_G-L_Package%2C_front_left.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Honda_N-One_G-L_Package,_front_left.jpg",
+      "artist": "DY5W-sport",
+      "license": "CC BY-SA 3.0"
+     },
+     "rear": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Honda_N-One_G-L_Package%2C_rear_left.jpg/960px-Honda_N-One_G-L_Package%2C_rear_left.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Honda_N-One_G-L_Package,_rear_left.jpg",
+      "artist": "DY5W-sport",
+      "license": "CC BY-SA 3.0"
+     }
+    }
+   ],
+   "since": "2020-11"
+  },
+  {
+   "rank": 56,
    "name": "シビック",
    "maker": "ホンダ",
-   "units": 29513,
-   "latestMonth": 1379,
+   "units": 32085,
+   "latestMonth": 909,
    "kind": "登録車",
    "id": "ホンダ|シビック",
    "aliases": [
@@ -2757,113 +2860,11 @@
    "since": "2021-09"
   },
   {
-   "rank": 54,
-   "name": "LBX",
-   "maker": "レクサス",
-   "units": 28691,
-   "latestMonth": 1450,
-   "kind": "登録車",
-   "id": "レクサス|LBX",
-   "aliases": [
-    "LBX"
-   ],
-   "wiki": "https://ja.wikipedia.org/wiki/%E3%83%AC%E3%82%AF%E3%82%B5%E3%82%B9%E3%83%BBLBX",
-   "gens": [
-    {
-     "label": "MAYH1#/GAYA16型",
-     "period": "2023年12月 – (発表:2023年11月9日)",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Lexus_LBX_%22Cool%22_%2724_%281%29.jpg/960px-Lexus_LBX_%22Cool%22_%2724_%281%29.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Lexus_LBX_%22Cool%22_%2724_(1).jpg",
-      "artist": "Oq10pass",
-      "license": "CC0"
-     },
-     "rear": null
-    }
-   ],
-   "since": "2023-12"
-  },
-  {
-   "rank": 55,
-   "name": "クロスビー",
-   "maker": "スズキ",
-   "units": 27972,
-   "latestMonth": 2502,
-   "kind": "登録車",
-   "id": "スズキ|クロスビー",
-   "aliases": [
-    "クロスビー"
-   ],
-   "wiki": "https://ja.wikipedia.org/wiki/%E3%82%B9%E3%82%BA%E3%82%AD%E3%83%BB%E3%82%AF%E3%83%AD%E3%82%B9%E3%83%93%E3%83%BC",
-   "gens": [
-    {
-     "label": "MN71S/MND1S型",
-     "period": "2017年12月25日 -",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/2017-2022_Suzuki_Xbee.jpg/960px-2017-2022_Suzuki_Xbee.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:2017-2022_Suzuki_Xbee.jpg",
-      "artist": "TTTNIS",
-      "license": "CC0"
-     },
-     "rear": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Suzuki_XBEE_HYBRID_MZ_%28DAA-MB71S-CBZK-JC%29_rear.jpg/960px-Suzuki_XBEE_HYBRID_MZ_%28DAA-MB71S-CBZK-JC%29_rear.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Suzuki_XBEE_HYBRID_MZ_(DAA-MB71S-CBZK-JC)_rear.jpg",
-      "artist": "Tokumeigakarinoaoshima",
-      "license": "CC BY-SA 4.0"
-     }
-    }
-   ],
-   "since": "2017-12"
-  },
-  {
-   "rank": 56,
-   "name": "N-ONE",
-   "maker": "ホンダ",
-   "units": 27956,
-   "latestMonth": 2018,
-   "kind": "軽自動車",
-   "id": "ホンダ|N-ONE",
-   "aliases": [
-    "N-ONE"
-   ],
-   "wiki": "https://ja.wikipedia.org/wiki/%E3%83%9B%E3%83%B3%E3%83%80%E3%83%BBN-ONE",
-   "gens": [
-    {
-     "label": "2代目 JG3/4型(2020年 - )",
-     "period": "2020年11月20日 - (発表:2020年11月19日)",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Honda_N-ONE_Original_2WD_%286BA-JG3%29_front.jpg/960px-Honda_N-ONE_Original_2WD_%286BA-JG3%29_front.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Honda_N-ONE_Original_2WD_(6BA-JG3)_front.jpg",
-      "artist": "Tokumeigakarinoaoshima",
-      "license": "CC BY-SA 4.0"
-     },
-     "rear": null
-    },
-    {
-     "label": "初代 JG1/2型(2012年 - 2020年)",
-     "period": "2012年11月2日 -2020年4月 (発表:2012年11月1日)",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Honda_N-One_G-L_Package%2C_front_left.jpg/960px-Honda_N-One_G-L_Package%2C_front_left.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Honda_N-One_G-L_Package,_front_left.jpg",
-      "artist": "DY5W-sport",
-      "license": "CC BY-SA 3.0"
-     },
-     "rear": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Honda_N-One_G-L_Package%2C_rear_left.jpg/960px-Honda_N-One_G-L_Package%2C_rear_left.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Honda_N-One_G-L_Package,_rear_left.jpg",
-      "artist": "DY5W-sport",
-      "license": "CC BY-SA 3.0"
-     }
-    }
-   ],
-   "since": "2020-11"
-  },
-  {
    "rank": 57,
    "name": "ロッキー",
    "maker": "ダイハツ",
-   "units": 27528,
-   "latestMonth": 977,
+   "units": 29053,
+   "latestMonth": 0,
    "kind": "登録車",
    "id": "ダイハツ|ロッキー",
    "aliases": [
@@ -2905,8 +2906,8 @@
    "rank": 58,
    "name": "フロンクス",
    "maker": "スズキ",
-   "units": 25287,
-   "latestMonth": 1219,
+   "units": 28339,
+   "latestMonth": 1025,
    "kind": "登録車",
    "id": "スズキ|フロンクス",
    "aliases": [
@@ -2937,8 +2938,8 @@
    "rank": 59,
    "name": "レヴォーグ",
    "maker": "スバル",
-   "units": 24253,
-   "latestMonth": 2489,
+   "units": 27374,
+   "latestMonth": 1836,
    "kind": "登録車",
    "id": "SUBARU|レヴォーグ",
    "aliases": [
@@ -2983,59 +2984,10 @@
   },
   {
    "rank": 60,
-   "name": "フレアワゴン",
-   "maker": "マツダ",
-   "units": 21621,
-   "latestMonth": 1483,
-   "kind": "軽自動車",
-   "id": "マツダ|フレアワゴン",
-   "aliases": [
-    "フレアワゴン"
-   ],
-   "wiki": "https://ja.wikipedia.org/wiki/%E3%83%9E%E3%83%84%E3%83%80%E3%83%BB%E3%83%95%E3%83%AC%E3%82%A2%E3%83%AF%E3%82%B4%E3%83%B3",
-   "gens": [
-    {
-     "label": "4代目 MM54S/94S型(2023年 - )",
-     "period": "2023年12月25日 -",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/2024_Mazda_Flair_Wagon_Custom_Style_XT_in_Pure_White_Pearl%2C_front_right.jpg/960px-2024_Mazda_Flair_Wagon_Custom_Style_XT_in_Pure_White_Pearl%2C_front_right.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:2024_Mazda_Flair_Wagon_Custom_Style_XT_in_Pure_White_Pearl,_front_right.jpg",
-      "artist": "Mr.choppers",
-      "license": "CC BY-SA 4.0"
-     },
-     "rear": null
-    },
-    {
-     "label": "3代目 MM53S型(2018年 - 2023年)",
-     "period": "HYBRID XG/HYBRID XS/カスタムスタイル 2018年2月8日 - 2023年12月24日 (発表:2017年12月22日) タフスタイル 2018年12月26日 - 2023年12月24日",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Mazda_FLAIR_WAGON_Custom_Style_HYBRID_XS_%28DAA-MM53S%29_front.jpg/960px-Mazda_FLAIR_WAGON_Custom_Style_HYBRID_XS_%28DAA-MM53S%29_front.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Mazda_FLAIR_WAGON_Custom_Style_HYBRID_XS_(DAA-MM53S)_front.jpg",
-      "artist": "Tokumeigakarinoaoshima",
-      "license": "CC BY-SA 4.0"
-     },
-     "rear": null
-    },
-    {
-     "label": "2代目 MM32S/42S型(2013年 - 2018年)",
-     "period": "2013年4月 - 2018年5月",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Mazda_FLAIR_WAGON_XS_%28DAA-MM42S%29_front.JPG/960px-Mazda_FLAIR_WAGON_XS_%28DAA-MM42S%29_front.JPG?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Mazda_FLAIR_WAGON_XS_(DAA-MM42S)_front.JPG",
-      "artist": "Tokumeigakarinoaoshima",
-      "license": "CC0"
-     },
-     "rear": null
-    }
-   ],
-   "since": "2023-12"
-  },
-  {
-   "rank": 61,
    "name": "bZ4X",
    "maker": "トヨタ",
-   "units": 21546,
-   "latestMonth": 3231,
+   "units": 25794,
+   "latestMonth": 3142,
    "kind": "登録車",
    "id": "トヨタ|bZ4X",
    "aliases": [
@@ -3090,75 +3042,60 @@
    "since": "2026-02"
   },
   {
-   "rank": 62,
-   "name": "サクラ",
-   "maker": "日産",
-   "units": 20477,
-   "latestMonth": 1371,
-   "kind": "軽自動車",
-   "id": "日産|サクラ",
-   "aliases": [
-    "サクラ"
-   ],
-   "wiki": "https://ja.wikipedia.org/wiki/%E6%97%A5%E7%94%A3%E3%83%BB%E3%82%B5%E3%82%AF%E3%83%A9",
-   "gens": [
-    {
-     "label": "初代 B6AW(KE0)型(2022年 - )",
-     "period": "2022年6月16日 - (発表:2022年5月20日)",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/2024_Nissan_Sakura_G.jpg/960px-2024_Nissan_Sakura_G.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:2024_Nissan_Sakura_G.jpg",
-      "artist": "TTTNIS",
-      "license": "CC0"
-     },
-     "rear": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/2024_Nissan_Sakura_X_rear.jpg/960px-2024_Nissan_Sakura_X_rear.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:2024_Nissan_Sakura_X_rear.jpg",
-      "artist": "TTTNIS",
-      "license": "CC0"
-     }
-    }
-   ],
-   "since": "2022-06"
-  },
-  {
-   "rank": 63,
-   "name": "CX-30",
+   "rank": 61,
+   "name": "フレアワゴン",
    "maker": "マツダ",
-   "units": 19652,
-   "latestMonth": 1535,
-   "kind": "登録車",
-   "id": "マツダ|CX-30",
+   "units": 23686,
+   "latestMonth": 934,
+   "kind": "軽自動車",
+   "id": "マツダ|フレアワゴン",
    "aliases": [
-    "CX-30"
+    "フレアワゴン"
    ],
-   "wiki": "https://ja.wikipedia.org/wiki/%E3%83%9E%E3%83%84%E3%83%80%E3%83%BBCX-30",
+   "wiki": "https://ja.wikipedia.org/wiki/%E3%83%9E%E3%83%84%E3%83%80%E3%83%BB%E3%83%95%E3%83%AC%E3%82%A2%E3%83%AF%E3%82%B4%E3%83%B3",
    "gens": [
     {
-     "label": "DMEP/DMEJ3P/DMEJ3R/DM5K3R/DM8P/DM8R/DMFP",
-     "period": "2019年 -",
+     "label": "4代目 MM54S/94S型(2023年 - )",
+     "period": "2023年12月25日 -",
      "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Mazda_CX-30_X.jpg/960px-Mazda_CX-30_X.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Mazda_CX-30_X.jpg",
-      "artist": "TTTNIS",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/2024_Mazda_Flair_Wagon_Custom_Style_XT_in_Pure_White_Pearl%2C_front_right.jpg/960px-2024_Mazda_Flair_Wagon_Custom_Style_XT_in_Pure_White_Pearl%2C_front_right.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:2024_Mazda_Flair_Wagon_Custom_Style_XT_in_Pure_White_Pearl,_front_right.jpg",
+      "artist": "Mr.choppers",
+      "license": "CC BY-SA 4.0"
+     },
+     "rear": null
+    },
+    {
+     "label": "3代目 MM53S型(2018年 - 2023年)",
+     "period": "HYBRID XG/HYBRID XS/カスタムスタイル 2018年2月8日 - 2023年12月24日 (発表:2017年12月22日) タフスタイル 2018年12月26日 - 2023年12月24日",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Mazda_FLAIR_WAGON_Custom_Style_HYBRID_XS_%28DAA-MM53S%29_front.jpg/960px-Mazda_FLAIR_WAGON_Custom_Style_HYBRID_XS_%28DAA-MM53S%29_front.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Mazda_FLAIR_WAGON_Custom_Style_HYBRID_XS_(DAA-MM53S)_front.jpg",
+      "artist": "Tokumeigakarinoaoshima",
+      "license": "CC BY-SA 4.0"
+     },
+     "rear": null
+    },
+    {
+     "label": "2代目 MM32S/42S型(2013年 - 2018年)",
+     "period": "2013年4月 - 2018年5月",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Mazda_FLAIR_WAGON_XS_%28DAA-MM42S%29_front.JPG/960px-Mazda_FLAIR_WAGON_XS_%28DAA-MM42S%29_front.JPG?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Mazda_FLAIR_WAGON_XS_(DAA-MM42S)_front.JPG",
+      "artist": "Tokumeigakarinoaoshima",
       "license": "CC0"
      },
-     "rear": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Mazda_CX-30_XD_AWD_rear.jpg/960px-Mazda_CX-30_XD_AWD_rear.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Mazda_CX-30_XD_AWD_rear.jpg",
-      "artist": "TTTNIS",
-      "license": "CC0"
-     }
+     "rear": null
     }
    ],
-   "since": "2019-01"
+   "since": "2023-12"
   },
   {
-   "rank": 64,
+   "rank": 62,
    "name": "キックス",
    "maker": "日産",
-   "units": 19525,
-   "latestMonth": 3690,
+   "units": 23317,
+   "latestMonth": 3210,
    "kind": "登録車",
    "id": "日産|キックス",
    "aliases": [
@@ -3186,11 +3123,75 @@
    "since": "2026-06"
   },
   {
+   "rank": 63,
+   "name": "サクラ",
+   "maker": "日産",
+   "units": 22059,
+   "latestMonth": 878,
+   "kind": "軽自動車",
+   "id": "日産|サクラ",
+   "aliases": [
+    "サクラ"
+   ],
+   "wiki": "https://ja.wikipedia.org/wiki/%E6%97%A5%E7%94%A3%E3%83%BB%E3%82%B5%E3%82%AF%E3%83%A9",
+   "gens": [
+    {
+     "label": "初代 B6AW(KE0)型(2022年 - )",
+     "period": "2022年6月16日 - (発表:2022年5月20日)",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/2024_Nissan_Sakura_G.jpg/960px-2024_Nissan_Sakura_G.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:2024_Nissan_Sakura_G.jpg",
+      "artist": "TTTNIS",
+      "license": "CC0"
+     },
+     "rear": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/2024_Nissan_Sakura_X_rear.jpg/960px-2024_Nissan_Sakura_X_rear.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:2024_Nissan_Sakura_X_rear.jpg",
+      "artist": "TTTNIS",
+      "license": "CC0"
+     }
+    }
+   ],
+   "since": "2022-06"
+  },
+  {
+   "rank": 64,
+   "name": "CX-30",
+   "maker": "マツダ",
+   "units": 20694,
+   "latestMonth": 1042,
+   "kind": "登録車",
+   "id": "マツダ|CX-30",
+   "aliases": [
+    "CX-30"
+   ],
+   "wiki": "https://ja.wikipedia.org/wiki/%E3%83%9E%E3%83%84%E3%83%80%E3%83%BBCX-30",
+   "gens": [
+    {
+     "label": "DMEP/DMEJ3P/DMEJ3R/DM5K3R/DM8P/DM8R/DMFP",
+     "period": "2019年 -",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Mazda_CX-30_X.jpg/960px-Mazda_CX-30_X.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Mazda_CX-30_X.jpg",
+      "artist": "TTTNIS",
+      "license": "CC0"
+     },
+     "rear": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Mazda_CX-30_XD_AWD_rear.jpg/960px-Mazda_CX-30_XD_AWD_rear.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Mazda_CX-30_XD_AWD_rear.jpg",
+      "artist": "TTTNIS",
+      "license": "CC0"
+     }
+    }
+   ],
+   "since": "2019-01"
+  },
+  {
    "rank": 65,
    "name": "ハイエースワゴン",
    "maker": "トヨタ",
-   "units": 16950,
-   "latestMonth": 1487,
+   "units": 19422,
+   "latestMonth": 1429,
    "kind": "登録車",
    "id": "トヨタ|ハイエースワゴン",
    "aliases": [
@@ -3238,8 +3239,8 @@
    "rank": 66,
    "name": "MAZDA3",
    "maker": "マツダ",
-   "units": 16885,
-   "latestMonth": 954,
+   "units": 17781,
+   "latestMonth": 896,
    "kind": "登録車",
    "id": "マツダ|MAZDA3",
    "aliases": [
@@ -3270,8 +3271,8 @@
    "rank": 67,
    "name": "リーフ",
    "maker": "日産",
-   "units": 15425,
-   "latestMonth": 2013,
+   "units": 16652,
+   "latestMonth": 1227,
    "kind": "登録車",
    "id": "日産|リーフ",
    "aliases": [
@@ -3329,8 +3330,8 @@
    "rank": 68,
    "name": "ロードスター",
    "maker": "マツダ",
-   "units": 15156,
-   "latestMonth": 1374,
+   "units": 16539,
+   "latestMonth": 769,
    "kind": "登録車",
    "id": "マツダ|ロードスター",
    "aliases": [
@@ -3393,14 +3394,14 @@
    "rank": 69,
    "name": "ミニキャブ",
    "maker": "三菱",
-   "units": 13329,
-   "latestMonth": 775,
+   "units": 14398,
+   "latestMonth": 450,
    "kind": "軽自動車",
    "id": "三菱|ミニキャブバン",
    "aliases": [
     "ミニキャブバン",
-    "ミニキャブ EV/ミーブ",
-    "ミニキャブトラック"
+    "ミニキャブトラック",
+    "ミニキャブ EV/ミーブ"
    ],
    "wiki": "https://ja.wikipedia.org/wiki/%E4%B8%89%E8%8F%B1%E3%83%BB%E3%83%9F%E3%83%8B%E3%82%AD%E3%83%A3%E3%83%96",
    "gens": [
@@ -3444,7 +3445,7 @@
    "rank": 70,
    "name": "CX-60",
    "maker": "マツダ",
-   "units": 11855,
+   "units": 12803,
    "latestMonth": 0,
    "kind": "登録車",
    "id": "マツダ|CX-60",
@@ -3476,8 +3477,8 @@
    "rank": 71,
    "name": "RX",
    "maker": "レクサス",
-   "units": 10954,
-   "latestMonth": 783,
+   "units": 12379,
+   "latestMonth": 0,
    "kind": "登録車",
    "id": "レクサス|RX350",
    "aliases": [
@@ -3536,8 +3537,8 @@
    "rank": 72,
    "name": "スクラム",
    "maker": "マツダ",
-   "units": 10745,
-   "latestMonth": 604,
+   "units": 11787,
+   "latestMonth": 473,
    "kind": "軽自動車",
    "id": "マツダ|スクラムバン",
    "aliases": [
@@ -3592,8 +3593,8 @@
    "rank": 73,
    "name": "コペン",
    "maker": "ダイハツ",
-   "units": 10138,
-   "latestMonth": 325,
+   "units": 10827,
+   "latestMonth": 85,
    "kind": "軽自動車",
    "id": "ダイハツ|コペン",
    "aliases": [
@@ -3633,10 +3634,58 @@
   },
   {
    "rank": 74,
+   "name": "フレアクロスオーバー",
+   "maker": "マツダ",
+   "units": 10039,
+   "latestMonth": 428,
+   "kind": "軽自動車",
+   "id": "マツダ|フレアクロスオーバー",
+   "aliases": [
+    "フレアクロスオーバー"
+   ],
+   "wiki": "https://ja.wikipedia.org/wiki/%E3%83%9E%E3%83%84%E3%83%80%E3%83%BB%E3%83%95%E3%83%AC%E3%82%A2%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC",
+   "gens": [
+    {
+     "label": "2代目 MS52/92S型(2020年 - )",
+     "period": "2020年2月 -",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Mazda_FLAIR_CROSSOVER_HYBRID_XS_2WD_%285AA-MS92S%29_front.jpg/960px-Mazda_FLAIR_CROSSOVER_HYBRID_XS_2WD_%285AA-MS92S%29_front.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Mazda_FLAIR_CROSSOVER_HYBRID_XS_2WD_(5AA-MS92S)_front.jpg",
+      "artist": "Tokumeigakarinoaoshima",
+      "license": "CC BY-SA 4.0"
+     },
+     "rear": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Mazda_FLAIR_CROSSOVER_HYBRID_XS_2WD_%285AA-MS92S%29_rear.jpg/960px-Mazda_FLAIR_CROSSOVER_HYBRID_XS_2WD_%285AA-MS92S%29_rear.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Mazda_FLAIR_CROSSOVER_HYBRID_XS_2WD_(5AA-MS92S)_rear.jpg",
+      "artist": "Tokumeigakarinoaoshima",
+      "license": "CC BY-SA 4.0"
+     }
+    },
+    {
+     "label": "初代 MS31/41S型(2014年 - 2020年)",
+     "period": "2014年1月 - 2020年2月",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Mazda_FLAIR_CROSSOVER_XS_%28MS31S%29_front.JPG/960px-Mazda_FLAIR_CROSSOVER_XS_%28MS31S%29_front.JPG?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Mazda_FLAIR_CROSSOVER_XS_(MS31S)_front.JPG",
+      "artist": "Tokumeigakarinoaoshima",
+      "license": "CC0"
+     },
+     "rear": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Mazda_FLAIR_CROSSOVER_XS_%28MS31S%29_rear.JPG/960px-Mazda_FLAIR_CROSSOVER_XS_%28MS31S%29_rear.JPG?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Mazda_FLAIR_CROSSOVER_XS_(MS31S)_rear.JPG",
+      "artist": "Tokumeigakarinoaoshima",
+      "license": "CC0"
+     }
+    }
+   ],
+   "since": "2020-02"
+  },
+  {
+   "rank": 75,
    "name": "クリッパーリオ",
    "maker": "日産",
-   "units": 9161,
-   "latestMonth": 541,
+   "units": 9842,
+   "latestMonth": 346,
    "kind": "軽自動車",
    "id": "日産|クリッパーリオ",
    "aliases": [
@@ -3691,59 +3740,11 @@
    "since": "2015-03"
   },
   {
-   "rank": 75,
-   "name": "フレアクロスオーバー",
-   "maker": "マツダ",
-   "units": 9141,
-   "latestMonth": 629,
-   "kind": "軽自動車",
-   "id": "マツダ|フレアクロスオーバー",
-   "aliases": [
-    "フレアクロスオーバー"
-   ],
-   "wiki": "https://ja.wikipedia.org/wiki/%E3%83%9E%E3%83%84%E3%83%80%E3%83%BB%E3%83%95%E3%83%AC%E3%82%A2%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC",
-   "gens": [
-    {
-     "label": "2代目 MS52/92S型(2020年 - )",
-     "period": "2020年2月 -",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Mazda_FLAIR_CROSSOVER_HYBRID_XS_2WD_%285AA-MS92S%29_front.jpg/960px-Mazda_FLAIR_CROSSOVER_HYBRID_XS_2WD_%285AA-MS92S%29_front.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Mazda_FLAIR_CROSSOVER_HYBRID_XS_2WD_(5AA-MS92S)_front.jpg",
-      "artist": "Tokumeigakarinoaoshima",
-      "license": "CC BY-SA 4.0"
-     },
-     "rear": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Mazda_FLAIR_CROSSOVER_HYBRID_XS_2WD_%285AA-MS92S%29_rear.jpg/960px-Mazda_FLAIR_CROSSOVER_HYBRID_XS_2WD_%285AA-MS92S%29_rear.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Mazda_FLAIR_CROSSOVER_HYBRID_XS_2WD_(5AA-MS92S)_rear.jpg",
-      "artist": "Tokumeigakarinoaoshima",
-      "license": "CC BY-SA 4.0"
-     }
-    },
-    {
-     "label": "初代 MS31/41S型(2014年 - 2020年)",
-     "period": "2014年1月 - 2020年2月",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Mazda_FLAIR_CROSSOVER_XS_%28MS31S%29_front.JPG/960px-Mazda_FLAIR_CROSSOVER_XS_%28MS31S%29_front.JPG?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Mazda_FLAIR_CROSSOVER_XS_(MS31S)_front.JPG",
-      "artist": "Tokumeigakarinoaoshima",
-      "license": "CC0"
-     },
-     "rear": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Mazda_FLAIR_CROSSOVER_XS_%28MS31S%29_rear.JPG/960px-Mazda_FLAIR_CROSSOVER_XS_%28MS31S%29_rear.JPG?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Mazda_FLAIR_CROSSOVER_XS_(MS31S)_rear.JPG",
-      "artist": "Tokumeigakarinoaoshima",
-      "license": "CC0"
-     }
-    }
-   ],
-   "since": "2020-02"
-  },
-  {
    "rank": 76,
    "name": "サンバー",
    "maker": "スバル",
-   "units": 8704,
-   "latestMonth": 495,
+   "units": 9641,
+   "latestMonth": 498,
    "kind": "軽自動車",
    "id": "スバル|サンバーバン",
    "aliases": [
@@ -3781,8 +3782,8 @@
    "rank": 77,
    "name": "アウトランダー",
    "maker": "三菱",
-   "units": 8507,
-   "latestMonth": 777,
+   "units": 9219,
+   "latestMonth": 712,
    "kind": "登録車",
    "id": "三菱|アウトランダー",
    "aliases": [
@@ -3892,6 +3893,247 @@
   },
   {
    "rank": 79,
+   "name": "スーパーワン",
+   "maker": "ホンダ",
+   "units": 6790,
+   "latestMonth": 2208,
+   "kind": "登録車",
+   "id": "ホンダ|スーパーワン",
+   "aliases": [
+    "スーパーワン"
+   ],
+   "wiki": "https://ja.wikipedia.org/wiki/%E3%83%9B%E3%83%B3%E3%83%80%E3%83%BBSuper-ONE",
+   "gens": [
+    {
+     "label": "JG6型",
+     "period": "2026年5月22日 - (公式発表:2026年5月21日)",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Honda_Super-ONE_%28ZAA-JG6%29_front.jpg/960px-Honda_Super-ONE_%28ZAA-JG6%29_front.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Honda_Super-ONE_(ZAA-JG6)_front.jpg",
+      "artist": "Tokumeigakarinoaoshima",
+      "license": "CC0"
+     },
+     "rear": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Honda_Super-ONE_%28ZAA-JG6%29_rear.jpg/960px-Honda_Super-ONE_%28ZAA-JG6%29_rear.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Honda_Super-ONE_(ZAA-JG6)_rear.jpg",
+      "artist": "Tokumeigakarinoaoshima",
+      "license": "CC0"
+     }
+    }
+   ],
+   "since": "2026-05"
+  },
+  {
+   "rank": 80,
+   "name": "CX-80",
+   "maker": "マツダ",
+   "units": 6387,
+   "latestMonth": 0,
+   "kind": "登録車",
+   "id": "マツダ|CX-80",
+   "aliases": [
+    "CX-80"
+   ],
+   "wiki": "https://ja.wikipedia.org/wiki/%E3%83%9E%E3%83%84%E3%83%80%E3%83%BBCX-80",
+   "gens": [
+    {
+     "label": "KL3P/KL3R3P/KL5S3P",
+     "period": "2024年10月10日 -",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Mazda_CX-80_PHEV_L_Package_%285LA-KL5S3P%29_front.jpg/960px-Mazda_CX-80_PHEV_L_Package_%285LA-KL5S3P%29_front.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Mazda_CX-80_PHEV_L_Package_(5LA-KL5S3P)_front.jpg",
+      "artist": "Tokumeigakarinoaoshima",
+      "license": "CC BY-SA 4.0"
+     },
+     "rear": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Mazda_CX-80_PHEV_L_Package_%285LA-KL5S3P%29_rear.jpg/960px-Mazda_CX-80_PHEV_L_Package_%285LA-KL5S3P%29_rear.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Mazda_CX-80_PHEV_L_Package_(5LA-KL5S3P)_rear.jpg",
+      "artist": "Tokumeigakarinoaoshima",
+      "license": "CC BY-SA 4.0"
+     }
+    }
+   ],
+   "since": "2024-10"
+  },
+  {
+   "rank": 81,
+   "name": "トール",
+   "maker": "ダイハツ",
+   "units": 6333,
+   "latestMonth": 0,
+   "kind": "登録車",
+   "id": "ダイハツ|トール",
+   "aliases": [
+    "トール"
+   ],
+   "wiki": "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%8F%E3%83%84%E3%83%BB%E3%83%88%E3%83%BC%E3%83%AB",
+   "gens": [
+    {
+     "label": "M900S/M910S型",
+     "period": "2016年11月9日 - 2023年12月20日(一時生産停止) 2024年4月19日 -",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Daihatsu_THOR_CUSTOM_G_2WD_%285BA-M900S-GBVE%29_front.jpg/960px-Daihatsu_THOR_CUSTOM_G_2WD_%285BA-M900S-GBVE%29_front.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Daihatsu_THOR_CUSTOM_G_2WD_(5BA-M900S-GBVE)_front.jpg",
+      "artist": "Tokumeigakarinoaoshima",
+      "license": "CC BY-SA 4.0"
+     },
+     "rear": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Daihatsu_THOR_CUSTOM_G_2WD_%285BA-M900S-GBVE%29_rear.jpg/960px-Daihatsu_THOR_CUSTOM_G_2WD_%285BA-M900S-GBVE%29_rear.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Daihatsu_THOR_CUSTOM_G_2WD_(5BA-M900S-GBVE)_rear.jpg",
+      "artist": "Tokumeigakarinoaoshima",
+      "license": "CC BY-SA 4.0"
+     }
+    }
+   ],
+   "since": "2016-11"
+  },
+  {
+   "rank": 82,
+   "name": "シフォン",
+   "maker": "スバル",
+   "units": 6266,
+   "latestMonth": 319,
+   "kind": "軽自動車",
+   "id": "スバル|シフォン",
+   "aliases": [
+    "シフォン"
+   ],
+   "wiki": "https://ja.wikipedia.org/wiki/%E3%82%B9%E3%83%90%E3%83%AB%E3%83%BB%E3%82%B7%E3%83%95%E3%82%A9%E3%83%B3",
+   "gens": [
+    {
+     "label": "2代目 LA650F/660F型(2019年 - )",
+     "period": "2019年7月25日 - (発表:2019年7月16日)",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Subaru_CHIFFON_G_Smart_Assist_%286BA-LA650F%29_front.jpg/960px-Subaru_CHIFFON_G_Smart_Assist_%286BA-LA650F%29_front.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Subaru_CHIFFON_G_Smart_Assist_(6BA-LA650F)_front.jpg",
+      "artist": "Tokumeigakarinoaoshima",
+      "license": "CC BY-SA 4.0"
+     },
+     "rear": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Subaru_CHIFFON_G_Smart_Assist_%286BA-LA650F%29_rear.jpg/960px-Subaru_CHIFFON_G_Smart_Assist_%286BA-LA650F%29_rear.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Subaru_CHIFFON_G_Smart_Assist_(6BA-LA650F)_rear.jpg",
+      "artist": "Tokumeigakarinoaoshima",
+      "license": "CC BY-SA 4.0"
+     }
+    },
+    {
+     "label": "初代 LA600F/610F型(2016年 - 2019年)",
+     "period": "2016年12月13日 - 2019年7月24日",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/1st_generation_Subaru_Chiffon_Custom_R%2C_front_right.jpg/960px-1st_generation_Subaru_Chiffon_Custom_R%2C_front_right.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:1st_generation_Subaru_Chiffon_Custom_R,_front_right.jpg",
+      "artist": "TTTNIS",
+      "license": "CC0"
+     },
+     "rear": null
+    }
+   ],
+   "since": "2019-07"
+  },
+  {
+   "rank": 83,
+   "name": "キャロル",
+   "maker": "マツダ",
+   "units": 6177,
+   "latestMonth": 298,
+   "kind": "軽自動車",
+   "id": "マツダ|キャロル",
+   "aliases": [
+    "キャロル"
+   ],
+   "wiki": "https://ja.wikipedia.org/wiki/%E3%83%9E%E3%83%84%E3%83%80%E3%83%BB%E3%82%AD%E3%83%A3%E3%83%AD%E3%83%AB",
+   "gens": [
+    {
+     "label": "歴史(スズキOEM以降)",
+     "period": "1998年10月 - 2004年9月",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Mazda_CAROL_SG_%28HB12S%29_front.JPG/960px-Mazda_CAROL_SG_%28HB12S%29_front.JPG?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Mazda_CAROL_SG_(HB12S)_front.JPG",
+      "artist": "Tokumeigakarinoaoshima",
+      "license": "CC0"
+     },
+     "rear": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Mazda_CAROL_SG_%28HB12S%29_rear.JPG/960px-Mazda_CAROL_SG_%28HB12S%29_rear.JPG?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Mazda_CAROL_SG_(HB12S)_rear.JPG",
+      "artist": "Tokumeigakarinoaoshima",
+      "license": "CC0"
+     }
+    },
+    {
+     "label": "歴史(自社生産時代)",
+     "period": "1962年2月 - 1970年8月",
+     "front": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Mazda_carol360.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page": "https://commons.wikimedia.org/wiki/File:Mazda_carol360.jpg",
+      "artist": "Ypy31",
+      "license": "Public domain"
+     },
+     "rear": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Mazda_Carol360_rearview.jpg/960px-Mazda_Carol360_rearview.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Mazda_Carol360_rearview.jpg",
+      "artist": "Tam0031",
+      "license": "CC BY-SA 3.0"
+     }
+    }
+   ],
+   "since": "1998-10"
+  },
+  {
+   "rank": 84,
+   "name": "エルグランド",
+   "maker": "日産",
+   "units": 6133,
+   "latestMonth": 1317,
+   "kind": "登録車",
+   "id": "日産|エルグランド",
+   "aliases": [
+    "エルグランド"
+   ],
+   "wiki": "https://ja.wikipedia.org/wiki/%E6%97%A5%E7%94%A3%E3%83%BB%E3%82%A8%E3%83%AB%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%89",
+   "gens": [
+    {
+     "label": "4代目 E53型(2026年 - )",
+     "period": "2026年7月16日-",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Japan_Mobility_Show_Kansai_2025_%28104%29_-_Nissan_ELGRAND_%286AA-NE53%29.jpg/960px-Japan_Mobility_Show_Kansai_2025_%28104%29_-_Nissan_ELGRAND_%286AA-NE53%29.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Japan_Mobility_Show_Kansai_2025_(104)_-_Nissan_ELGRAND_(6AA-NE53).jpg",
+      "artist": "Tokumeigakarinoaoshima",
+      "license": "CC0"
+     },
+     "rear": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Japan_Mobility_Show_Kansai_2025_%28106%29_-_Nissan_ELGRAND_%286AA-NE53%29.jpg/960px-Japan_Mobility_Show_Kansai_2025_%28106%29_-_Nissan_ELGRAND_%286AA-NE53%29.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Japan_Mobility_Show_Kansai_2025_(106)_-_Nissan_ELGRAND_(6AA-NE53).jpg",
+      "artist": "Tokumeigakarinoaoshima",
+      "license": "CC0"
+     }
+    },
+    {
+     "label": "3代目 E52型(2010年 - 2026年)",
+     "period": "2010年8月 - 2026年7月",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Nissan_Elgrand_E52%2C_250Highway_STAR_Premium_Urban_Chrome%2C_Deep_Crimson%2C_left_front%2C_Gallery_HQ%2C_2021_%28cropped%29.jpg/960px-Nissan_Elgrand_E52%2C_250Highway_STAR_Premium_Urban_Chrome%2C_Deep_Crimson%2C_left_front%2C_Gallery_HQ%2C_2021_%28cropped%29.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Nissan_Elgrand_E52,_250Highway_STAR_Premium_Urban_Chrome,_Deep_Crimson,_left_front,_Gallery_HQ,_2021_(cropped).jpg",
+      "artist": "Kazyakuruma",
+      "license": "CC BY-SA 4.0"
+     },
+     "rear": null
+    },
+    {
+     "label": "2代目 E51型(2002年 - 2010年)",
+     "period": "2002年5月 - 2010年8月",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/2002-2004_NISSAN_ELGRAND.jpg/960px-2002-2004_NISSAN_ELGRAND.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:2002-2004_NISSAN_ELGRAND.jpg",
+      "artist": "TTTNIS",
+      "license": "Public domain"
+     },
+     "rear": null
+    }
+   ],
+   "since": "2026-07"
+  },
+  {
+   "rank": 85,
    "name": "レガシィ",
    "maker": "スバル",
    "units": 6129,
@@ -3945,166 +4187,11 @@
    "since": "2009-05"
   },
   {
-   "rank": 80,
-   "name": "CX-80",
-   "maker": "マツダ",
-   "units": 5784,
-   "latestMonth": 0,
-   "kind": "登録車",
-   "id": "マツダ|CX-80",
-   "aliases": [
-    "CX-80"
-   ],
-   "wiki": "https://ja.wikipedia.org/wiki/%E3%83%9E%E3%83%84%E3%83%80%E3%83%BBCX-80",
-   "gens": [
-    {
-     "label": "KL3P/KL3R3P/KL5S3P",
-     "period": "2024年10月10日 -",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Mazda_CX-80_PHEV_L_Package_%285LA-KL5S3P%29_front.jpg/960px-Mazda_CX-80_PHEV_L_Package_%285LA-KL5S3P%29_front.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Mazda_CX-80_PHEV_L_Package_(5LA-KL5S3P)_front.jpg",
-      "artist": "Tokumeigakarinoaoshima",
-      "license": "CC BY-SA 4.0"
-     },
-     "rear": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Mazda_CX-80_PHEV_L_Package_%285LA-KL5S3P%29_rear.jpg/960px-Mazda_CX-80_PHEV_L_Package_%285LA-KL5S3P%29_rear.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Mazda_CX-80_PHEV_L_Package_(5LA-KL5S3P)_rear.jpg",
-      "artist": "Tokumeigakarinoaoshima",
-      "license": "CC BY-SA 4.0"
-     }
-    }
-   ],
-   "since": "2024-10"
-  },
-  {
-   "rank": 81,
-   "name": "トール",
-   "maker": "ダイハツ",
-   "units": 5737,
-   "latestMonth": 0,
-   "kind": "登録車",
-   "id": "ダイハツ|トール",
-   "aliases": [
-    "トール"
-   ],
-   "wiki": "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%8F%E3%83%84%E3%83%BB%E3%83%88%E3%83%BC%E3%83%AB",
-   "gens": [
-    {
-     "label": "M900S/M910S型",
-     "period": "2016年11月9日 - 2023年12月20日(一時生産停止) 2024年4月19日 -",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Daihatsu_THOR_CUSTOM_G_2WD_%285BA-M900S-GBVE%29_front.jpg/960px-Daihatsu_THOR_CUSTOM_G_2WD_%285BA-M900S-GBVE%29_front.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Daihatsu_THOR_CUSTOM_G_2WD_(5BA-M900S-GBVE)_front.jpg",
-      "artist": "Tokumeigakarinoaoshima",
-      "license": "CC BY-SA 4.0"
-     },
-     "rear": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Daihatsu_THOR_CUSTOM_G_2WD_%285BA-M900S-GBVE%29_rear.jpg/960px-Daihatsu_THOR_CUSTOM_G_2WD_%285BA-M900S-GBVE%29_rear.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Daihatsu_THOR_CUSTOM_G_2WD_(5BA-M900S-GBVE)_rear.jpg",
-      "artist": "Tokumeigakarinoaoshima",
-      "license": "CC BY-SA 4.0"
-     }
-    }
-   ],
-   "since": "2016-11"
-  },
-  {
-   "rank": 82,
-   "name": "シフォン",
-   "maker": "スバル",
-   "units": 5660,
-   "latestMonth": 268,
-   "kind": "軽自動車",
-   "id": "スバル|シフォン",
-   "aliases": [
-    "シフォン"
-   ],
-   "wiki": "https://ja.wikipedia.org/wiki/%E3%82%B9%E3%83%90%E3%83%AB%E3%83%BB%E3%82%B7%E3%83%95%E3%82%A9%E3%83%B3",
-   "gens": [
-    {
-     "label": "2代目 LA650F/660F型(2019年 - )",
-     "period": "2019年7月25日 - (発表:2019年7月16日)",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Subaru_CHIFFON_G_Smart_Assist_%286BA-LA650F%29_front.jpg/960px-Subaru_CHIFFON_G_Smart_Assist_%286BA-LA650F%29_front.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Subaru_CHIFFON_G_Smart_Assist_(6BA-LA650F)_front.jpg",
-      "artist": "Tokumeigakarinoaoshima",
-      "license": "CC BY-SA 4.0"
-     },
-     "rear": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Subaru_CHIFFON_G_Smart_Assist_%286BA-LA650F%29_rear.jpg/960px-Subaru_CHIFFON_G_Smart_Assist_%286BA-LA650F%29_rear.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Subaru_CHIFFON_G_Smart_Assist_(6BA-LA650F)_rear.jpg",
-      "artist": "Tokumeigakarinoaoshima",
-      "license": "CC BY-SA 4.0"
-     }
-    },
-    {
-     "label": "初代 LA600F/610F型(2016年 - 2019年)",
-     "period": "2016年12月13日 - 2019年7月24日",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/1st_generation_Subaru_Chiffon_Custom_R%2C_front_right.jpg/960px-1st_generation_Subaru_Chiffon_Custom_R%2C_front_right.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:1st_generation_Subaru_Chiffon_Custom_R,_front_right.jpg",
-      "artist": "TTTNIS",
-      "license": "CC0"
-     },
-     "rear": null
-    }
-   ],
-   "since": "2019-07"
-  },
-  {
-   "rank": 83,
-   "name": "キャロル",
-   "maker": "マツダ",
-   "units": 5586,
-   "latestMonth": 433,
-   "kind": "軽自動車",
-   "id": "マツダ|キャロル",
-   "aliases": [
-    "キャロル"
-   ],
-   "wiki": "https://ja.wikipedia.org/wiki/%E3%83%9E%E3%83%84%E3%83%80%E3%83%BB%E3%82%AD%E3%83%A3%E3%83%AD%E3%83%AB",
-   "gens": [
-    {
-     "label": "歴史(スズキOEM以降)",
-     "period": "1998年10月 - 2004年9月",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Mazda_CAROL_SG_%28HB12S%29_front.JPG/960px-Mazda_CAROL_SG_%28HB12S%29_front.JPG?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Mazda_CAROL_SG_(HB12S)_front.JPG",
-      "artist": "Tokumeigakarinoaoshima",
-      "license": "CC0"
-     },
-     "rear": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Mazda_CAROL_SG_%28HB12S%29_rear.JPG/960px-Mazda_CAROL_SG_%28HB12S%29_rear.JPG?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Mazda_CAROL_SG_(HB12S)_rear.JPG",
-      "artist": "Tokumeigakarinoaoshima",
-      "license": "CC0"
-     }
-    },
-    {
-     "label": "歴史(自社生産時代)",
-     "period": "1962年2月 - 1970年8月",
-     "front": {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Mazda_carol360.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-      "page": "https://commons.wikimedia.org/wiki/File:Mazda_carol360.jpg",
-      "artist": "Ypy31",
-      "license": "Public domain"
-     },
-     "rear": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Mazda_Carol360_rearview.jpg/960px-Mazda_Carol360_rearview.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Mazda_Carol360_rearview.jpg",
-      "artist": "Tam0031",
-      "license": "CC BY-SA 3.0"
-     }
-    }
-   ],
-   "since": "1998-10"
-  },
-  {
-   "rank": 84,
+   "rank": 86,
    "name": "ステラ",
    "maker": "スバル",
-   "units": 5157,
-   "latestMonth": 462,
+   "units": 5979,
+   "latestMonth": 345,
    "kind": "軽自動車",
    "id": "スバル|ステラ",
    "aliases": [
@@ -4159,65 +4246,11 @@
    "since": "2025-06"
   },
   {
-   "rank": 85,
-   "name": "エルグランド",
-   "maker": "日産",
-   "units": 4816,
-   "latestMonth": 1568,
-   "kind": "登録車",
-   "id": "日産|エルグランド",
-   "aliases": [
-    "エルグランド"
-   ],
-   "wiki": "https://ja.wikipedia.org/wiki/%E6%97%A5%E7%94%A3%E3%83%BB%E3%82%A8%E3%83%AB%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%89",
-   "gens": [
-    {
-     "label": "4代目 E53型(2026年 - )",
-     "period": "2026年7月16日-",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Japan_Mobility_Show_Kansai_2025_%28104%29_-_Nissan_ELGRAND_%286AA-NE53%29.jpg/960px-Japan_Mobility_Show_Kansai_2025_%28104%29_-_Nissan_ELGRAND_%286AA-NE53%29.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Japan_Mobility_Show_Kansai_2025_(104)_-_Nissan_ELGRAND_(6AA-NE53).jpg",
-      "artist": "Tokumeigakarinoaoshima",
-      "license": "CC0"
-     },
-     "rear": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Japan_Mobility_Show_Kansai_2025_%28106%29_-_Nissan_ELGRAND_%286AA-NE53%29.jpg/960px-Japan_Mobility_Show_Kansai_2025_%28106%29_-_Nissan_ELGRAND_%286AA-NE53%29.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Japan_Mobility_Show_Kansai_2025_(106)_-_Nissan_ELGRAND_(6AA-NE53).jpg",
-      "artist": "Tokumeigakarinoaoshima",
-      "license": "CC0"
-     }
-    },
-    {
-     "label": "3代目 E52型(2010年 - 2026年)",
-     "period": "2010年8月 - 2026年7月",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Nissan_Elgrand_E52%2C_250Highway_STAR_Premium_Urban_Chrome%2C_Deep_Crimson%2C_left_front%2C_Gallery_HQ%2C_2021_%28cropped%29.jpg/960px-Nissan_Elgrand_E52%2C_250Highway_STAR_Premium_Urban_Chrome%2C_Deep_Crimson%2C_left_front%2C_Gallery_HQ%2C_2021_%28cropped%29.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Nissan_Elgrand_E52,_250Highway_STAR_Premium_Urban_Chrome,_Deep_Crimson,_left_front,_Gallery_HQ,_2021_(cropped).jpg",
-      "artist": "Kazyakuruma",
-      "license": "CC BY-SA 4.0"
-     },
-     "rear": null
-    },
-    {
-     "label": "2代目 E51型(2002年 - 2010年)",
-     "period": "2002年5月 - 2010年8月",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/2002-2004_NISSAN_ELGRAND.jpg/960px-2002-2004_NISSAN_ELGRAND.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:2002-2004_NISSAN_ELGRAND.jpg",
-      "artist": "TTTNIS",
-      "license": "Public domain"
-     },
-     "rear": null
-    }
-   ],
-   "since": "2026-07"
-  },
-  {
-   "rank": 86,
+   "rank": 87,
    "name": "フレア",
    "maker": "マツダ",
-   "units": 4675,
-   "latestMonth": 338,
+   "units": 5110,
+   "latestMonth": 212,
    "kind": "軽自動車",
    "id": "マツダ|フレア",
    "aliases": [
@@ -4256,7 +4289,7 @@
    "since": "2017-03"
   },
   {
-   "rank": 87,
+   "rank": 88,
    "name": "エクリプスクロス",
    "maker": "三菱",
    "units": 4629,
@@ -4304,39 +4337,39 @@
    "since": "2025-01"
   },
   {
-   "rank": 88,
-   "name": "スーパーワン",
-   "maker": "ホンダ",
-   "units": 4582,
-   "latestMonth": 1055,
+   "rank": 89,
+   "name": "JPN TAXI",
+   "maker": "トヨタ",
+   "units": 4483,
+   "latestMonth": 731,
    "kind": "登録車",
-   "id": "ホンダ|スーパーワン",
+   "id": "トヨタ|JPN TAXI",
    "aliases": [
-    "スーパーワン"
+    "JPN TAXI"
    ],
-   "wiki": "https://ja.wikipedia.org/wiki/%E3%83%9B%E3%83%B3%E3%83%80%E3%83%BBSuper-ONE",
+   "wiki": "https://ja.wikipedia.org/wiki/%E3%83%88%E3%83%A8%E3%82%BF%E3%83%BB%E3%82%B8%E3%83%A3%E3%83%91%E3%83%B3%E3%82%BF%E3%82%AF%E3%82%B7%E3%83%BC",
    "gens": [
     {
-     "label": "JG6型",
-     "period": "2026年5月22日 - (公式発表:2026年5月21日)",
+     "label": "NTP10型{{efn2|「DAA-NTP10」から「6AA-NTP10」へ変更(識別記号の変更): 自動車の排ガス基準・規制レベルが2018年排出ガス規制(平成30年規制)に対応したハイブリッド車(6AA)として区別されたため。}}",
+     "period": "2017年10月23日 -",
      "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Honda_Super-ONE_%28ZAA-JG6%29_front.jpg/960px-Honda_Super-ONE_%28ZAA-JG6%29_front.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Honda_Super-ONE_(ZAA-JG6)_front.jpg",
-      "artist": "Tokumeigakarinoaoshima",
-      "license": "CC0"
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/TOYOTA_JPNTAXI_NIHONKOTSU_TAXI_004.jpg/960px-TOYOTA_JPNTAXI_NIHONKOTSU_TAXI_004.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:TOYOTA_JPNTAXI_NIHONKOTSU_TAXI_004.jpg",
+      "artist": "Vlchang",
+      "license": "CC BY-SA 4.0"
      },
      "rear": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Honda_Super-ONE_%28ZAA-JG6%29_rear.jpg/960px-Honda_Super-ONE_%28ZAA-JG6%29_rear.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Honda_Super-ONE_(ZAA-JG6)_rear.jpg",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/The_rearview_of_Toyota_JPN_TAXI_Takumi_%28DAA-NTP10-AHXGN%29_as_a_taxi_of_Yuko_Taxi.jpg/960px-The_rearview_of_Toyota_JPN_TAXI_Takumi_%28DAA-NTP10-AHXGN%29_as_a_taxi_of_Yuko_Taxi.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:The_rearview_of_Toyota_JPN_TAXI_Takumi_(DAA-NTP10-AHXGN)_as_a_taxi_of_Yuko_Taxi.jpg",
       "artist": "Tokumeigakarinoaoshima",
-      "license": "CC0"
+      "license": "CC BY-SA 4.0"
      }
     }
    ],
-   "since": "2026-05"
+   "since": "2017-10"
   },
   {
-   "rank": 89,
+   "rank": 90,
    "name": "86",
    "maker": "トヨタ",
    "units": 4321,
@@ -4384,7 +4417,82 @@
    "since": "2021-10"
   },
   {
-   "rank": 90,
+   "rank": 91,
+   "name": "CX-3",
+   "maker": "マツダ",
+   "units": 3561,
+   "latestMonth": 0,
+   "kind": "登録車",
+   "id": "マツダ|CX-3",
+   "aliases": [
+    "CX-3"
+   ],
+   "wiki": "https://ja.wikipedia.org/wiki/%E3%83%9E%E3%83%84%E3%83%80%E3%83%BBCX-3",
+   "gens": [
+    {
+     "label": "DKLFW/DKLAW/DKEFW/DKEAW/ DK5FW/DK5AW/DK8FW/DK8AW型",
+     "period": "2015年2月27日 -",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Mazda_CX-3.jpg/960px-Mazda_CX-3.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Mazda_CX-3.jpg",
+      "artist": "TTTNIS",
+      "license": "CC0"
+     },
+     "rear": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Mazda_CX-3_XD_%28DK5FW%29_rear.JPG/960px-Mazda_CX-3_XD_%28DK5FW%29_rear.JPG?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Mazda_CX-3_XD_(DK5FW)_rear.JPG",
+      "artist": "Tokumeigakarinoaoshima",
+      "license": "CC0"
+     }
+    }
+   ],
+   "since": "2015-02"
+  },
+  {
+   "rank": 92,
+   "name": "プレオ",
+   "maker": "スバル",
+   "units": 3541,
+   "latestMonth": 188,
+   "kind": "軽自動車",
+   "id": "スバル|プレオ",
+   "aliases": [
+    "プレオ"
+   ],
+   "wiki": "https://ja.wikipedia.org/wiki/%E3%82%B9%E3%83%90%E3%83%AB%E3%83%BB%E3%83%97%E3%83%AC%E3%82%AA",
+   "gens": [
+    {
+     "label": "2代目 L275F/285F型(2010年 - 2018年)",
+     "period": "セダン5MTモデル・バン5MTモデル: 2010年4月 - 2018年3月 バンATモデル:2010年4月 - 2011年7月 バンCVTモデル:2011年7月 - 2018年3月 セダンCVTモデル・カスタム: 2010年4月 - 2013年2月",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Subaru_PLEO_2nd.JPG/960px-Subaru_PLEO_2nd.JPG?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Subaru_PLEO_2nd.JPG",
+      "artist": "お口チャック",
+      "license": "CC BY 3.0"
+     },
+     "rear": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Subaru_PLEO_2nd_rear.JPG/960px-Subaru_PLEO_2nd_rear.JPG?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Subaru_PLEO_2nd_rear.JPG",
+      "artist": "お口チャック",
+      "license": "CC BY 3.0"
+     }
+    },
+    {
+     "label": "初代 RA/RV型(1998年 - 2010年)",
+     "period": "1998年10月 - 2010年6月 (2010年3月末生産終了)",
+     "front": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/1998_Subaru_Pleo_01.jpg/960px-1998_Subaru_Pleo_01.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:1998_Subaru_Pleo_01.jpg",
+      "artist": "Mytho88",
+      "license": "CC BY-SA 3.0"
+     },
+     "rear": null
+    }
+   ],
+   "since": "2010-04"
+  },
+  {
+   "rank": 93,
    "name": "フェアレディZ",
    "maker": "日産",
    "units": 3523,
@@ -4448,118 +4556,11 @@
    "since": "2022-01"
   },
   {
-   "rank": 91,
-   "name": "プレオ",
-   "maker": "スバル",
-   "units": 3157,
-   "latestMonth": 158,
-   "kind": "軽自動車",
-   "id": "スバル|プレオ",
-   "aliases": [
-    "プレオ"
-   ],
-   "wiki": "https://ja.wikipedia.org/wiki/%E3%82%B9%E3%83%90%E3%83%AB%E3%83%BB%E3%83%97%E3%83%AC%E3%82%AA",
-   "gens": [
-    {
-     "label": "2代目 L275F/285F型(2010年 - 2018年)",
-     "period": "セダン5MTモデル・バン5MTモデル: 2010年4月 - 2018年3月 バンATモデル:2010年4月 - 2011年7月 バンCVTモデル:2011年7月 - 2018年3月 セダンCVTモデル・カスタム: 2010年4月 - 2013年2月",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Subaru_PLEO_2nd.JPG/960px-Subaru_PLEO_2nd.JPG?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Subaru_PLEO_2nd.JPG",
-      "artist": "お口チャック",
-      "license": "CC BY 3.0"
-     },
-     "rear": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Subaru_PLEO_2nd_rear.JPG/960px-Subaru_PLEO_2nd_rear.JPG?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Subaru_PLEO_2nd_rear.JPG",
-      "artist": "お口チャック",
-      "license": "CC BY 3.0"
-     }
-    },
-    {
-     "label": "初代 RA/RV型(1998年 - 2010年)",
-     "period": "1998年10月 - 2010年6月 (2010年3月末生産終了)",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/1998_Subaru_Pleo_01.jpg/960px-1998_Subaru_Pleo_01.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:1998_Subaru_Pleo_01.jpg",
-      "artist": "Mytho88",
-      "license": "CC BY-SA 3.0"
-     },
-     "rear": null
-    }
-   ],
-   "since": "2010-04"
-  },
-  {
-   "rank": 92,
-   "name": "JPN TAXI",
-   "maker": "トヨタ",
-   "units": 3005,
-   "latestMonth": 0,
-   "kind": "登録車",
-   "id": "トヨタ|JPN TAXI",
-   "aliases": [
-    "JPN TAXI"
-   ],
-   "wiki": "https://ja.wikipedia.org/wiki/%E3%83%88%E3%83%A8%E3%82%BF%E3%83%BB%E3%82%B8%E3%83%A3%E3%83%91%E3%83%B3%E3%82%BF%E3%82%AF%E3%82%B7%E3%83%BC",
-   "gens": [
-    {
-     "label": "NTP10型{{efn2|「DAA-NTP10」から「6AA-NTP10」へ変更(識別記号の変更): 自動車の排ガス基準・規制レベルが2018年排出ガス規制(平成30年規制)に対応したハイブリッド車(6AA)として区別されたため。}}",
-     "period": "2017年10月23日 -",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/TOYOTA_JPNTAXI_NIHONKOTSU_TAXI_004.jpg/960px-TOYOTA_JPNTAXI_NIHONKOTSU_TAXI_004.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:TOYOTA_JPNTAXI_NIHONKOTSU_TAXI_004.jpg",
-      "artist": "Vlchang",
-      "license": "CC BY-SA 4.0"
-     },
-     "rear": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/The_rearview_of_Toyota_JPN_TAXI_Takumi_%28DAA-NTP10-AHXGN%29_as_a_taxi_of_Yuko_Taxi.jpg/960px-The_rearview_of_Toyota_JPN_TAXI_Takumi_%28DAA-NTP10-AHXGN%29_as_a_taxi_of_Yuko_Taxi.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:The_rearview_of_Toyota_JPN_TAXI_Takumi_(DAA-NTP10-AHXGN)_as_a_taxi_of_Yuko_Taxi.jpg",
-      "artist": "Tokumeigakarinoaoshima",
-      "license": "CC BY-SA 4.0"
-     }
-    }
-   ],
-   "since": "2017-10"
-  },
-  {
-   "rank": 93,
-   "name": "CX-3",
-   "maker": "マツダ",
-   "units": 2743,
-   "latestMonth": 0,
-   "kind": "登録車",
-   "id": "マツダ|CX-3",
-   "aliases": [
-    "CX-3"
-   ],
-   "wiki": "https://ja.wikipedia.org/wiki/%E3%83%9E%E3%83%84%E3%83%80%E3%83%BBCX-3",
-   "gens": [
-    {
-     "label": "DKLFW/DKLAW/DKEFW/DKEAW/ DK5FW/DK5AW/DK8FW/DK8AW型",
-     "period": "2015年2月27日 -",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Mazda_CX-3.jpg/960px-Mazda_CX-3.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Mazda_CX-3.jpg",
-      "artist": "TTTNIS",
-      "license": "CC0"
-     },
-     "rear": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Mazda_CX-3_XD_%28DK5FW%29_rear.JPG/960px-Mazda_CX-3_XD_%28DK5FW%29_rear.JPG?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Mazda_CX-3_XD_(DK5FW)_rear.JPG",
-      "artist": "Tokumeigakarinoaoshima",
-      "license": "CC0"
-     }
-    }
-   ],
-   "since": "2015-02"
-  },
-  {
    "rank": 94,
    "name": "eKクロス EV",
    "maker": "三菱",
-   "units": 2385,
-   "latestMonth": 170,
+   "units": 2600,
+   "latestMonth": 110,
    "kind": "軽自動車",
    "id": "三菱|eKクロス EV",
    "aliases": [
@@ -4739,10 +4740,23 @@
   },
   {
    "rank": 98,
+   "name": "RACCO",
+   "maker": "BYD",
+   "units": 1255,
+   "latestMonth": 607,
+   "kind": "軽自動車",
+   "id": "BYD|RACCO",
+   "aliases": [
+    "RACCO"
+   ],
+   "since": null
+  },
+  {
+   "rank": 99,
    "name": "e-ハイゼットカーゴ/e-アトレー",
    "maker": "ダイハツ",
-   "units": 1017,
-   "latestMonth": 76,
+   "units": 1052,
+   "latestMonth": 35,
    "kind": "軽自動車",
    "id": "ダイハツ|e-ハイゼットカーゴ/e-アトレー",
    "aliases": [
@@ -4751,7 +4765,7 @@
    "since": null
   },
   {
-   "rank": 99,
+   "rank": 100,
    "name": "WRX",
    "maker": "スバル",
    "units": 949,
@@ -4794,53 +4808,36 @@
    "since": "2021-11"
   },
   {
-   "rank": 100,
-   "name": "CR-V",
-   "maker": "ホンダ",
-   "units": 944,
-   "latestMonth": 0,
+   "rank": 103,
+   "name": "トレイルシーカー",
+   "maker": "スバル",
+   "units": 750,
+   "latestMonth": 750,
    "kind": "登録車",
-   "id": "ホンダ|CR-V",
+   "id": "SUBARU|トレイルシーカー",
    "aliases": [
-    "CR-V"
+    "トレイルシーカー"
    ],
-   "wiki": "https://ja.wikipedia.org/wiki/%E3%83%9B%E3%83%B3%E3%83%80%E3%83%BBCR-V",
+   "wiki": "https://ja.wikipedia.org/wiki/%E3%82%B9%E3%83%90%E3%83%AB%E3%83%BB%E3%83%88%E3%83%AC%E3%82%A4%E3%83%AB%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC",
    "gens": [
     {
-     "label": "6代目 RS3/4/5/6/ZC8型(2022年 - )",
-     "period": "北米 : 2022年9月22日 - 日本:2024年7月19日 - (発表:2024年7月18日)",
+     "label": "初代(XEAM1#X型、2026年 - )",
+     "period": "2026年4月 -",
      "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Honda_CR-V_eHEV_RS_2025_at_Japan_Mobility_Show_JAPAN_Front.jpg/960px-Honda_CR-V_eHEV_RS_2025_at_Japan_Mobility_Show_JAPAN_Front.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Honda_CR-V_eHEV_RS_2025_at_Japan_Mobility_Show_JAPAN_Front.jpg",
-      "artist": "Suzuki-Ham",
-      "license": "CC BY-SA 4.0"
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/2026_Subaru_Trailseeker_%28Prototype%29_at_the_2025_NYC_Auto_Show.jpg/960px-2026_Subaru_Trailseeker_%28Prototype%29_at_the_2025_NYC_Auto_Show.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:2026_Subaru_Trailseeker_(Prototype)_at_the_2025_NYC_Auto_Show.jpg",
+      "artist": "Raszbeary",
+      "license": "CC BY 4.0"
      },
-     "rear": null
-    },
-    {
-     "label": "5代目 RW1/2/RT5/6型(2016年 - 2022年)",
-     "period": "海外:2016年10月 - 2022年日本:2018年8月31日 - (発表:2018年8月30日)-2022年8月",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/2018_Honda_CR-V_%28RW_MY18%29_%2BSport_2WD_wagon_%282018-10-22%29_01.jpg/960px-2018_Honda_CR-V_%28RW_MY18%29_%2BSport_2WD_wagon_%282018-10-22%29_01.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:2018_Honda_CR-V_(RW_MY18)_%2BSport_2WD_wagon_(2018-10-22)_01.jpg",
-      "artist": "EurovisionNim",
-      "license": "CC BY-SA 4.0"
-     },
-     "rear": null
-    },
-    {
-     "label": "4代目 RM1/4型(2011年 - 2018年)",
-     "period": "2011年12月 - 2016年10月",
-     "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/2016_Honda_CR-V_%28RM_Series_II_MY16%29_VTi_2.0_2WD_wagon_%282018-10-08%29_01.jpg/960px-2016_Honda_CR-V_%28RM_Series_II_MY16%29_VTi_2.0_2WD_wagon_%282018-10-08%29_01.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:2016_Honda_CR-V_(RM_Series_II_MY16)_VTi_2.0_2WD_wagon_(2018-10-08)_01.jpg",
-      "artist": "EurovisionNim",
-      "license": "CC BY-SA 4.0"
-     },
-     "rear": null
+     "rear": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/2026_Subaru_Trailseeker_ET-HS_rear.jpg/960px-2026_Subaru_Trailseeker_ET-HS_rear.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:2026_Subaru_Trailseeker_ET-HS_rear.jpg",
+      "artist": "TTTNIS",
+      "license": "CC0"
+     }
     }
    ],
-   "since": "2024-07"
+   "since": "2026-04"
   }
  ],
  "emblems": [

@@ -4355,5 +4355,76 @@
    }
   ],
   "fetchedAt": "2026-10-19T02:09:10.123Z"
+ },
+ "SUBARU|トレイルシーカー|{}": {
+  "wiki": "スバル・トレイルシーカー",
+  "gens": [
+   {
+    "label": "初代(XEAM1#X型、2026年 - )",
+    "period": "2026年4月 -",
+    "front": {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/2026_Subaru_Trailseeker_%28Prototype%29_at_the_2025_NYC_Auto_Show.jpg/960px-2026_Subaru_Trailseeker_%28Prototype%29_at_the_2025_NYC_Auto_Show.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File:2026_Subaru_Trailseeker_(Prototype)_at_the_2025_NYC_Auto_Show.jpg",
+     "artist": "Raszbeary",
+     "license": "CC BY 4.0"
+    },
+    "rear": {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/2026_Subaru_Trailseeker_ET-HS_rear.jpg/960px-2026_Subaru_Trailseeker_ET-HS_rear.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File:2026_Subaru_Trailseeker_ET-HS_rear.jpg",
+     "artist": "TTTNIS",
+     "license": "CC0"
+    }
+   }
+  ],
+  "fetchedAt": "2026-11-08T10:04:38.673Z"
+ },
+ "スズキ|アルトバン|{}": {
+  "wiki": "スズキ・アルト",
+  "gens": [
+   {
+    "label": "9代目 HA37S/97S型(2021年 - )",
+    "period": "2021年12月22日 -",
+    "front": {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Suzuki_ALTO_L_2WD_%283BA-HA37S-ABLE-ZY3%29_front.jpg/960px-Suzuki_ALTO_L_2WD_%283BA-HA37S-ABLE-ZY3%29_front.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File:Suzuki_ALTO_L_2WD_(3BA-HA37S-ABLE-ZY3)_front.jpg",
+     "artist": "Tokumeigakarinoaoshima",
+     "license": "CC0"
+    },
+    "rear": {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Suzuki_Alto_L_2023_JAPAN_Rear.jpg/960px-Suzuki_Alto_L_2023_JAPAN_Rear.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File:Suzuki_Alto_L_2023_JAPAN_Rear.jpg",
+     "artist": "Suzuki-Ham",
+     "license": "CC0"
+    }
+   },
+   {
+    "label": "8代目 HA36S型(日本 : 2014年 - 2021年、パキスタン : 2019年 - 、ブルネイ:2026年 - )、HA36V型(2014年 - 2021年)",
+    "period": "",
+    "front": {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Suzuki_Alto_L_%2715_%281%29.jpg/960px-Suzuki_Alto_L_%2715_%281%29.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File:Suzuki_Alto_L_%2715_(1).jpg",
+     "artist": "Oq10pass",
+     "license": "CC0"
+    },
+    "rear": {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Suzuki_Alto_L_%2715_%282%29.jpg/960px-Suzuki_Alto_L_%2715_%282%29.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File:Suzuki_Alto_L_%2715_(2).jpg",
+     "artist": "Oq10pass",
+     "license": "CC0"
+    }
+   },
+   {
+    "label": "7代目 HA25S/25V/35S型(2009年 - 2014年)",
+    "period": "セダン/バン: 2009年12月 - 2014年12月 エコ: 2011年11月 - 2014年12月",
+    "front": {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/7th_Suzuki_Alto.jpg/960px-7th_Suzuki_Alto.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File:7th_Suzuki_Alto.jpg",
+     "artist": "Kuha455405",
+     "license": "CC BY-SA 3.0"
+    },
+    "rear": null
+   }
+  ],
+  "fetchedAt": "2026-11-08T10:04:38.673Z"
  }
 }
