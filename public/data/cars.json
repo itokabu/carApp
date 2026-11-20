@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-08T10:04:38.676Z",
+ "updatedAt": "2026-11-20T11:14:39.799Z",
  "period": {
   "registered": "2026-10",
   "kei": "2026-10"
@@ -795,7 +795,7 @@
     },
     {
      "label": "3代目 R80G/W型(2014年 - 2021年)",
-     "period": "2014年1月20日 - 2021年",
+     "period": "2014年1月20日 - 2021年9月23日",
      "front": {
       "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Toyota_VOXY_ZS_%28DBA-ZRR80W%29_front.jpg/960px-Toyota_VOXY_ZS_%28DBA-ZRR80W%29_front.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "page": "https://commons.wikimedia.org/wiki/File:Toyota_VOXY_ZS_(DBA-ZRR80W)_front.jpg",
@@ -1330,12 +1330,17 @@
      "label": "2代目(BA1A/BA2A/BA5A/BA6A型・2025年 - )",
      "period": "2025年10月29日 - (公式発表:2025年9月18日)",
      "front": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Mitsubishi_Delica_mini_T_Premium_DELIMARU_Package_2025_JAPAN_Front.jpg/960px-Mitsubishi_Delica_mini_T_Premium_DELIMARU_Package_2025_JAPAN_Front.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:Mitsubishi_Delica_mini_T_Premium_DELIMARU_Package_2025_JAPAN_Front.jpg",
-      "artist": "Suzuki-Ham",
-      "license": "CC BY-SA 4.0"
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Mitsubishi_DELICA_mini_T_Premium_DELIMARU_Package_4WD_Active_Tone_Style_%284BA-BA6A-HXTTUZ%29_front.jpg/960px-Mitsubishi_DELICA_mini_T_Premium_DELIMARU_Package_4WD_Active_Tone_Style_%284BA-BA6A-HXTTUZ%29_front.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Mitsubishi_DELICA_mini_T_Premium_DELIMARU_Package_4WD_Active_Tone_Style_(4BA-BA6A-HXTTUZ)_front.jpg",
+      "artist": "Tokumeigakarinoaoshima",
+      "license": "CC0"
      },
-     "rear": null
+     "rear": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Mitsubishi_DELICA_mini_T_Premium_DELIMARU_Package_4WD_Active_Tone_Style_%284BA-BA6A-HXTTUZ%29_rear.jpg/960px-Mitsubishi_DELICA_mini_T_Premium_DELIMARU_Package_4WD_Active_Tone_Style_%284BA-BA6A-HXTTUZ%29_rear.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page": "https://commons.wikimedia.org/wiki/File:Mitsubishi_DELICA_mini_T_Premium_DELIMARU_Package_4WD_Active_Tone_Style_(4BA-BA6A-HXTTUZ)_rear.jpg",
+      "artist": "Tokumeigakarinoaoshima",
+      "license": "CC0"
+     }
     },
     {
      "label": "初代(B34A/B35A/B37A/B38A型・2023年 - 2025年)",
@@ -1699,8 +1704,8 @@
      "front": {
       "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/2010_Honda_Fit_1.3.jpg/960px-2010_Honda_Fit_1.3.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "page": "https://commons.wikimedia.org/wiki/File:2010_Honda_Fit_1.3.jpg",
-      "artist": "TTTNIS",
-      "license": "CC0"
+      "artist": "不明",
+      "license": ""
      },
      "rear": {
       "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/2010_Honda_Fit_1.3_rear.jpg/960px-2010_Honda_Fit_1.3_rear.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -3254,8 +3259,8 @@
      "front": {
       "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Mazda3_SKYACTIV-G.jpg/960px-Mazda3_SKYACTIV-G.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "page": "https://commons.wikimedia.org/wiki/File:Mazda3_SKYACTIV-G.jpg",
-      "artist": "不明",
-      "license": ""
+      "artist": "TTTNIS",
+      "license": "CC0"
      },
      "rear": {
       "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Mazda3_SKYACTIV-G_rear.jpg/960px-Mazda3_SKYACTIV-G_rear.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -3615,7 +3620,7 @@
     },
     {
      "label": "初代 L880K型(2002年-2012年)",
-     "period": "2002年 - 2012年",
+     "period": "2002年6月 - 2012年9月",
      "front": {
       "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/2007_Daihatsu_Copen_1.3_Front.jpg/960px-2007_Daihatsu_Copen_1.3_Front.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "page": "https://commons.wikimedia.org/wiki/File:2007_Daihatsu_Copen_1.3_Front.jpg",
@@ -4521,7 +4526,7 @@
      }
     },
     {
-     "label": "6代目 Z34型系 (2008年 - 2021年)",
+     "label": "6代目 Z34型系 (2008年 - 2022年)",
      "period": "",
      "front": {
       "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/2012-2017_Nissan_Fairlady_Z.jpg/960px-2012-2017_Nissan_Fairlady_Z.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -4778,20 +4783,15 @@
    "wiki": "https://ja.wikipedia.org/wiki/%E3%82%B9%E3%83%90%E3%83%AB%E3%83%BBWRX",
    "gens": [
     {
-     "label": "2代目 VB系(2021年 - 2026年予定)",
-     "period": "日本: 2021年11月25日 - 2026年5月18日 米国: 2022年 - 2026年予定",
+     "label": "2代目 VB系(2021年 - )",
+     "period": "日本: 2021年11月25日 - 米国: 2022年 - 2026年予定",
      "front": {
       "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/The_frontview_of_Subaru_WRX_S4_STI_Sport_R_EX_%285BA-VBH%29.jpg/960px-The_frontview_of_Subaru_WRX_S4_STI_Sport_R_EX_%285BA-VBH%29.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "page": "https://commons.wikimedia.org/wiki/File:The_frontview_of_Subaru_WRX_S4_STI_Sport_R_EX_(5BA-VBH).jpg",
       "artist": "Tokumeigakarinoaoshima",
       "license": "CC BY-SA 4.0"
      },
-     "rear": {
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/The_rearview_of_Subaru_WRX_S4_STI_Sport_R_EX_%285BA-VBH%29.jpg/960px-The_rearview_of_Subaru_WRX_S4_STI_Sport_R_EX_%285BA-VBH%29.jpg?utm_source=ja.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page": "https://commons.wikimedia.org/wiki/File:The_rearview_of_Subaru_WRX_S4_STI_Sport_R_EX_(5BA-VBH).jpg",
-      "artist": "Tokumeigakarinoaoshima",
-      "license": "CC BY-SA 4.0"
-     }
+     "rear": null
     },
     {
      "label": "初代 VA系(2014年 - 2021年)",
